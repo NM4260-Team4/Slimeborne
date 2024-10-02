@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_tile",
+  "%Name":"obj_collidable",
   "eventList":[],
   "managed":true,
-  "name":"obj_tile",
+  "name":"obj_collidable",
   "overriddenProperties":[],
   "parent":{
     "name":"Environment",
