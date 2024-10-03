@@ -1,4 +1,4 @@
-hp -= 1;
+fhp -= 1;
 
 if (hp > 0) {
 	x = grounded_x;
