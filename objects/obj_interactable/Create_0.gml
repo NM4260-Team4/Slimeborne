@@ -1,0 +1,2 @@
+/// @description Player-interactable objects
+
