@@ -13,8 +13,8 @@
     "path":"folders/Objects/Environment/Enemy.yy",
   },
   "parentObjectId":{
-    "name":"obj_interactable",
-    "path":"objects/obj_interactable/obj_interactable.yy",
+    "name":"obj_hittable",
+    "path":"objects/obj_hittable/obj_hittable.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,

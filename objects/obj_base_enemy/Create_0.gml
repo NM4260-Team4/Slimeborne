@@ -12,6 +12,6 @@ all_collidables = [tile_1, obj_collidable];
 hp = 2;
 
 // Override interact(), change it to decreasing health
-function interact() {
+function hit() {
 	hp -= 1;
 }

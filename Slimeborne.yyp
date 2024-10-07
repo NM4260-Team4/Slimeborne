@@ -48,7 +48,7 @@
     {"id":{"name":"obj_danger_zone","path":"objects/obj_danger_zone/obj_danger_zone.yy",},},
     {"id":{"name":"obj_exit_button","path":"objects/obj_exit_button/obj_exit_button.yy",},},
     {"id":{"name":"obj_help_button","path":"objects/obj_help_button/obj_help_button.yy",},},
-    {"id":{"name":"obj_interactable","path":"objects/obj_interactable/obj_interactable.yy",},},
+    {"id":{"name":"obj_hittable","path":"objects/obj_hittable/obj_hittable.yy",},},
     {"id":{"name":"obj_menu_button","path":"objects/obj_menu_button/obj_menu_button.yy",},},
     {"id":{"name":"obj_play_button","path":"objects/obj_play_button/obj_play_button.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
