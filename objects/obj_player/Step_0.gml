@@ -12,3 +12,8 @@ if place_meeting( x, y + move_y, all_collidables) {
 }
 
 y += move_y;
+
+// invincible frame
+if (no_hurt_frames > 0) {
+	no_hurt_frames --;
+}

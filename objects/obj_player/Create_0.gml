@@ -15,12 +15,10 @@ grounded_x = x;
 grounded_y = y;
 
 // player's health
-max_hp = 3;
-hp = max_hp;
+hp = global.max_hp;
 
 // invincible frames
 no_hurt_frames = 0;
-
 
 // for collision
 tile_1 = layer_tilemap_get_id("Tiles_1");
