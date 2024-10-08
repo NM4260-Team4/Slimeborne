@@ -1,3 +1,9 @@
+// x movement
+var _move_count = abs(move_x);
+repeat (_move_count) {
+	
+}
+
 // y movement
 move_y += grav;
 
