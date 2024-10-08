@@ -12,3 +12,7 @@ if place_meeting( x + move_x, y, all_collidables) {
 }
 
 x += move_x;
+
+if (grounded) {
+	sprite_index = spr_player_move;
+}
