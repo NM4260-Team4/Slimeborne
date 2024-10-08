@@ -13,7 +13,14 @@ if place_meeting( x, y + move_y, all_collidables) {
 
 y += move_y;
 
+// Reduce health if touching enemy
+if place_meeting(x, y, obj_base_enemy) and no_hurt_frames > 0 {
+	hp -= 1;
+}
+
 // invincible frame
 if (no_hurt_frames > 0) {
 	no_hurt_frames --;
 }
+
+

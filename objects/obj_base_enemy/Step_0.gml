@@ -21,4 +21,9 @@ if _on_land {
 	}
 	move_x = move_speed * move_dir;
 } 
+
 x += move_x;
+
+if max_health <= 0 {
+	instance_destroy();
+}
