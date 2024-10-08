@@ -14,8 +14,10 @@ grounded = false;
 grounded_x = x;
 grounded_y = y;
 
-// player's health
-hp = global.max_hp;
+// player's data
+max_hp = global.player_state.max_hp;
+hp = global.player_state.hp;
+microplastics = global.player_state.microplastics;
 
 // invincible frames
 no_hurt_frames = 0;
