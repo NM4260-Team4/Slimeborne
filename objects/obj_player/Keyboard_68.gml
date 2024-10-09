@@ -1,3 +1,5 @@
+if (is_attacking) exit;
+
 move_dir = 1;
 move_x = move_dir * move_speed;
 

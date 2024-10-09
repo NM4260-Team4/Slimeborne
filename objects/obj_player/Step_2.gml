@@ -22,17 +22,22 @@ if (hp <= 0) {
 switch (sprite_index) {
 	
 	case spr_player_move:
-		
-		// image_speed = 1;
 	
 		if (move_x == 0) {
 			sprite_index = spr_player_idle;
 		}
-	
+		
 		//if (move_y > 1) {
 		//	sprite_index = spr_player_fall;
 		//	image_index = 0;
 		//}
+		break;
+	
+	case spr_player_attack:
+		if (image_index >= image_number) {
+			is_attacking = false;
+			sprite_index = spr_player_idle;
+		}
 		break;
 	
 }

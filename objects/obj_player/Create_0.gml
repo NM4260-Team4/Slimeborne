@@ -14,6 +14,10 @@ grounded = false;
 grounded_x = x;
 grounded_y = y;
 
+// player state
+is_attacking = false;
+is_hit = false;
+
 // player's data
 max_hp = global.player_state.max_hp;
 hp = global.player_state.hp;
