@@ -60,6 +60,7 @@
     {"id":{"name":"obj_hittable","path":"objects/obj_hittable/obj_hittable.yy",},},
     {"id":{"name":"obj_menu_button","path":"objects/obj_menu_button/obj_menu_button.yy",},},
     {"id":{"name":"obj_microplastics","path":"objects/obj_microplastics/obj_microplastics.yy",},},
+    {"id":{"name":"obj_pig","path":"objects/obj_pig/obj_pig.yy",},},
     {"id":{"name":"obj_play_button","path":"objects/obj_play_button/obj_play_button.yy",},},
     {"id":{"name":"obj_player_state","path":"objects/obj_player_state/obj_player_state.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},

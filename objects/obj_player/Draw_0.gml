@@ -16,7 +16,7 @@ if curr_ani != sprite_index {
 	curr_ani = sprite_index;
 }
 
-draw_sprite(spr_pig, -1, x - (sprite_width/2) + curr_frame_pos[frame_count][0], y - sprite_height + curr_frame_pos[frame_count][1]);
+draw_sprite(spr_pig, 0, x - (sprite_width/2) + curr_frame_pos[frame_count][0], y - sprite_height + curr_frame_pos[frame_count][1]);
 //draw_sprite_ext()
 
 if step_counter == 0 {
