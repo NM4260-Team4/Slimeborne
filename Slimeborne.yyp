@@ -72,6 +72,7 @@
     {"id":{"name":"spr_menu_button","path":"sprites/spr_menu_button/spr_menu_button.yy",},},
     {"id":{"name":"spr_microplastics","path":"sprites/spr_microplastics/spr_microplastics.yy",},},
     {"id":{"name":"spr_pig","path":"sprites/spr_pig/spr_pig.yy",},},
+    {"id":{"name":"spr_player_attack","path":"sprites/spr_player_attack/spr_player_attack.yy",},},
     {"id":{"name":"spr_player_idle","path":"sprites/spr_player_idle/spr_player_idle.yy",},},
     {"id":{"name":"spr_player_move","path":"sprites/spr_player_move/spr_player_move.yy",},},
     {"id":{"name":"spr_tile","path":"sprites/spr_tile/spr_tile.yy",},},

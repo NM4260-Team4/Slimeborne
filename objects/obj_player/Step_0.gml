@@ -1,9 +1,3 @@
-// x movement
-var _move_count = abs(move_x);
-repeat (_move_count) {
-	
-}
-
 // y movement
 move_y += grav;
 
@@ -29,4 +23,12 @@ if (no_hurt_frames > 0) {
 	no_hurt_frames --;
 }
 
-
+// attack
+if mouse_check_button_pressed(mb_left) and (grounded) {
+	if (sprite_index != spr_player_attack) {
+		is_attacking = true;
+		image_index = 0;
+		sprite_index = spr_player_attack;
+	}
+}
+	
