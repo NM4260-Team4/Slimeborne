@@ -13,6 +13,13 @@ if place_meeting( x, y + move_y, all_collidables) {
 
 y += move_y;
 
+// Reduce health if touching enemy
+var _collision_box = collision_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, obj_base_enemy, false, true);
+if _collision_box != noone and no_hurt_frames <= 0 and not is_attacking {
+	hp -= 1;
+	no_hurt_frames = 60; 
+}
+
 // invincible frame
 if (no_hurt_frames > 0) {
 	no_hurt_frames --;
@@ -26,4 +33,3 @@ if mouse_check_button_pressed(mb_left) and (grounded) {
 		sprite_index = spr_player_attack;
 	}
 }
-	
