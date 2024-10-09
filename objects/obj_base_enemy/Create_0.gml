@@ -7,9 +7,11 @@ grav = 1;
 
 // Other Properties
 max_health = 2;
+no_hurt_frames = 0;
 
 function hit() {
 	max_health -= 1;
+	no_hurt_frames = 60;
 }
 
 // for collision

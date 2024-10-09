@@ -6,7 +6,9 @@ if (distance_to_object(obj_player) < 20) {
 		instance_destroy();
 	}
 	image_index = 1;
+	show_prompt = true
 
 } else {
 	image_index = 0;
+	show_prompt = false;
 }
