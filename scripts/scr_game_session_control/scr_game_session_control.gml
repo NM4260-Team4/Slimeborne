@@ -5,8 +5,6 @@ function save_game() {
 	global.player_state.max_hp = obj_player.max_hp;
 	global.player_state.hp = obj_player.hp;
 	global.player_state.microplastics = obj_player.microplastics;
-	global.player_state.respawn_x = obj_player.x;
-	global.player_state.respawn_y = obj_player.y;
 	global.player_state.current_room = room_get_name(room);
 	
 	// save microplastics, inventory, attachment owned, and accessories
