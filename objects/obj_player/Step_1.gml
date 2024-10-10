@@ -1,3 +1,5 @@
+// check and save if player is on the ground
+
 grounded = place_meeting( x, y + 1, all_collidables);
 
 if (grounded) {

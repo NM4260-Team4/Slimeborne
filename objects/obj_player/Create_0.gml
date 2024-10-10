@@ -1,8 +1,11 @@
+set_up_controls();
+
 // moving
 move_dir = 0;
 move_speed = 10;
 move_x = 0;
 move_y = 0;
+
 // jumping
 grav = 1;
 term_velocity = 10;

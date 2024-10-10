@@ -23,7 +23,7 @@ switch (sprite_index) {
 	
 	case spr_player_move:
 	
-		if (move_x == 0) {
+		if (move_dir == 0) {
 			sprite_index = spr_player_idle;
 		}
 		
