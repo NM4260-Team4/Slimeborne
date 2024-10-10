@@ -1,8 +1,35 @@
+get_controls();
+
+// x movement
+move_dir = right_key - left_key;
+move_x = move_dir * move_speed;
+
+// move with x collision
+var _sub_pixel = 0.5;
+if place_meeting( x + move_x, y, all_collidables) {
+	var _pixel_check = _sub_pixel * sign(move_x);
+	while !place_meeting(x + _pixel_check, y, all_collidables) {
+		x += _pixel_check;
+	}
+	move_x = 0;
+}
+
+x += move_x;
+
 // y movement
 move_y += grav;
 
-// y collision
-var _sub_pixel = 1;
+// jump
+if jump_buffered && grounded {
+	// reset the buffer
+	jump_buffered = false;
+	jump_buffer_timer = 0;
+	// jump with jump_speed
+	move_y = jump_speed;
+	grounded = false;
+}
+
+// move with y collision
 if place_meeting( x, y + move_y, all_collidables) {
 	var _pixel_check = _sub_pixel * sign(move_y);
 	while !place_meeting(x, y + _pixel_check, all_collidables) {
