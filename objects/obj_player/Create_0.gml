@@ -1,4 +1,4 @@
-set_up_controls();
+set_up_buffer();
 
 // moving
 move_dir = 0;
@@ -15,6 +15,10 @@ jump_speed = -24 // in GM, going up is negative y-axis
 grounded = false;
 grounded_x = x;
 grounded_y = y;
+
+// coyote time
+coyote_buffer_frames = 10;
+coyote_buffer_timer = 0;
 
 // player state
 is_attacking = false;

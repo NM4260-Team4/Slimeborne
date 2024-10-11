@@ -1,6 +1,6 @@
-function set_up_controls() {
-	buffer_time = 10;
-	jump_buffered = 0;
+function set_up_buffer() {
+	buffer_frames = 10;
+	jump_buffered = false;
 	jump_buffer_timer = 0;
 }
 
@@ -12,7 +12,7 @@ function get_controls() {
 	
 	// jump key buffering
 	if (jump_pressed) {
-		jump_buffer_timer = buffer_time;
+		jump_buffer_timer = buffer_frames;
 	}
 	if (jump_buffer_timer > 0) {
 		jump_buffered = 1;
