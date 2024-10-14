@@ -9,11 +9,6 @@ grav = 1;
 max_health = 2;
 no_hurt_frames = 0;
 
-function hit() {
-	max_health -= 1;
-	no_hurt_frames = 60;
-}
-
 // for collision
 tile_1 = layer_tilemap_get_id("Tiles_1");
 all_collidables = [tile_1, obj_collidable];

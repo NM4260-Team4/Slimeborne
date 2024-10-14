@@ -1,3 +1,5 @@
+check_animation();
+if (!enabled) exit;
 get_controls();
 
 // x movement
@@ -61,9 +63,5 @@ if (no_hurt_frames > 0) {
 
 // attack
 if mouse_check_button_pressed(mb_left) and (grounded) {
-	if (sprite_index != spr_player_attack) {
-		is_attacking = true;
-		image_index = 0;
-		sprite_index = spr_player_attack;
-	}
+	start_animation(seq_player_attack)
 }

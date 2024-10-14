@@ -49,3 +49,41 @@ function add_attachment(_obj_attachment) {
 	has_attachment = true;
 	attachment = _obj_attachment;
 }
+
+
+enabled = true;
+
+enable = function () {
+	enabled = true;
+	image_alpha = 1;
+}
+
+disable = function () {
+	enabled = false;
+	alarm[0] = 1;
+	image_alpha = 0;
+	move_x = 0;
+	move_y = 0;
+}
+
+active_animation = -1;
+active_sequence = -1;
+function start_animation(_sequence) {
+	active_animation = _sequence;
+	active_sequence = layer_sequence_create(layer, x, y, _sequence);
+	layer_sequence_xscale(active_sequence, image_xscale);
+	disable();
+}
+
+function check_animation() {
+	if (active_sequence == undefined) return;
+	
+	if (layer_sequence_is_finished(active_sequence)) {
+		layer_sequence_destroy(active_sequence);
+		
+		active_animation = -1;
+		active_sequence = -1;
+		
+		enable();
+	}
+}

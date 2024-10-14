@@ -1,2 +1,2 @@
 is_attacking = true;
-sprite_index = spr_player_attack;
+//sprite_index = spr_player_attack;
