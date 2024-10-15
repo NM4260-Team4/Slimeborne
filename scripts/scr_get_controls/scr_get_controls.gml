@@ -2,6 +2,11 @@ function set_up_buffer() {
 	buffer_frames = 10;
 	jump_buffered = false;
 	jump_buffer_timer = 0;
+	
+	// coyote time
+	coyote_buffer_frames = 6;
+	coyote_buffer_timer = 0;
+
 }
 
 function get_controls() {
@@ -19,5 +24,12 @@ function get_controls() {
 		jump_buffer_timer--;
 	} else {
 		jump_buffered = 0;
+	}
+	
+	// set coyote time
+	if grounded {
+		coyote_buffer_timer = coyote_buffer_frames;
+	} else {
+		coyote_buffer_timer--;
 	}
 }

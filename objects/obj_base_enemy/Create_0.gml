@@ -10,5 +10,5 @@ max_health = 2;
 no_hurt_frames = 0;
 
 // for collision
-tile_1 = layer_tilemap_get_id("Tiles_1");
-all_collidables = [tile_1, obj_collidable];
+collision_tiles = layer_tilemap_get_id("Collision_tiles");
+all_collidables = [collision_tiles, obj_collidable];

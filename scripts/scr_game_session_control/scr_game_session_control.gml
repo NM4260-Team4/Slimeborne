@@ -7,10 +7,9 @@ function save_game() {
 	global.player_state.microplastics = obj_player.microplastics;
 	global.player_state.current_room = room_get_name(room);
 	
-	// save microplastics, inventory, attachment owned, and accessories
+	// save inventory, attachment owned, and accessories
 	
 	array_push(_save_array, global.player_state);
-	
 
 	var _filename = "save.sav";
 	var _json = json_stringify(_save_array);
@@ -35,5 +34,17 @@ function load_game() {
 }
 
 function init_game() {
-
+	var _filename = "save.sav";
+	if file_exists(_filename) {
+		file_delete(_filename);
+	}
+	
+	global.player_state.max_hp = global.default_hp;
+	global.player_state.hp = global.player_state.max_hp;
+	global.player_state.microplastics = 0;
+	global.player_state.current_room = "rm_tutorial";
+	global.player_state.respawn_x = -1;
+	global.player_state.respawn_y = -1;
+	
+	// initialise other global variables here
 }

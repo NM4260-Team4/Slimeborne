@@ -21,13 +21,6 @@ x += move_x;
 // y movement
 move_y += grav;
 
-// set coyote time
-if grounded {
-	coyote_buffer_timer = coyote_buffer_frames;
-} else {
-	coyote_buffer_timer--;
-}
-
 // jump
 if jump_buffered && coyote_buffer_timer > 0 {
 	// reset the buffer

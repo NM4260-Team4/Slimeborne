@@ -1,5 +1,17 @@
 set_up_buffer();
 
+// set default spawn point in the level if there is no save file
+if (global.player_state.respawn_x == -1) {
+	global.player_state.respawn_x = x;
+} else {
+	x = global.player_state.respawn_x;
+}
+if (global.player_state.respawn_y == -1) {
+	global.player_state.respawn_y = y;
+} else {
+	y = global.player_state.respawn_y;
+}
+
 // moving
 move_dir = 0;
 move_speed = 10;
@@ -16,10 +28,6 @@ grounded = false;
 grounded_x = x;
 grounded_y = y;
 
-// coyote time
-coyote_buffer_frames = 10;
-coyote_buffer_timer = 0;
-
 // player state
 is_attacking = false;
 is_hit = false;
@@ -33,8 +41,8 @@ microplastics = global.player_state.microplastics;
 no_hurt_frames = 0;
 
 // for collision
-tile_1 = layer_tilemap_get_id("Tiles_1");
-all_collidables = [tile_1, obj_collidable];
+collision_tiles = layer_tilemap_get_id("Collision_tiles");
+all_collidables = [collision_tiles, obj_collidable];
 
 // Attachment sprite values
 has_attachment = false;
