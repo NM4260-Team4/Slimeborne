@@ -98,8 +98,8 @@ disable = function () {
 	//move_y = 0;
 }
 
-test = sequence_get(seq_player_attack)
-test.tracks[2].enabled = false;
+//test = sequence_get(seq_player_attack)
+//test.tracks[2].enabled = false;
 
 active_animation = -1;
 active_sequence = -1;

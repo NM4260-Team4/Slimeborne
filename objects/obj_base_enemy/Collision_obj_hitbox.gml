@@ -8,5 +8,6 @@ if (no_hurt_frames <= 0) {
 }
 
 if max_health <= 0 {
+	global.player_state.microplastics += 5;
 	instance_destroy();
 }
