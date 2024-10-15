@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_game_session_control",
+  "%Name":"scr_game_session_manager",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_game_session_control",
+  "name":"scr_game_session_manager",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

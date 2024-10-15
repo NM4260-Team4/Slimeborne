@@ -1,5 +1,5 @@
 function set_up_buffer() {
-	buffer_frames = 10;
+	buffer_frames = 8;
 	jump_buffered = false;
 	jump_buffer_timer = 0;
 	

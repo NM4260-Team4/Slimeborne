@@ -29,8 +29,23 @@ grounded_x = x;
 grounded_y = y;
 
 // player state
-is_attacking = false;
 is_hit = false;
+enum PLAYER_STATE {
+	IDLE,
+	MOVE,
+	JUMP,
+	FALL,
+	ATTACK,
+	HIT,
+	DEATH
+}
+state = PLAYER_STATE.IDLE;
+next_state = state;
+inner_state = 0;
+change_state = function(_next_state) {
+	inner_state = 2;
+	next_state = _next_state;
+}
 
 // player's data
 max_hp = global.player_state.max_hp;
