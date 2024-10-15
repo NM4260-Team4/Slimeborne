@@ -1,4 +1,7 @@
 global.default_hp = 3;
+global.max_attachments = 5;
+global.max_accessories = 10;
+global.max_acc_equipped = 3;
 
 global.player_state = {
 	max_hp : global.default_hp,
@@ -9,4 +12,13 @@ global.player_state = {
 	respawn_y : -1
 }
 
-// inventory, attachments and accessories should also go here
+global.inventory = {
+	attachments: array_create(global.max_attachments),
+	accessories: array_create(global.max_accessories)
+}
+
+global.equipped = {
+	has_attachment : false,
+	attachment : NaN,
+	accessories : array_create(global.max_acc_equipped)
+}

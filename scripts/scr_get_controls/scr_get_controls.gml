@@ -20,6 +20,9 @@ function get_controls() {
 	attack_pressed = mouse_check_button_pressed(mb_left);
 	if (mouse_check_button_pressed(mb_right)) {
 		is_hit = true;
+		//if (!is_hit and no_hurt_frames <= 0) {
+			
+		//}
 		//show_debug_message("right meeting: " + string(place_meeting(x + 1, y, all_collidables)));
 		//show_debug_message("down meeting: " + string(place_meeting(x, y + 1, all_collidables)));
 	}
