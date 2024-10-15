@@ -1,3 +1,5 @@
 event_inherited();
 
-room_goto(rm_room1);
+init_game();
+
+room_goto(rm_tutorial);
