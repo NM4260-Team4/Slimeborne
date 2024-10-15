@@ -20,7 +20,9 @@ switch state {
 		} 
 		// update
 		else if (inner_state == 1) {
-			if (jump_buffered && coyote_buffer_timer > 0) {
+			if (is_hit) {
+				change_state(PLAYER_STATE.HIT);
+			} else if (jump_buffered && coyote_buffer_timer > 0) {
 				change_state(PLAYER_STATE.JUMP);
 			} else if (attack_buffered) {
 				change_state(PLAYER_STATE.ATTACK);
@@ -45,7 +47,9 @@ switch state {
 		}
 		// update 
 		else if (inner_state == 1) {
-			if (jump_buffered && coyote_buffer_timer > 0) {
+			if (is_hit) {
+				change_state(PLAYER_STATE.HIT);
+			} else if (jump_buffered && coyote_buffer_timer > 0) {
 				change_state(PLAYER_STATE.JUMP);
 			} else if (attack_buffered) {
 				change_state(PLAYER_STATE.ATTACK);
@@ -77,7 +81,9 @@ switch state {
 		}
 		// update
 		else if (inner_state == 1) {
-			if (move_y > 0) {
+			if (is_hit) {
+				change_state(PLAYER_STATE.HIT);
+			} else if (move_y > 0) {
 				change_state(PLAYER_STATE.FALL);
 			}
 		}
@@ -99,11 +105,12 @@ switch state {
 		}
 		// update
 		else if (inner_state == 1) {
-			if jump_buffered && coyote_buffer_timer > 0 {
+			if (is_hit) {
+				change_state(PLAYER_STATE.HIT);
+			} else if jump_buffered && coyote_buffer_timer > 0 {
 				change_state(PLAYER_STATE.JUMP);
 			} else if (grounded) {
 				image_speed = 1;
-				exit;
 			}
 		}
 		// exit
@@ -125,6 +132,7 @@ switch state {
 		}
 		// update
 		else if (inner_state == 1) {
+			// edit here for interrupt
 			check_animation();
 			if (!enabled) {
 				exit;
@@ -143,18 +151,21 @@ switch state {
 	case PLAYER_STATE.HIT:
 		// init
 		if (inner_state == 0) {
+			image_alpha = 1;
+			move_y = 0;
 			inner_state = 1;
-			can_hit = false;
 			sprite_index = spr_player_on_hit;
 			image_speed = 1;
 		}
 		// update
 		else if (inner_state == 1) {
-			// does nothing, see animation end event
+			// see animation end event
+			move_x = 0;
 		}
 		// exit
 		else {
-			can_hit = true;
+			no_hurt_frames = 60;
+			is_hit = false;
 			state = next_state;
 			inner_state = 0;
 		}
@@ -188,4 +199,9 @@ y += move_y;
 // invincible frame
 if (no_hurt_frames > 0) {
 	no_hurt_frames --;
+	if (image_alpha == 1) {
+		image_alpha = 0.5;
+	} else {
+		image_alpha = 1;
+	}
 }
