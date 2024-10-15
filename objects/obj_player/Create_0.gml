@@ -29,7 +29,7 @@ grounded_x = x;
 grounded_y = y;
 
 // player state
-can_hit = true;
+is_hit = false;
 enum PLAYER_STATE {
 	IDLE,
 	MOVE,
