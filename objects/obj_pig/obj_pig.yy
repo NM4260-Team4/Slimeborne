@@ -10,8 +10,8 @@
   "name":"obj_pig",
   "overriddenProperties":[],
   "parent":{
-    "name":"Interactable",
-    "path":"folders/Objects/Interactable.yy",
+    "name":"Attachments",
+    "path":"folders/Objects/Attachments.yy",
   },
   "parentObjectId":null,
   "persistent":false,
