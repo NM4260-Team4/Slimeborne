@@ -1,19 +1,21 @@
 {
   "$GMObject":"",
-  "%Name":"obj_hittable",
+  "%Name":"obj_switch",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_hitbox","path":"objects/obj_hitbox/obj_hitbox.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_hittable",
+  "name":"obj_switch",
   "overriddenProperties":[],
   "parent":{
     "name":"Hittable",
     "path":"folders/Objects/Hittable.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_hittable",
+    "path":"objects/obj_hittable/obj_hittable.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -32,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_tile",
-    "path":"sprites/spr_tile/spr_tile.yy",
+    "name":"spr_switch",
+    "path":"sprites/spr_switch/spr_switch.yy",
   },
   "spriteMaskId":null,
   "visible":true,
