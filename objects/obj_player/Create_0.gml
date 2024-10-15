@@ -57,7 +57,7 @@ no_hurt_frames = 0;
 
 // for collision
 collision_tiles = layer_tilemap_get_id("Collision_tiles");
-all_collidables = [collision_tiles, obj_collidable];
+all_collidables = [collision_tiles, obj_collidable, obj_breakable_wall];
 
 // Attachment sprite values
 has_attachment = false;
