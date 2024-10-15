@@ -29,7 +29,7 @@ grounded_x = x;
 grounded_y = y;
 
 // player state
-can_hit = true;
+is_hit = false;
 enum PLAYER_STATE {
 	IDLE,
 	MOVE,
@@ -98,10 +98,10 @@ function start_animation(_sequence) {
 	disable();
 }
 
-function check_animation() {
+function check_animation(_should_interrupt) {
 	if (active_sequence == undefined) return;
 	
-	if (layer_sequence_is_finished(active_sequence)) {
+	if (_should_interrupt or layer_sequence_is_finished(active_sequence)) {
 		layer_sequence_destroy(active_sequence);
 		
 		active_animation = -1;

@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_move_and_collide",
+  "%Name":"spr_camera_control",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_move_and_collide",
+  "name":"spr_camera_control",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",
