@@ -16,5 +16,7 @@ if (sprite_index == spr_player_on_hit) {
 		change_state(PLAYER_STATE.IDLE);
 	} else if (move_y > 0) {
 		change_state(PLAYER_STATE.FALL);
+	} else {
+		change_state(PLAYER_STATE.IDLE);
 	}
 }

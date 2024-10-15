@@ -16,6 +16,7 @@ switch state {
 		if (inner_state == 0) {
 			inner_state = 1;
 			sprite_index = spr_player_idle;
+			image_index = 0;
 			image_speed = 1;
 		} 
 		// update
@@ -43,6 +44,7 @@ switch state {
 		if (inner_state == 0) {
 			inner_state = 1;
 			sprite_index = spr_player_move;
+			image_index = 0;
 			image_speed = 1;
 		}
 		// update 
@@ -70,6 +72,7 @@ switch state {
 		if (inner_state == 0) {
 			inner_state = 1;
 			sprite_index = spr_player_jump;
+			image_index = 0;
 			image_speed = 1;
 			
 			// reset the buffer
@@ -100,8 +103,8 @@ switch state {
 		if (inner_state == 0) {
 			inner_state = 1;
 			sprite_index = spr_player_fall;
-			image_speed = 0;
 			image_index = 0;
+			image_speed = 0;
 		}
 		// update
 		else if (inner_state == 1) {
@@ -133,7 +136,7 @@ switch state {
 		// update
 		else if (inner_state == 1) {
 			// edit here for interrupt
-			check_animation();
+			check_animation(is_hit);
 			if (!enabled) {
 				exit;
 			} else {
@@ -151,10 +154,10 @@ switch state {
 	case PLAYER_STATE.HIT:
 		// init
 		if (inner_state == 0) {
-			image_alpha = 1;
 			move_y = 0;
 			inner_state = 1;
 			sprite_index = spr_player_on_hit;
+			image_index = 0;
 			image_speed = 1;
 		}
 		// update
@@ -199,9 +202,9 @@ y += move_y;
 // invincible frame
 if (no_hurt_frames > 0) {
 	no_hurt_frames --;
-	if (image_alpha == 1) {
-		image_alpha = 0.5;
-	} else {
-		image_alpha = 1;
-	}
+	//if (image_alpha == 1) {
+	//	image_alpha = 0.5;
+	//} else {
+	//	image_alpha = 1;
+	//}
 }
