@@ -29,7 +29,7 @@ grounded_x = x;
 grounded_y = y;
 
 // player state
-is_hit = false;
+can_hit = true;
 enum PLAYER_STATE {
 	IDLE,
 	MOVE,
@@ -86,7 +86,7 @@ disable = function () {
 	alarm[0] = 1;
 	image_alpha = 0;
 	move_x = 0;
-	move_y = 0;
+	//move_y = 0;
 }
 
 active_animation = -1;

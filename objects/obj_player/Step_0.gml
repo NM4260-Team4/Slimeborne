@@ -1,9 +1,7 @@
 // y movement
 move_y += grav;
 
-check_animation();
-if (!enabled) exit;
-
+// keyboard controls
 get_controls();
 move_dir = right_key - left_key;
 move_x = move_dir * move_speed;
@@ -11,6 +9,7 @@ if (move_dir != 0) {
 	image_xscale = sign(move_dir);
 }
 
+// state machine
 switch state {
 	case PLAYER_STATE.IDLE:
 		// init
@@ -21,8 +20,10 @@ switch state {
 		} 
 		// update
 		else if (inner_state == 1) {
-			if jump_buffered && coyote_buffer_timer > 0 {
+			if (jump_buffered && coyote_buffer_timer > 0) {
 				change_state(PLAYER_STATE.JUMP);
+			} else if (attack_buffered) {
+				change_state(PLAYER_STATE.ATTACK);
 			} else if (move_dir != 0) {
 				change_state(PLAYER_STATE.MOVE);
 			}
@@ -44,8 +45,10 @@ switch state {
 		}
 		// update 
 		else if (inner_state == 1) {
-			if jump_buffered && coyote_buffer_timer > 0 {
+			if (jump_buffered && coyote_buffer_timer > 0) {
 				change_state(PLAYER_STATE.JUMP);
+			} else if (attack_buffered) {
+				change_state(PLAYER_STATE.ATTACK);
 			} else if (move_dir == 0) {
 				change_state(PLAYER_STATE.IDLE);
 			}
@@ -112,10 +115,50 @@ switch state {
 		break;
 		
 	case PLAYER_STATE.ATTACK:
+		// init
+		if (inner_state == 0) {
+			inner_state = 1;
+			// reset the buffer
+			attack_buffered = false;
+			attack_buffer_timer = 0;
+			start_animation(seq_player_attack);
+		}
+		// update
+		else if (inner_state == 1) {
+			check_animation();
+			if (!enabled) {
+				exit;
+			} else {
+				change_state(PLAYER_STATE.IDLE);
+			}
+		}
+		// exit
+		else {
+			state = next_state;
+			inner_state = 0;
+		}
+		
 		break;
+		
 	case PLAYER_STATE.HIT:
-		break;
-	case PLAYER_STATE.DEATH:
+		// init
+		if (inner_state == 0) {
+			inner_state = 1;
+			can_hit = false;
+			sprite_index = spr_player_on_hit;
+			image_speed = 1;
+		}
+		// update
+		else if (inner_state == 1) {
+			// does nothing, see animation end event
+		}
+		// exit
+		else {
+			can_hit = true;
+			state = next_state;
+			inner_state = 0;
+		}
+		
 		break;
 }
 
@@ -145,9 +188,4 @@ y += move_y;
 // invincible frame
 if (no_hurt_frames > 0) {
 	no_hurt_frames --;
-}
-
-// attack
-if mouse_check_button_pressed(mb_left) and (grounded) {
-	start_animation(seq_player_attack)
 }
