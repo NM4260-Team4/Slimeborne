@@ -9,6 +9,17 @@ if (move_dir != 0) {
 	image_xscale = sign(move_dir);
 }
 
+//if (!self.has_attachment and global.equipped_attachment != -1) {
+//	self.attachment = global.equipped_attachment;
+//}
+
+//// Check if the attachment is correct
+//if (self.has_attachment) {
+//	if (self.attachment.attach_id != global.equipped_attachment.attach_id){
+//		self.attachment = global.equipped_attachment;
+//	}
+//} 
+
 // state machine
 switch state {
 	case PLAYER_STATE.IDLE:

@@ -22,3 +22,38 @@ global.equipped = {
 	equipped_attachment : NaN,
 	equipped_accessories : array_create(global.max_acc_equipped)
 }
+
+// Disable all of the attachment layers on creation
+attack_seq = sequence_get(seq_player_attack);
+for (var i = 5; i > 2; i--) {
+	attack_seq.tracks[i].enabled = false;
+}
+
+global.attachments = [];
+global.equipped_attachment = -1;
+equipped_attachment_pos = -1;
+
+// Function to add a new attachment
+global.add_attachment = function(_attachment) {
+	// Add attachment to the array
+	array_push(global.attachments, _attachment);
+	equipped_attachment_pos = array_length(global.attachments) - 1;
+	
+	// Disable the previous attachment
+	if (global.equipped_attachment != -1) {
+		show_debug_message("before");
+		show_debug_message(global.equipped_attachment.attach_id);
+		attack_seq.tracks[global.equipped_attachment.attach_id].enabled = false;
+	}
+	
+	// Enable the new attachment
+	global.equipped_attachment = _attachment;
+	show_debug_message("after");
+	show_debug_message(global.equipped_attachment.attach_id);
+	attack_seq.tracks[_attachment.attach_id].enabled = true;
+}
+
+global.get_next_attachment = function() {
+
+}
+

@@ -76,31 +76,36 @@ move_rot = [100, 95, 100, 97, 97, 96, 99, 97, 97, 92]
 jump_rot = [91, 90, 115, 135]
 fall_rot = [108, 93, 86, 60, 65, 74, 87] 
 hit_rot = [92, 70,80]
+
 // Function for adding attachment
-function add_attachment(_obj_attachment) {
+function add_attachment(_obj) {
 	has_attachment = true;
-	attachment = _obj_attachment;
+	global.add_attachment(_obj.obj_attachment);
+	attachment = _obj.obj_attachment;
 }
 
 // For Sequencing
 enabled = true;
-
+not_attacking = true
 enable = function () {
 	enabled = true;
 	image_alpha = 1;
+	if (has_attachment) {
+		not_attacking = true;
+	}
 }
 
 disable = function () {
 	enabled = false;
 	alarm[0] = 1;
 	image_alpha = 0;
+	if (has_attachment) {
+		not_attacking = false;
+	}
 	move_x = 0;
-	//move_y = 0;
 }
 
-//test = sequence_get(seq_player_attack)
-//test.tracks[2].enabled = false;
-
+// Sequence animation checks and playing
 active_animation = -1;
 active_sequence = -1;
 function start_animation(_sequence) {
