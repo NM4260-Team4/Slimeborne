@@ -20,6 +20,7 @@ function get_controls() {
 	attack_pressed = mouse_check_button_pressed(mb_left);
 	swap_pressed = keyboard_check_pressed(ord("Q"));
 	//if (mouse_check_button_pressed(mb_right)) {
+	//	show_debug_message("Number of collectibles: " + string(instance_number(obj_collectible)));
 	//	is_hit = true;
 	//	if (!is_hit and no_hurt_frames <= 0) {
 			
