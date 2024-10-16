@@ -13,20 +13,22 @@ global.player_state = {
 }
 
 global.inventory = {
+	num_attachments: 0,
+	num_accessories: 0,
 	attachments: array_create(global.max_attachments),
 	accessories: array_create(global.max_accessories)
 }
 
 global.equipped = {
 	has_attachment : false,
-	equipped_attachment : NaN,
+	equipped_attachment : -1,
 	equipped_accessories : array_create(global.max_acc_equipped)
 }
 
 // Disable all of the attachment layers on creation
 attack_seq = sequence_get(seq_player_attack);
-for (var i = 7; i > 2; i--) {
-	attack_seq.tracks[i].enabled = false;
+for (var _i = 7; _i > 2; _i--) {
+	attack_seq.tracks[_i].enabled = false;
 }
 
 global.attachments = [];
