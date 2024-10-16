@@ -18,14 +18,14 @@ function get_controls() {
 	left_key = keyboard_check(ord("A"));
 	jump_pressed = keyboard_check_pressed(vk_space);
 	attack_pressed = mouse_check_button_pressed(mb_left);
-	if (mouse_check_button_pressed(mb_right)) {
-		is_hit = true;
-		//if (!is_hit and no_hurt_frames <= 0) {
+	//if (mouse_check_button_pressed(mb_right)) {
+	//	is_hit = true;
+	//	if (!is_hit and no_hurt_frames <= 0) {
 			
-		//}
-		//show_debug_message("right meeting: " + string(place_meeting(x + 1, y, all_collidables)));
-		//show_debug_message("down meeting: " + string(place_meeting(x, y + 1, all_collidables)));
-	}
+	//	}
+	//	show_debug_message("right meeting: " + string(place_meeting(x + 1, y, all_collidables)));
+	//	show_debug_message("down meeting: " + string(place_meeting(x, y + 1, all_collidables)));
+	//}
 	
 	// jump key buffering
 	if (jump_pressed) {

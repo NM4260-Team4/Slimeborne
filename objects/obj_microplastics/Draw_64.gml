@@ -5,5 +5,5 @@ if (!instance_exists(obj_player)) {
 draw_self();
 
 draw_set_valign(fa_middle);
-draw_text(x + 20, y, string(obj_player.microplastics));
+draw_text(x + 20, y, string(global.player_state.microplastics));
 draw_set_valign(fa_top);
