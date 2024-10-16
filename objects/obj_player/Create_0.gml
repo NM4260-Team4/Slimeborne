@@ -60,8 +60,8 @@ collision_tiles = layer_tilemap_get_id("Collision_tiles");
 all_collidables = [collision_tiles, obj_collidable, obj_breakable_wall];
 
 // Attachment sprite values
-has_attachment = true;
-attachment = obj_pig;
+has_attachment = false;
+attachment = NaN;
 curr_frame_pos = 0; // The current set of positions to draw the attachment
 
 idle_frame_pos = [[32, 87], [32, 96], [33, 103], [33, 107], [34, 102], [32, 96], [32,88]];
