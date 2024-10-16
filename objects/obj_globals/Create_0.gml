@@ -41,19 +41,19 @@ global.add_attachment = function(_attachment) {
 	
 	// Disable the previous attachment
 	if (global.equipped_attachment != -1) {
-		show_debug_message("before");
-		show_debug_message(global.equipped_attachment.attach_id);
 		attack_seq.tracks[global.equipped_attachment.attach_id].enabled = false;
 	}
 	
 	// Enable the new attachment
 	global.equipped_attachment = _attachment;
-	show_debug_message("after");
-	show_debug_message(global.equipped_attachment.attach_id);
 	attack_seq.tracks[_attachment.attach_id].enabled = true;
 }
 
 global.get_next_attachment = function() {
-
+	equipped_attachment_pos = (equipped_attachment_pos + 1) % array_length(global.attachments);
+	attack_seq.tracks[global.equipped_attachment.attach_id].enabled = false;
+	global.equipped_attachment = global.attachments[equipped_attachment_pos];
+	attack_seq.tracks[global.equipped_attachment.attach_id].enabled = true;
+	return global.equipped_attachment;
 }
 

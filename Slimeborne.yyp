@@ -17,6 +17,7 @@
     {"$GMFolder":"","%Name":"Attachments","folderPath":"folders/Objects/Attachments.yy","name":"Attachments","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Enemy","folderPath":"folders/Objects/Enemy.yy","name":"Enemy","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Environment","folderPath":"folders/Objects/Environment.yy","name":"Environment","resourceType":"GMFolder","resourceVersion":"2.0",},
+    {"$GMFolder":"","%Name":"Hitboxes","folderPath":"folders/Objects/Hitboxes.yy","name":"Hitboxes","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Hittable","folderPath":"folders/Objects/Hittable.yy","name":"Hittable","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"HUD","folderPath":"folders/Objects/HUD.yy","name":"HUD","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Interactable","folderPath":"folders/Objects/Interactable.yy","name":"Interactable","resourceType":"GMFolder","resourceVersion":"2.0",},

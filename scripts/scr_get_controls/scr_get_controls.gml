@@ -18,7 +18,7 @@ function get_controls() {
 	left_key = keyboard_check(ord("A"));
 	jump_pressed = keyboard_check_pressed(vk_space);
 	attack_pressed = mouse_check_button_pressed(mb_left);
-	swap_pressed = keyboard_check(ord("Q"));
+	swap_pressed = keyboard_check_pressed(ord("Q"));
 	//if (mouse_check_button_pressed(mb_right)) {
 	//	is_hit = true;
 	//	if (!is_hit and no_hurt_frames <= 0) {

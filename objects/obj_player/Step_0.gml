@@ -9,6 +9,19 @@ if (move_dir != 0) {
 	image_xscale = sign(move_dir);
 }
 
+if (num_attached == 2 and !swap_prompt_shown) {
+	show_swap_prompt = true;
+}
+
+if (swap_pressed != 0 and has_attachment) {
+	self.attachment = global.get_next_attachment();
+	if (show_swap_prompt) {
+		show_swap_prompt = false;
+		swap_prompt_shown = true;
+	}
+} 
+
+
 //if (!self.has_attachment and global.equipped_attachment != -1) {
 //	self.attachment = global.equipped_attachment;
 //}

@@ -78,12 +78,16 @@ fall_rot = [108, 93, 86, 60, 65, 74, 87]
 hit_rot = [92, 70,80]
 
 // Function for adding attachment
+num_attached = 0;
 function add_attachment(_obj) {
 	has_attachment = true;
 	global.add_attachment(_obj.obj_attachment);
 	attachment = _obj.obj_attachment;
+	num_attached += 1;
 }
 
+swap_prompt_shown = false; // Whether or not the prompty for the Q key is shown
+show_swap_prompt = false; // Whether or not the prompt SHOULD be shown
 // For Sequencing
 enabled = true;
 not_attacking = true
