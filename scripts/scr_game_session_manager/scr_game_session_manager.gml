@@ -1,7 +1,11 @@
-function save_game() {
+function save_game(_should_save_location) {
 
 	var _save_array = array_create(0);
 	
+	if (_should_save_location) {
+		global.player_state.respawn_x = obj_player.x;
+		global.player_state.respawn_y = obj_player.y;
+	}
 	global.player_state.max_hp = obj_player.max_hp;
 	global.player_state.hp = obj_player.hp;
 	global.player_state.microplastics = obj_player.microplastics;
