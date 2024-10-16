@@ -19,6 +19,6 @@ global.inventory = {
 
 global.equipped = {
 	has_attachment : false,
-	attachment : NaN,
-	accessories : array_create(global.max_acc_equipped)
+	equipped_attachment : NaN,
+	equipped_accessories : array_create(global.max_acc_equipped)
 }

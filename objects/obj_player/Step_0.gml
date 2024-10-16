@@ -55,6 +55,8 @@ switch state {
 				change_state(PLAYER_STATE.JUMP);
 			} else if (attack_buffered) {
 				change_state(PLAYER_STATE.ATTACK);
+			} else if (!grounded) {
+				change_state(PLAYER_STATE.FALL);
 			} else if (move_dir == 0) {
 				change_state(PLAYER_STATE.IDLE);
 			}
