@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_hitbox",
-  "eventList":[],
+  "%Name":"obj_pig_attach",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_hitbox",
+  "name":"obj_pig_attach",
   "overriddenProperties":[],
   "parent":{
-    "name":"Hitboxes",
-    "path":"folders/Objects/Hitboxes.yy",
+    "name":"Attachments",
+    "path":"folders/Objects/Attachments.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_hitbox",
-    "path":"sprites/spr_hitbox/spr_hitbox.yy",
+    "name":"spr_pig",
+    "path":"sprites/spr_pig/spr_pig.yy",
   },
   "spriteMaskId":null,
   "visible":true,

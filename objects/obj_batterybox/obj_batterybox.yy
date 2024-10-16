@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_hitbox",
+  "%Name":"obj_batterybox",
   "eventList":[],
   "managed":true,
-  "name":"obj_hitbox",
+  "name":"obj_batterybox",
   "overriddenProperties":[],
   "parent":{
     "name":"Hitboxes",
