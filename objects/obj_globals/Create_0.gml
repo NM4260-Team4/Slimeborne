@@ -33,7 +33,7 @@ global.equipped = {
 
 // Disable all of the attachment layers on creation
 attack_seq = sequence_get(seq_player_attack);
-for (var _i = 7; _i > 2; _i--) {
+for (var _i = 5; _i > 2; _i--) {
 	attack_seq.tracks[_i].enabled = false;
 }
 
