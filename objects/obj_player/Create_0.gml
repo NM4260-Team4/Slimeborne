@@ -60,8 +60,6 @@ collision_tiles = layer_tilemap_get_id("Collision_tiles");
 all_collidables = [collision_tiles, obj_collidable, obj_breakable_wall];
 
 // Attachment sprite values
-has_attachment = false;
-attachment = NaN;
 curr_frame_pos = 0; // The current set of positions to draw the attachment
 
 idle_frame_pos = [[32, 87], [32, 96], [33, 103], [33, 107], [34, 102], [32, 96], [32,88]];
@@ -78,13 +76,6 @@ fall_rot = [108, 93, 86, 60, 65, 74, 87]
 hit_rot = [92, 70,80]
 
 // Function for adding attachment
-num_attached = 0;
-function add_attachment(_obj) {
-	has_attachment = true;
-	global.add_attachment(_obj.obj_attachment);
-	attachment = _obj.obj_attachment;
-	num_attached += 1;
-}
 
 swap_prompt_shown = false; // Whether or not the prompty for the Q key is shown
 show_swap_prompt = false; // Whether or not the prompt SHOULD be shown
@@ -94,7 +85,7 @@ not_attacking = true
 enable = function () {
 	enabled = true;
 	image_alpha = 1;
-	if (has_attachment) {
+	if (global.equipped.has_attachment) {
 		not_attacking = true;
 	}
 }
@@ -103,7 +94,7 @@ disable = function () {
 	enabled = false;
 	alarm[0] = 1;
 	image_alpha = 0;
-	if (has_attachment) {
+	if (global.equipped.has_attachment) {
 		not_attacking = false;
 	}
 	move_x = 0;

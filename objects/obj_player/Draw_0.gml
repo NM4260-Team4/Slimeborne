@@ -17,8 +17,8 @@ if (sprite_index == spr_player_move) {
 	curr_rot = hit_rot;
 } 
 
-if has_attachment and not_attacking {
-	draw_sprite_ext(attachment.sprite_index, 0, x - (sprite_get_xoffset(sprite_index)  - curr_frame_pos[image_index][0])* image_xscale , y - sprite_get_yoffset(sprite_index) + curr_frame_pos[image_index][1], image_xscale, 1, curr_rot[image_index] * image_xscale, -1, 1);
+if global.equipped.has_attachment and not_attacking {
+	draw_sprite_ext(global.equipped.equipped_attachment.sprite_index, -1, x - (sprite_get_xoffset(sprite_index)  - curr_frame_pos[image_index][0])* image_xscale , y - sprite_get_yoffset(sprite_index) + curr_frame_pos[image_index][1], image_xscale, 1, curr_rot[image_index] * image_xscale, -1, 1);
 }
 
 
