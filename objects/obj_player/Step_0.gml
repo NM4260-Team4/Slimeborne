@@ -163,9 +163,21 @@ switch state {
 		else if (inner_state == 1) {
 			// edit here for interrupt
 			check_animation(is_hit);
+			if (global.equipped.has_attachment and instance_exists(obj_tracker)) {
+				global.equipped.equipped_attachment.x = obj_tracker.x;
+				global.equipped.equipped_attachment.y = obj_tracker.y;
+				global.equipped.equipped_attachment.image_xscale = obj_tracker.image_xscale;
+				global.equipped.equipped_attachment.image_angle = obj_tracker.image_angle;
+			} 
 			if (!enabled) {
+				if (global.equipped.has_attachment) {
+					global.equipped.equipped_attachment.visible = true;
+				}
 				exit;
 			} else {
+				if (global.equipped.has_attachment) {
+					global.equipped.equipped_attachment.visible = false;
+				}
 				change_state(PLAYER_STATE.IDLE);
 			}
 		}

@@ -1,13 +1,15 @@
 {
   "$GMObject":"",
-  "%Name":"obj_hammerbox",
-  "eventList":[],
+  "%Name":"obj_tracker",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_hammerbox",
+  "name":"obj_tracker",
   "overriddenProperties":[],
   "parent":{
-    "name":"Hitboxes",
-    "path":"folders/Objects/Hitboxes.yy",
+    "name":"Player",
+    "path":"folders/Objects/Player.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -28,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_hitbox",
-    "path":"sprites/spr_hitbox/spr_hitbox.yy",
+    "name":"spr_tracker",
+    "path":"sprites/spr_tracker/spr_tracker.yy",
   },
   "spriteMaskId":null,
   "visible":true,

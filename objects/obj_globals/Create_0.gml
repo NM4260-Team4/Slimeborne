@@ -32,10 +32,10 @@ global.equipped = {
 }
 
 // Disable all of the attachment layers on creation
-attack_seq = sequence_get(seq_player_attack);
-for (var _i = 5; _i > 2; _i--) {
-	attack_seq.tracks[_i].enabled = false;
-}
+//attack_seq = sequence_get(seq_player_attack);
+//for (var _i = 5; _i > 2; _i--) {
+//	attack_seq.tracks[_i].enabled = false;
+//}
 
 // Function to add a new attachment
 global.add_attachment = function(_attachment) {
@@ -46,22 +46,22 @@ global.add_attachment = function(_attachment) {
 	
 	// Disable the previous attachment
 	if (global.equipped.has_attachment != false) {
-		attack_seq.tracks[global.equipped.equipped_attachment.attach_id].enabled = false;
+		//attack_seq.tracks[global.equipped.equipped_attachment.attach_id].enabled = false;
 	} else {
 		global.equipped.has_attachment = true;
 	}
 	
 	// Enable the new attachment
 	global.equipped.equipped_attachment = _attachment;
-	attack_seq.tracks[_attachment.attach_id].enabled = true;
+	//attack_seq.tracks[_attachment.attach_id].enabled = true;
 }
 
 global.get_next_attachment = function() {
-	attack_seq.tracks[global.equipped.equipped_attachment.attach_id].enabled = false;
+	//attack_seq.tracks[global.equipped.equipped_attachment.attach_id].enabled = false;
 	global.equipped.equipped_attachment_pos = (global.equipped.equipped_attachment_pos + 1) % global.inventory.num_attachments;
 	
 	
 	global.equipped.equipped_attachment = global.inventory.attachments[global.equipped.equipped_attachment_pos];
-	attack_seq.tracks[global.equipped.equipped_attachment.attach_id].enabled = true;
+	//attack_seq.tracks[global.equipped.equipped_attachment.attach_id].enabled = true;
 }
 
