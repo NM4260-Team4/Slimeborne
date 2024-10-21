@@ -62,7 +62,7 @@ active_sequence = -1;
 function start_animation(_sequence) {
 	active_animation = _sequence;
 	active_sequence = layer_sequence_create(layer, x, y, _sequence);
-	layer_sequence_xscale(active_sequence, -1 * move_dir);
+	layer_sequence_xscale(active_sequence, image_xscale);
 	disable();
 }
 

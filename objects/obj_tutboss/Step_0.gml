@@ -14,6 +14,11 @@ if place_meeting( x, y + move_y, all_collidables) {
 
 y += move_y;
 
+// Counting timers
+if (attack_cooldown > 0) {
+	attack_cooldown--;
+}
+
 // State handling
 switch state {
 	case BOSS_STATE.ROAM:
@@ -42,17 +47,19 @@ switch state {
 			inner_state = 1;
 			move_speed = 6.5;
 		} else if (inner_state == 1) {
-			if (abs(x - obj_player.x) < 350) {
+			if (abs(x - obj_player.x) < 350 and attack_cooldown == 0) {
 				change_state(BOSS_STATE.BASE_ATTACK);
 				break;
 			}
 			if _on_land {
 				if (x > obj_player.x + 2) {
 					move_dir = -1;
+					image_xscale = 1;
 				} else if (x <= obj_player.x + 2 and x >= obj_player.x - 2){
 					move_dir = 0;
 				} else {
 					move_dir = 1;
+					image_xscale = -1;
 				}
 				move_x = move_speed * move_dir;
 			} 
@@ -69,6 +76,7 @@ switch state {
 		} else if (inner_state == 1) {
 			check_animation(false);
 			if (enabled) {
+				attack_cooldown = 30;
 				change_state(BOSS_STATE.TARGETING);
 			}
 		} else {
