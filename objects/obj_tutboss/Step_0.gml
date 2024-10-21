@@ -52,10 +52,11 @@ switch state {
 				break;
 			}
 			if _on_land {
-				if (x > obj_player.x + 2) {
+				if (x > obj_player.x + 350) {
 					move_dir = -1;
 					image_xscale = 1;
-				} else if (x <= obj_player.x + 2 and x >= obj_player.x - 2){
+				} else if (x <= obj_player.x + 350 and x >= obj_player.x - 350){
+					// Extra checks for direction and all that
 					move_dir = 0;
 				} else {
 					move_dir = 1;
