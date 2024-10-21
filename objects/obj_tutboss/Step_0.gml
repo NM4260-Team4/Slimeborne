@@ -47,7 +47,7 @@ switch state {
 			inner_state = 1;
 			move_speed = 6.5;
 		} else if (inner_state == 1) {
-			if (abs(x - obj_player.x) < 350 and attack_cooldown == 0) {
+			if (abs(x - obj_player.x) < 400 and abs(x - obj_player.x) > 300 and attack_cooldown == 0) {
 				change_state(BOSS_STATE.BASE_ATTACK);
 				break;
 			}
@@ -58,6 +58,15 @@ switch state {
 				} else if (x <= obj_player.x + 350 and x >= obj_player.x - 350){
 					// Extra checks for direction and all that
 					move_dir = 0;
+					if (x > obj_player.x) {
+						image_xscale = 1;
+					} else {
+						image_xscale = -1;
+					}
+					if (attack_cooldown == 0) {
+						change_state(BOSS_STATE.SWEEP_ATTACK);
+						break;
+					}
 				} else {
 					move_dir = 1;
 					image_xscale = -1;
@@ -73,6 +82,21 @@ switch state {
 	case BOSS_STATE.BASE_ATTACK:
 		if (inner_state == 0) {
 			start_animation(seq_tutboss_base_attack);
+			inner_state = 1;
+		} else if (inner_state == 1) {
+			check_animation(false);
+			if (enabled) {
+				attack_cooldown = 30;
+				change_state(BOSS_STATE.TARGETING);
+			}
+		} else {
+			state = next_state;
+			inner_state = 0;
+		}
+		break;
+	case BOSS_STATE.SWEEP_ATTACK:
+		if (inner_state == 0) {
+			start_animation(seq_tutboss_sweep_attack);
 			inner_state = 1;
 		} else if (inner_state == 1) {
 			check_animation(false);
