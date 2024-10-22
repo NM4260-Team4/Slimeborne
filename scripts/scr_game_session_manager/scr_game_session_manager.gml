@@ -43,8 +43,12 @@ function load_game() {
 	for (var _i = 0; _i < global.inventory.num_attachments; _i++) {
 		array_push(global.attachments, instance_create_layer(0, 0, "Attachments", global.inventory.attachments[_i]));
 	}
-	global.equipped_attachment = global.attachments[global.equipped.equipped_attachment_pos];
-	global.equipped.equipped_attachment = global.equipped_attachment.object_index;
+	
+	if (global.equipped.has_attachment) {
+		global.equipped_attachment = global.attachments[global.equipped.equipped_attachment_pos];
+		global.equipped.equipped_attachment = global.equipped_attachment.object_index;
+	}
+	
 	
 }
 
