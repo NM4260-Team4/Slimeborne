@@ -1,6 +1,5 @@
 event_inherited();
-enabled = false;
 
 function hit() {
-	enabled = !enabled;
+	has_hit = !has_hit;
 }
