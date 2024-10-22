@@ -1,3 +1,5 @@
+if (should_freeze) {exit;}
+
 // y movement
 move_y += grav;
 

@@ -29,6 +29,7 @@ grounded_x = x;
 grounded_y = y;
 
 // player state
+should_freeze = false;
 is_hit = false;
 enum PLAYER_STATE {
 	IDLE,

@@ -1,14 +1,15 @@
 {
   "$GMTileSet":"v1",
-  "%Name":"ts_tileset1",
+  "%Name":"ts_traps",
   "autoTileSets":[],
   "macroPageTiles":{
-    "SerialiseHeight":0,
-    "SerialiseWidth":0,
-    "TileSerialiseData":[],
+    "SerialiseHeight":5,
+    "SerialiseWidth":6,
+    "TileCompressedData":[-30,0,],
+    "TileDataFormat":1,
   },
-  "name":"ts_tileset1",
-  "out_columns":3,
+  "name":"ts_traps",
+  "out_columns":1,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
@@ -18,8 +19,8 @@
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
   "spriteId":{
-    "name":"spr_tileset",
-    "path":"sprites/spr_tileset/spr_tileset.yy",
+    "name":"spr_trap",
+    "path":"sprites/spr_trap/spr_trap.yy",
   },
   "spriteNoExport":false,
   "textureGroupId":{
@@ -34,5 +35,5 @@
   "tileWidth":64,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":12,
+  "tile_count":2,
 }

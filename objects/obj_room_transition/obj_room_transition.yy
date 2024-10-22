@@ -26,7 +26,11 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"target_room","filters":[],"listItems":[],"multiselect":false,"name":"target_room","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"rm_tutorial","path":"rooms/rm_tutorial/rm_tutorial.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rm_tutorial","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"target_x","filters":[],"listItems":[],"multiselect":false,"name":"target_x","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-1","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"target_y","filters":[],"listItems":[],"multiselect":false,"name":"target_y","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-1","varType":0,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,

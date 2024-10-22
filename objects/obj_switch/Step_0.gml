@@ -1,6 +1,6 @@
-/// @description Insert description here
 event_inherited();
-if (enabled) {
+
+if (has_hit) {
 	image_index = 1;
 } else {
 	image_index = 0;
