@@ -53,7 +53,6 @@ function save_room() {
 }
 
 function load_room() {
-	
 	var _room_struct = 0;
 	
 	// get the correct struct

@@ -78,7 +78,6 @@ hit_rot = [92, 70,80]
 
 // Function for adding attachment
 
-swap_prompt_shown = false; // Whether or not the prompty for the Q key is shown
 show_swap_prompt = false; // Whether or not the prompt SHOULD be shown
 // For Sequencing
 enabled = true;
@@ -93,7 +92,6 @@ enable = function () {
 
 disable = function () {
 	enabled = false;
-	alarm[0] = 1;
 	image_alpha = 0;
 	if (global.equipped.has_attachment) {
 		not_attacking = false;

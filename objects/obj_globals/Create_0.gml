@@ -26,42 +26,38 @@ global.inventory = {
 
 global.equipped = {
 	has_attachment : false,
+	swap_prompt_shown: false,
 	equipped_attachment : -1,
 	equipped_attachment_pos : -1,
 	equipped_accessories : array_create(global.max_acc_equipped)
 }
 
-// Disable all of the attachment layers on creation
-//attack_seq = sequence_get(seq_player_attack);
-//for (var _i = 5; _i > 2; _i--) {
-//	attack_seq.tracks[_i].enabled = false;
-//}
+// Temporary variables for room use
+global.equipped_attachment = -1;
+global.attachments = [];
 
 // Function to add a new attachment
 global.add_attachment = function(_attachment) {
-	// Add attachment to the array
-	array_push(global.inventory.attachments, _attachment);
+	// Add attachment to the array	
+	array_push(global.attachments, _attachment);
+	array_push(global.inventory.attachments, _attachment.object_index);
+	
 	global.inventory.num_attachments += 1;
 	global.equipped.equipped_attachment_pos = global.inventory.num_attachments - 1;
 	
 	// Disable the previous attachment
-	if (global.equipped.has_attachment != false) {
-		//attack_seq.tracks[global.equipped.equipped_attachment.attach_id].enabled = false;
-	} else {
+	if (global.equipped.has_attachment == false) {
 		global.equipped.has_attachment = true;
 	}
 	
 	// Enable the new attachment
-	global.equipped.equipped_attachment = _attachment;
-	//attack_seq.tracks[_attachment.attach_id].enabled = true;
+	global.equipped_attachment = _attachment;
+	global.equipped.equipped_attachment = _attachment.object_index;
 }
 
 global.get_next_attachment = function() {
-	//attack_seq.tracks[global.equipped.equipped_attachment.attach_id].enabled = false;
 	global.equipped.equipped_attachment_pos = (global.equipped.equipped_attachment_pos + 1) % global.inventory.num_attachments;
-	
-	
-	global.equipped.equipped_attachment = global.inventory.attachments[global.equipped.equipped_attachment_pos];
-	//attack_seq.tracks[global.equipped.equipped_attachment.attach_id].enabled = true;
+	global.equipped_attachment = global.attachments[global.equipped.equipped_attachment_pos];
+	global.equipped.equipped_attachment = global.equipped_attachment.object_index;
 }
 

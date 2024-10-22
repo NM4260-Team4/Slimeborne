@@ -1,9 +1,10 @@
-health = 10;
+hp = 12;
+max_hp = 12;
 
 // Frame counts
 attack_cooldown = 0;
 break_frames = 0;
-
+no_hurt_frames = 0;
 
 // moving
 move_dir = -1;
@@ -20,6 +21,7 @@ all_collidables = [collision_tiles, obj_collidable, obj_breakable_wall];
 
 // boss state
 is_hit = false;
+is_stumbled = false;
 enum BOSS_STATE {
 	ROAM,
 	TARGETING,

@@ -14,8 +14,8 @@ function save_game(_should_save_location) {
 	// save inventory, attachment owned, and accessories
 	
 	array_push(_save_array, global.player_state);
-	//array_push(_save_array, global.inventory);
-	//array_push(_save_array, global.equipped);
+	array_push(_save_array, global.inventory);
+	array_push(_save_array, global.equipped);
 
 	var _filename = "save.sav";
 	var _json = json_stringify(_save_array);
@@ -35,10 +35,17 @@ function load_game() {
 	buffer_delete(_buffer);
 	
 	var _load_array = json_parse(_json);
-	
+
 	global.player_state = array_get(_load_array, 0);
-	//global.inventory = array_get(_load_array, 1);
-	//global.equipped = array_get(_load, 2);
+	global.inventory = array_get(_load_array, 1);
+	global.equipped = array_get(_load_array, 2);
+	global.attachments = [];
+	for (var _i = 0; _i < global.inventory.num_attachments; _i++) {
+		array_push(global.attachments, instance_create_layer(0, 0, "Attachments", global.inventory.attachments[_i]));
+	}
+	global.equipped_attachment = global.attachments[global.equipped.equipped_attachment_pos];
+	global.equipped.equipped_attachment = global.equipped_attachment.object_index;
+	
 }
 
 function init_game() {

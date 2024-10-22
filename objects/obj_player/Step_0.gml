@@ -11,7 +11,7 @@ if (move_dir != 0) {
 	image_xscale = sign(move_dir);
 }
 
-if (global.inventory.num_attachments == 2 and !swap_prompt_shown) {
+if (global.inventory.num_attachments == 2 and !global.equipped.swap_prompt_shown) {
 	show_swap_prompt = true;
 }
 
@@ -19,7 +19,7 @@ if (swap_pressed != 0 and global.equipped.has_attachment) {
 	global.get_next_attachment();
 	if (show_swap_prompt) {
 		show_swap_prompt = false;
-		swap_prompt_shown = true;
+		global.equipped.swap_prompt_shown = true;
 	}
 } 
 
@@ -166,19 +166,19 @@ switch state {
 			// edit here for interrupt
 			check_animation(is_hit);
 			if (global.equipped.has_attachment and instance_exists(obj_tracker)) {
-				global.equipped.equipped_attachment.x = obj_tracker.x;
-				global.equipped.equipped_attachment.y = obj_tracker.y;
-				global.equipped.equipped_attachment.image_xscale = obj_tracker.image_xscale;
-				global.equipped.equipped_attachment.image_angle = obj_tracker.image_angle;
+				global.equipped_attachment.x = obj_tracker.x;
+				global.equipped_attachment.y = obj_tracker.y;
+				global.equipped_attachment.image_xscale = obj_tracker.image_xscale;
+				global.equipped_attachment.image_angle = obj_tracker.image_angle;
 			} 
 			if (!enabled) {
 				if (global.equipped.has_attachment) {
-					global.equipped.equipped_attachment.visible = true;
+					global.equipped_attachment.visible = true;
 				}
 				exit;
 			} else {
 				if (global.equipped.has_attachment) {
-					global.equipped.equipped_attachment.visible = false;
+					global.equipped_attachment.visible = false;
 				}
 				change_state(PLAYER_STATE.IDLE);
 			}
