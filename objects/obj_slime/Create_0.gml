@@ -1,5 +1,5 @@
-hp = 3;
-max_hp = 3;
+hp = 2;
+max_hp = 2;
 
 // Frame counts
 attack_cooldown = 0;
@@ -43,6 +43,7 @@ function swap_direction_on_bump() {
 	var _has_wall = position_meeting(bbox_right + 2, bbox_top, all_collidables) or position_meeting(bbox_left - 2, bbox_top, all_collidables);
 	if _no_floor or _has_wall {
 		move_dir = -1 * move_dir;
+		image_xscale = -1 * image_xscale;
 	}
 }
 

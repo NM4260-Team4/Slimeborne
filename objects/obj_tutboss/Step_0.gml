@@ -108,7 +108,6 @@ switch state {
 		} else if (inner_state == 1) {
 			check_animation(is_stumbled);
 			if (enabled) {
-				
 				attack_cooldown = 30;
 				change_state(BOSS_STATE.TARGETING);
 			}

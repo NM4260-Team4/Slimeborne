@@ -1,4 +1,4 @@
-set_up_buffer();
+ set_up_buffer();
 
 // set default spawn point in the level if there is no save file
 if (global.player_state.respawn_x == -1) {

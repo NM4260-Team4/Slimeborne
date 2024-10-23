@@ -44,8 +44,6 @@ switch state {
 			if _on_land {
 				swap_direction_on_bump();
 				move_x = move_speed * move_dir;
-				show_debug_message("move_x is incremented");
-				show_debug_message(move_x);
 			} 
 			x += move_x;
 		} else {
@@ -73,8 +71,10 @@ switch state {
 			}
 			if (x > obj_player.x) {
 				move_dir = -1;
+				image_xscale = -1 * abs(image_xscale);
 			} else {
 				move_dir = 1;
+				image_xscale = abs(image_xscale);
 			}
 			//swap_direction_on_bump();
 			move_x = move_speed * move_dir;
@@ -87,7 +87,7 @@ switch state {
 		
 	case ENEMY_STATE.HIT:
 		if (inner_state == 0) {
-			sprite_index = spr_slime_hurt;
+			sprite_index = spr_slime_hit;
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {
@@ -98,7 +98,7 @@ switch state {
 			state = next_state;
 			inner_state = 0;
 		}
-		
+		break;
 	case ENEMY_STATE.DEATH:
 		if (inner_state == 0) {
 			sprite_index = spr_slime_death;
