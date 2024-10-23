@@ -99,6 +99,11 @@ switch state {
 				}
 			}
 			//swap_direction_on_bump();
+			var _no_floor = not position_meeting(bbox_right, bbox_bottom + 1, all_collidables[0]) or not position_meeting(bbox_left, bbox_bottom + 1, all_collidables[0]);
+			var _has_wall = position_meeting(bbox_right + 2, bbox_top, all_collidables) or position_meeting(bbox_left - 2, bbox_top, all_collidables);
+			if _no_floor or _has_wall {
+				move_dir = 0;
+			}
 			move_x = move_speed * move_dir;
 			x += move_x;
 		} else {
