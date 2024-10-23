@@ -37,7 +37,7 @@ switch state {
 				break;
 			}
 			
-			if (abs(x - obj_player.x) < 1000 and abs(y - obj_player.y) < 500) {
+			if (abs(x - obj_player.x) < 700 and abs(y - obj_player.y) < 50) {
 				change_state(ENEMY_STATE.TARGETING);
 				break;
 			}
@@ -65,7 +65,7 @@ switch state {
 				change_state(ENEMY_STATE.HIT);
 				break;
 			}
-			if (abs(x - obj_player.x) >= 1000 or abs(y - obj_player.y) > 500) {
+			if (abs(x - obj_player.x) >= 700 or abs(y - obj_player.y) > 50) {
 				change_state(ENEMY_STATE.ROAM);
 				break;
 			}
@@ -77,8 +77,8 @@ switch state {
 				image_xscale = abs(image_xscale);
 			}
 			
-			var _no_floor = not position_meeting(bbox_right, bbox_bottom + 1, all_collidables[0]) or not position_meeting(bbox_left, bbox_bottom + 1, all_collidables[0]);
-			var _has_wall = position_meeting(bbox_right + 2, bbox_top, all_collidables) or position_meeting(bbox_left - 2, bbox_top, all_collidables);
+			var _no_floor = (not position_meeting(bbox_right, bbox_bottom + 1, all_collidables[0]) and move_dir > 0) or (not position_meeting(bbox_left, bbox_bottom + 1, all_collidables[0]) and move_dir < 0);
+			var _has_wall = (position_meeting(bbox_right + 2, bbox_top, all_collidables) and move_dir > 0) or (position_meeting(bbox_left - 2, bbox_top, all_collidables) and move_dir < 0);
 			if _no_floor or _has_wall {
 				move_dir = 0;
 			}
