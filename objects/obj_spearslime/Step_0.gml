@@ -78,10 +78,10 @@ switch state {
 
 			if (x > obj_player.x) {
 				move_dir = -1;
-				image_xscale = abs(image_xscale);
+				image_xscale = -1 * abs(image_xscale);
 			} else {
 				move_dir = 1;
-				image_xscale = -1 * abs(image_xscale);
+				image_xscale = abs(image_xscale);
 			}
 			
 			if (abs(x - obj_player.x) < 300 and abs(x - obj_player.x) > 200) {
@@ -92,15 +92,15 @@ switch state {
 			} else if (abs(x - obj_player.x) <= 200) {
 				if (x > obj_player.x) {
 					move_dir = 1;
-					image_xscale = -1;
+					image_xscale = 1;
 				} else {
 					move_dir = -1;
-					image_xscale = 1;
+					image_xscale = -1;
 				}
 			}
 			//swap_direction_on_bump();
-			var _no_floor = not position_meeting(bbox_right, bbox_bottom + 1, all_collidables[0]) or not position_meeting(bbox_left, bbox_bottom + 1, all_collidables[0]);
-			var _has_wall = position_meeting(bbox_right + 2, bbox_top, all_collidables) or position_meeting(bbox_left - 2, bbox_top, all_collidables);
+			var _no_floor = (not position_meeting(bbox_right, bbox_bottom + 1, all_collidables[0]) and move_dir > 0) or (not position_meeting(bbox_left, bbox_bottom + 1, all_collidables[0]) and move_dir < 0);
+			var _has_wall = (position_meeting(bbox_right + 2, bbox_top, all_collidables) and move_dir > 0) or (position_meeting(bbox_left - 2, bbox_top, all_collidables) and move_dir < 0);
 			if _no_floor or _has_wall {
 				move_dir = 0;
 			}
