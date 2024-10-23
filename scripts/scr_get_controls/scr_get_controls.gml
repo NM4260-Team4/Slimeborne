@@ -17,7 +17,7 @@ function get_controls() {
 	right_key = keyboard_check(ord("D"));
 	left_key = keyboard_check(ord("A"));
 	jump_pressed = keyboard_check_pressed(vk_space);
-	attack_pressed = mouse_check_button_pressed(mb_left);
+	attack_pressed = clamp(mouse_check_button_pressed(mb_left) + keyboard_check(ord("J")), 0, 1);
 	swap_pressed = keyboard_check_pressed(ord("Q"));
 	//if (mouse_check_button_pressed(mb_right)) {
 	//	show_debug_message("Number of collectibles: " + string(instance_number(obj_collectible)));
