@@ -23,18 +23,6 @@ if (swap_pressed != 0 and global.equipped.has_attachment) {
 	}
 } 
 
-
-//if (!self.has_attachment and global.equipped_attachment != -1) {
-//	self.attachment = global.equipped_attachment;
-//}
-
-//// Check if the attachment is correct
-//if (self.has_attachment) {
-//	if (self.attachment.attach_id != global.equipped_attachment.attach_id){
-//		self.attachment = global.equipped_attachment;
-//	}
-//} 
-
 // state machine
 switch state {
 	case PLAYER_STATE.IDLE:
