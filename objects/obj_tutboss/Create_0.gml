@@ -40,11 +40,16 @@ change_state = function(_next_state) {
 }
 
 function swap_direction_on_bump() {
-	if not position_meeting(x + move_dir * sprite_width/2, y + 1, all_collidables[0]) or position_meeting(x + move_dir * sprite_width/2, y - 1, all_collidables){
-		move_dir = -1 * move_dir
+	var _right_has_block = not position_meeting(bbox_right, bbox_bottom + 1, all_collidables[0]) or position_meeting(bbox_right + 2, bbox_top, all_collidables);
+	var _left_has_block =  not position_meeting(bbox_left, bbox_bottom + 1, all_collidables[0]) or position_meeting(bbox_left - 2, bbox_top, all_collidables);
+	if _right_has_block{
+		move_dir = -1 * abs(move_dir);
+		image_xscale = -1 * abs(image_xscale);
+	} else if _left_has_block {
+		move_dir = abs(move_dir);
+		image_xscale = abs(image_xscale);
 	}
 }
-
 enabled = true;
 enable = function () {
 	enabled = true;
