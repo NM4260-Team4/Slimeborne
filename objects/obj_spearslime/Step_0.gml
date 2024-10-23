@@ -41,7 +41,7 @@ switch state {
 				break;
 			}
 			
-			if (abs(x - obj_player.x) < 1000 and abs(y - obj_player.y) < 500) {
+			if (abs(x - obj_player.x) < 400 and abs(y - obj_player.y) < 50) {
 				change_state(SLIMEENEMY_STATE.TARGETING);
 				break;
 			}
@@ -71,7 +71,7 @@ switch state {
 				change_state(SLIMEENEMY_STATE.HIT);
 				break;
 			}
-			if (abs(x - obj_player.x) >= 1000 or abs(y - obj_player.y) > 500) {
+			if (abs(x - obj_player.x) >= 400 or abs(y - obj_player.y) > 50) {
 				change_state(SLIMEENEMY_STATE.ROAM);
 				break;
 			}
