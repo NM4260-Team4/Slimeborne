@@ -29,7 +29,7 @@
   ],
   "name":"spr_player_fall",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"Player",
     "path":"folders/Sprites/Player.yy",
@@ -99,7 +99,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":87,
+    "xorigin":107,
     "yorigin":165,
   },
   "swatchColours":null,
