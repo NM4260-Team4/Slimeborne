@@ -34,8 +34,10 @@ function load_game() {
 	var _json = buffer_read(_buffer, buffer_string);
 	buffer_delete(_buffer);
 	
+	var _layer_id = layer_get_id("Attachments");
+	
+	
 	var _load_array = json_parse(_json);
-
 	global.player_state = array_get(_load_array, 0);
 	global.inventory = array_get(_load_array, 1);
 	global.equipped = array_get(_load_array, 2);
