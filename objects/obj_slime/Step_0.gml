@@ -42,6 +42,7 @@ switch state {
 				break;
 			}
 			if _on_land {
+				
 				swap_direction_on_bump();
 				move_x = move_speed * move_dir;
 			} 

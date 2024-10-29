@@ -56,6 +56,7 @@
     {"id":{"name":"obj_base_enemy","path":"objects/obj_base_enemy/obj_base_enemy.yy",},},
     {"id":{"name":"obj_battery_attach","path":"objects/obj_battery_attach/obj_battery_attach.yy",},},
     {"id":{"name":"obj_battery","path":"objects/obj_battery/obj_battery.yy",},},
+    {"id":{"name":"obj_bigslime","path":"objects/obj_bigslime/obj_bigslime.yy",},},
     {"id":{"name":"obj_breakable_wall","path":"objects/obj_breakable_wall/obj_breakable_wall.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},
     {"id":{"name":"obj_checkpoint","path":"objects/obj_checkpoint/obj_checkpoint.yy",},},
