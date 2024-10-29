@@ -9,5 +9,7 @@ if (moved_distance >= distance_limit) {
 if (!instance_exists(obj_player)) {
 	exit;
 } else {
-	obj_player.x += move_dir * move_speed
+	if (place_meeting(x, y - 1, obj_player)) {
+		obj_player.x += move_dir * move_speed;
+	}
 }
