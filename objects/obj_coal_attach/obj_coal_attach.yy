@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_battery_attach",
+  "%Name":"obj_coal_attach",
   "eventList":[],
   "managed":true,
-  "name":"obj_battery_attach",
+  "name":"obj_coal_attach",
   "overriddenProperties":[],
   "parent":{
     "name":"Attachments",
@@ -28,8 +28,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_battery",
-    "path":"sprites/spr_battery/spr_battery.yy",
+    "name":"spr_coal",
+    "path":"sprites/spr_coal/spr_coal.yy",
   },
   "spriteMaskId":null,
   "visible":true,

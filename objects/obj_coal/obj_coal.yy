@@ -1,15 +1,20 @@
 {
   "$GMObject":"",
-  "%Name":"obj_battery_attach",
-  "eventList":[],
+  "%Name":"obj_coal",
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
-  "name":"obj_battery_attach",
+  "name":"obj_coal",
   "overriddenProperties":[],
   "parent":{
     "name":"Attachments",
     "path":"folders/Objects/Attachments.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_pig",
+    "path":"objects/obj_pig/obj_pig.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -28,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_battery",
-    "path":"sprites/spr_battery/spr_battery.yy",
+    "name":"spr_coal",
+    "path":"sprites/spr_coal/spr_coal.yy",
   },
   "spriteMaskId":null,
   "visible":true,
