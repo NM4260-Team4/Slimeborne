@@ -100,8 +100,6 @@ switch state {
 		} else if (inner_state == 1) {
 			move_x = 0;
 		} else {
-			no_hurt_frames = 5;
-			is_hit = false;
 			state = next_state;
 			inner_state = 0;
 		}
