@@ -32,6 +32,8 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"door_index","filters":[],"listItems":[],"multiselect":false,"name":"door_index","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-1","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"sprite_on","filters":[],"listItems":[],"multiselect":false,"name":"sprite_on","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"spr_generator_on","path":"sprites/spr_generator_on/spr_generator_on.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_generator_on","varType":5,},
+    {"$GMObjectProperty":"v1","%Name":"sprite_off","filters":[],"listItems":[],"multiselect":false,"name":"sprite_off","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"spr_generator_off","path":"sprites/spr_generator_off/spr_generator_off.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_generator_off","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
