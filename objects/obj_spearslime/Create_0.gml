@@ -7,7 +7,7 @@ break_frames = 0;
 no_hurt_frames = 0;
 
 // moving
-move_dir = -1;
+move_dir = 1;
 move_speed = 1;
 move_x = 0;
 move_y = 0;
