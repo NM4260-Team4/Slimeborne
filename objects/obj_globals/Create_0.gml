@@ -1,11 +1,13 @@
 global.default_hp = 3;
+global.has_final_access = false;
 global.max_attachments = 5;
 global.max_accessories = 10;
 global.max_acc_equipped = 3;
 
 global.room_data = {
 	tutorial : 0,
-	generator_room : 0
+	generator_room : 0,
+	furnance: 0
 }
 
 global.player_state = {

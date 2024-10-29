@@ -19,15 +19,16 @@ function get_controls() {
 	jump_pressed = keyboard_check_pressed(vk_space);
 	attack_pressed = clamp(mouse_check_button_pressed(mb_left) + keyboard_check(ord("J")), 0, 1);
 	swap_pressed = keyboard_check_pressed(ord("Q"));
-	//if (mouse_check_button_pressed(mb_right)) {
-	//	show_debug_message("Number of collectibles: " + string(instance_number(obj_collectible)));
-	//	is_hit = true;
-	//	if (!is_hit and no_hurt_frames <= 0) {
+	if (mouse_check_button_pressed(mb_right)) {
+		global.has_final_access = !global.has_final_access;
+		//show_debug_message("Number of collectibles: " + string(instance_number(obj_collectible)));
+		//is_hit = true;
+		//if (!is_hit and no_hurt_frames <= 0) {
 			
-	//	}
-	//	show_debug_message("right meeting: " + string(place_meeting(x + 1, y, all_collidables)));
-	//	show_debug_message("down meeting: " + string(place_meeting(x, y + 1, all_collidables)));
-	//}
+		//}
+		//show_debug_message("right meeting: " + string(place_meeting(x + 1, y, all_collidables)));
+		//show_debug_message("down meeting: " + string(place_meeting(x, y + 1, all_collidables)));
+	}
 	
 	// jump key buffering
 	if (jump_pressed) {

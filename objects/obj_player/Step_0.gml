@@ -95,7 +95,11 @@ switch state {
 			jump_buffered = false;
 			jump_buffer_timer = 0;
 			// jump with jump_speed
-			move_y = jump_speed;
+			if (!auto_jump) {
+				move_y = jump_speed;
+			} else {
+				auto_jump = false;
+			}
 			grounded = false;
 		}
 		// update
@@ -126,10 +130,12 @@ switch state {
 		else if (inner_state == 1) {
 			if (is_hit) {
 				change_state(PLAYER_STATE.HIT);
-			} else if jump_buffered && coyote_buffer_timer > 0 {
+			} else if jump_buffered and coyote_buffer_timer > 0 {
 				change_state(PLAYER_STATE.JUMP);
+			} else if (grounded and attack_buffered) {
+				change_state(PLAYER_STATE.ATTACK);
 			} else if (grounded) {
-				image_speed = 1;
+				change_state(PLAYER_STATE.IDLE);
 			}
 		}
 		// exit
