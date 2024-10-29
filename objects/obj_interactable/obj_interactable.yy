@@ -8,8 +8,8 @@
   "name":"obj_interactable",
   "overriddenProperties":[],
   "parent":{
-    "name":"Interactable",
-    "path":"folders/Objects/Interactable.yy",
+    "name":"Environment",
+    "path":"folders/Objects/Environment.yy",
   },
   "parentObjectId":null,
   "persistent":false,

@@ -21,6 +21,7 @@ move_y = 0;
 // jumping
 grav = 1;
 term_velocity = 10;
+auto_jump = false;
 jump_speed = -24 // in GM, going up is negative y-axis
 
 // to put player back when it falls into trap
@@ -58,7 +59,7 @@ no_hurt_frames = 0;
 
 // for collision
 collision_tiles = layer_tilemap_get_id("Collision_tiles");
-all_collidables = [collision_tiles, obj_collidable, obj_breakable_wall];
+all_collidables = [collision_tiles, obj_collidable, obj_breakable_wall, obj_final_door];
 
 // Attachment sprite values
 curr_frame_pos = 0; // The current set of positions to draw the attachment
