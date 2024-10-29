@@ -22,7 +22,7 @@ all_collidables = [collision_tiles, obj_collidable, obj_breakable_wall];
 // boss state
 is_hit = false;
 is_stumbled = false;
-enum BOSS_STATE {
+enum asdf {
 	ROAM,
 	TARGETING,
 	BASE_ATTACK,
@@ -40,13 +40,14 @@ change_state = function(_next_state) {
 }
 
 function swap_direction_on_bump() {
-	var _right_has_block = not position_meeting(bbox_right, bbox_bottom + 1, all_collidables[0]) or position_meeting(bbox_right + 2, bbox_top, all_collidables);
-	var _left_has_block =  not position_meeting(bbox_left, bbox_bottom + 1, all_collidables[0]) or position_meeting(bbox_left - 2, bbox_top, all_collidables);
+	var _right_has_block = (not position_meeting(bbox_right, bbox_bottom + 1, all_collidables[0])) or position_meeting(bbox_right + 3, bbox_bottom, all_collidables);
+	var _left_has_block =  (not position_meeting(bbox_left, bbox_bottom + 1, all_collidables[0])) or position_meeting(bbox_left - 3, bbox_bottom, all_collidables);
 	if _right_has_block{
-		move_dir = -1 * abs(move_dir);
+		move_dir = -1;
 		image_xscale = -1 * abs(image_xscale);
 	} else if _left_has_block {
-		move_dir = abs(move_dir);
+		show_debug_message("huh");
+		move_dir = 1;
 		image_xscale = abs(image_xscale);
 	}
 }

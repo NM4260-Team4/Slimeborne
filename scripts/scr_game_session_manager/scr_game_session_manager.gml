@@ -34,8 +34,18 @@ function load_game() {
 	var _json = buffer_read(_buffer, buffer_string);
 	buffer_delete(_buffer);
 	
+	var _layer_id = layer_get_id("Attachments");
+	var _elements = layer_get_all_elements(_layer_id);
+	for (var _i = 0; _i < array_length(_elements); _i++) {
+		if (layer_get_element_type(_elements[_i]) == layerelementtype_instance) {
+			var layerelement = _elements[_i];
+	        var inst = layer_instance_get_instance(layerelement);
+			instance_destroy(inst);
+		}
+	}
+	
+	
 	var _load_array = json_parse(_json);
-
 	global.player_state = array_get(_load_array, 0);
 	global.inventory = array_get(_load_array, 1);
 	global.equipped = array_get(_load_array, 2);

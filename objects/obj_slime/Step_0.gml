@@ -42,6 +42,7 @@ switch state {
 				break;
 			}
 			if _on_land {
+				
 				swap_direction_on_bump();
 				move_x = move_speed * move_dir;
 			} 
@@ -99,7 +100,7 @@ switch state {
 		} else if (inner_state == 1) {
 			move_x = 0;
 		} else {
-			no_hurt_frames = 30;
+			no_hurt_frames = 5;
 			is_hit = false;
 			state = next_state;
 			inner_state = 0;

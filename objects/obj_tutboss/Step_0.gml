@@ -35,6 +35,8 @@ switch state {
 				change_state(BOSS_STATE.BREAK);
 				break;
 			}
+			show_debug_message("x distance:" + string(x - obj_player.x));
+			show_debug_message("y distance:" + string(y - obj_player.y));
 			if (abs(x - obj_player.x) < 700 and abs(y - obj_player.y) < 150) {
 				change_state(BOSS_STATE.TARGETING);
 				break;

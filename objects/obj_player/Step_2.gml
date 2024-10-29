@@ -6,6 +6,9 @@ if (hp <= 0) {
 	if (active_sequence != undefined) {
 		layer_sequence_destroy(active_sequence);
 	}
+	if (global.equipped.has_attachment) {
+		global.equipped_attachment.visible = false;
+	}
 	global.player_state.hp = global.player_state.max_hp;
 	var _respawn_x = global.player_state.respawn_x;
 	var _respawn_y = global.player_state.respawn_y;

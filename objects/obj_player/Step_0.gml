@@ -212,7 +212,7 @@ switch state {
 
 // move with x collision
 var _sub_pixel = 0.5;
-if place_meeting( x + move_x, y, all_collidables) {
+if place_meeting(x + move_x, y, all_collidables) {
 	var _pixel_check = _sub_pixel * sign(move_x);
 	while !place_meeting(x + _pixel_check, y, all_collidables) {
 		x += _pixel_check;
