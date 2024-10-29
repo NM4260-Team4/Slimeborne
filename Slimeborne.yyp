@@ -134,6 +134,7 @@
     {"id":{"name":"spr_jump_pad","path":"sprites/spr_jump_pad/spr_jump_pad.yy",},},
     {"id":{"name":"spr_menu_button","path":"sprites/spr_menu_button/spr_menu_button.yy",},},
     {"id":{"name":"spr_microplastics","path":"sprites/spr_microplastics/spr_microplastics.yy",},},
+    {"id":{"name":"spr_moving_platform","path":"sprites/spr_moving_platform/spr_moving_platform.yy",},},
     {"id":{"name":"spr_pig_hovered","path":"sprites/spr_pig_hovered/spr_pig_hovered.yy",},},
     {"id":{"name":"spr_pig","path":"sprites/spr_pig/spr_pig.yy",},},
     {"id":{"name":"spr_player_attack","path":"sprites/spr_player_attack/spr_player_attack.yy",},},

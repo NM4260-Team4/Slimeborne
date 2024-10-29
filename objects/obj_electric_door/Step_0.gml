@@ -4,7 +4,7 @@ var _all_hit = true;
 
 if (instance_exists(obj_generator)) {
 	with(obj_generator) {
-		if (door_index == other.door_index) {
+		if (item_index == other.door_index) {
 			if (!has_hit) {
 				_all_hit = false;
 			}
@@ -14,7 +14,6 @@ if (instance_exists(obj_generator)) {
 
 if (_all_hit) {
 	activated = true;
-	// initial_y = sprite_height + ystart;
 }
 
 if (activated) {
