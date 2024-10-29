@@ -12,4 +12,4 @@ state = ITEM_STATE.SAFE;
 timer = delay;
 safe_duration = 200;
 warn_duration = 100;
-danger_duration = 200;
+danger_duration = 100;
