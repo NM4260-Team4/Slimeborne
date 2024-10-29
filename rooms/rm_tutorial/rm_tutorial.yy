@@ -50,7 +50,6 @@
     {"name":"inst_786F2368","path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"inst_57D426FF","path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"inst_782E45BD","path":"rooms/rm_tutorial/rm_tutorial.yy",},
-    {"name":"inst_2E9C875E","path":"rooms/rm_tutorial/rm_tutorial.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -84,7 +83,6 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_prompt_area","path":"objects/obj_prompt_area/obj_prompt_area.yy",},"propertyId":{"name":"prompt","path":"objects/obj_prompt_area/obj_prompt_area.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Press J or LEFT CLICK to attack",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":5.0,"scaleY":2.0,"x":3008.0,"y":4416.0,},
         {"$GMRInstance":"v1","%Name":"inst_782E45BD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_782E45BD","objectId":{"name":"obj_h_moving_platforms","path":"objects/obj_h_moving_platforms/obj_h_moving_platforms.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":5.0,"scaleY":1.0,"x":12544.0,"y":2304.0,},
-        {"$GMRInstance":"v1","%Name":"inst_2E9C875E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2E9C875E","objectId":{"name":"obj_coal","path":"objects/obj_coal/obj_coal.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":13568.0,"y":2368.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Enemies","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_26F69106","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_26F69106","objectId":{"name":"obj_slime","path":"objects/obj_slime/obj_slime.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":3328.0,"y":4512.0,},
