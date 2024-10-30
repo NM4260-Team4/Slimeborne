@@ -48,7 +48,6 @@ switch state {
 			if _on_land {
 				swap_direction_on_bump();
 				move_x = move_speed * move_dir;
-				show_debug_message("move_x is incremented");
 				show_debug_message(move_x);
 			} 
 			x += move_x;
@@ -86,6 +85,7 @@ switch state {
 			
 			if (abs(x - obj_player.x) < 300 and abs(x - obj_player.x) > 200) {
 				if (attack_cooldown == 0) {
+					attack_cooldown = irandom_range(5, 30);
 					change_state(SLIMEENEMY_STATE.ATTACK);
 				}
 				break;
@@ -113,8 +113,12 @@ switch state {
 		break;
 	case SLIMEENEMY_STATE.ATTACK:
 		if (inner_state == 0) {
-			start_animation(seq_spearslime_attack);
-			inner_state = 1;
+			if (attack_cooldown == 0) {
+				start_animation(seq_spearslime_attack);
+				inner_state = 1;
+			} else {
+				show_debug_message("somethings up")
+			}
 		} else if (inner_state == 1) {
 			move_x = 0;
 			check_animation(is_hit);

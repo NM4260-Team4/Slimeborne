@@ -33,6 +33,7 @@
   "properties":[
     {"$GMObjectProperty":"v1","%Name":"door_index","filters":[],"listItems":[],"multiselect":false,"name":"door_index","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-1","varType":0,},
     {"$GMObjectProperty":"v1","%Name":"total_power_supply","filters":[],"listItems":[],"multiselect":false,"name":"total_power_supply","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":0,},
+    {"$GMObjectProperty":"v1","%Name":"sprite","filters":[],"listItems":[],"multiselect":false,"name":"sprite","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"spr_electric_door","path":"sprites/spr_electric_door/spr_electric_door.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_electric_door","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",

@@ -13,10 +13,16 @@ if place_meeting(x, y + move_y, all_collidables) {
 }
 
 y += move_y;
+
 // invincible frame
 if (no_hurt_frames > 0) {
 	no_hurt_frames --;
 }
+// Counting timers
+if (attack_cooldown > 0) {
+	attack_cooldown--;
+}
+
 
 // State handling
 switch state {
@@ -26,7 +32,7 @@ switch state {
 			inner_state = 1
 			move_speed = 0;
 		} else if (inner_state == 1) {
-			if (point_distance(x, y, obj_player.x, obj_player.y) < 300) {
+			if (point_distance(x, y, obj_player.x, obj_player.y) < 1200) {
 				change_state(BOSS_STATE.TARGETING);
 				break;
 			}
@@ -37,25 +43,24 @@ switch state {
 		break;
 	case BOSS_STATE.ROAM:
 		if (inner_state == 0) {
-			sprite_index = spr_bigslime_idle;
+			sprite_index = spr_bigslime_move;
 			inner_state = 1
 			move_speed = 2;
 		} else if (inner_state == 1) {
-			if (is_hit) {
-				if (hp == 0) {
-					change_state(BOSS_STATE.DEATH);
-					break;
-				}
+			if (hp == 0) {
+				change_state(BOSS_STATE.DEATH);
+				break;
+			}
+			if (is_stumbled) {
 				change_state(BOSS_STATE.BREAK);
 				break;
 			}
 			
-			if (abs(x - obj_player.x) < 400 and abs(y - obj_player.y) < 50) {
+			if (point_distance(x, y, obj_player.x, obj_player.y) < 1500) {
 				change_state(BOSS_STATE.TARGETING);
 				break;
 			}
 			if _on_land {
-				
 				swap_direction_on_bump();
 				move_x = move_speed * move_dir;
 			} 
@@ -67,36 +72,69 @@ switch state {
 		break;
 	case BOSS_STATE.TARGETING:
 		if (inner_state == 0) {
-			sprite_index = spr_bigslime_idle;
+			// Set up for the next state
+			sprite_index = spr_bigslime_move;
 			inner_state = 1;
-			move_speed = 2;
+			move_speed = 3;
+			move_dir = sign(image_xscale);
+			// Pick an attack based on the player's location
+			if (abs(x - obj_player.x) >= 250) {
+				chosen_attack = BOSS_STATE.BASE_ATTACK;
+				show_debug_message("base attack logged")
+			}
+			// State 2: Within range of sweep attack
+			else{		
+				chosen_attack = BOSS_STATE.SWEEP_ATTACK;
+				show_debug_message("sweep attack logged")
+			}
 		} else if (inner_state == 1) {
-			if (is_hit) {
-				if (hp == 0) {
-					change_state(BOSS_STATE.DEATH);
-					break;
-				}
+			// When the boss is dead, swap states
+			if (hp == 0) {
+				change_state(BOSS_STATE.DEATH);
+				break;
+			}
+			// When the boss is broken, swap states
+			if (is_stumbled) {
 				change_state(BOSS_STATE.BREAK);
 				break;
 			}
-			if (abs(x - obj_player.x) >= 400 or abs(y - obj_player.y) > 50) {
+			if (point_distance(x, y, obj_player.x, obj_player.y) >= 2000) {
 				change_state(BOSS_STATE.ROAM);
 				break;
 			}
-			if (x > obj_player.x) {
-				move_dir = -1;
-				image_xscale = -1 * abs(image_xscale);
-			} else {
-				move_dir = 1;
-				image_xscale = abs(image_xscale);
+			// If within attack range, stop and trigger attack
+			
+			if (abs(x - obj_player.x) <= 280 and abs(x - obj_player.x) >= 150) {
+				change_state(chosen_attack);
+				if (x < obj_player.x) {
+					image_xscale = abs(image_xscale);
+				} else {
+					image_xscale = -1 * abs(image_xscale);
+				}
+				break;
 			}
 			
-			var _no_floor = (not position_meeting(bbox_right, bbox_bottom + 1, all_collidables[0]) and move_dir > 0) or (not position_meeting(bbox_left, bbox_bottom + 1, all_collidables[0]) and move_dir < 0);
-			var _has_wall = (position_meeting(bbox_right + 2, bbox_top, all_collidables) and move_dir > 0) or (position_meeting(bbox_left - 2, bbox_top, all_collidables) and move_dir < 0);
-			if _no_floor or _has_wall {
+			if (x - obj_player.x >= 280 or (obj_player.x - x >= 0 and obj_player.x - x < 150)) {
+				move_dir = -1;
+				image_xscale = -1 * abs(image_xscale);
+			} else if (obj_player.x - x >= 280 or (x - obj_player.x >= 0 and x - obj_player.x < 150)){
+				move_dir = 1;
+				image_xscale = abs(image_xscale);
+			} else {
+				move_dir = 0;
+				if (x < obj_player.x) {
+					image_xscale = abs(image_xscale);
+				} else {
+					image_xscale = -1 * abs(image_xscale);
+				}
+			}
+			
+			var _right_has_block = not position_meeting(bbox_right, bbox_bottom + 1, all_collidables[0]) or position_meeting(bbox_right + 2, bbox_bottom - 1, all_collidables);
+			var _left_has_block =  not position_meeting(bbox_left, bbox_bottom + 1, all_collidables[0]) or position_meeting(bbox_left - 2, bbox_bottom -1 , all_collidables);
+			if _right_has_block or _left_has_block {
 				move_dir = 0;
 			}
-			//swap_direction_on_bump();
+			
 			move_x = move_speed * move_dir;
 			x += move_x;
 		} else {
@@ -107,10 +145,19 @@ switch state {
 	
 	case BOSS_STATE.BASE_ATTACK:
 		if (inner_state == 0) {
-			start_animation(seq_tutboss_base_attack);
+			start_animation(seq_bigslime_slam_attack);
 			inner_state = 1;
+			move_speed = 0;
 		} else if (inner_state == 1) {
-			check_animation(is_stumbled);
+			check_animation(is_stumbled or hp == 0);
+			if (hp == 0) {
+				change_state(BOSS_STATE.DEATH);
+				break;
+			}
+			if (is_stumbled) {
+				change_state(BOSS_STATE.BREAK);
+				break;
+			}
 			if (enabled) {
 				attack_cooldown = 30;
 				change_state(BOSS_STATE.TARGETING);
@@ -122,13 +169,21 @@ switch state {
 		break;
 	case BOSS_STATE.SWEEP_ATTACK:
 		if (inner_state == 0) {
-			image_xscale = -image_xscale;
-			start_animation(seq_tutboss_sweep_attack);
+			start_animation(seq_bigslime_sweep_attack);
 			inner_state = 1;
+			move_speed = 0;
 		} else if (inner_state == 1) {
-			check_animation(is_stumbled);
+			check_animation(is_stumbled or hp == 0);
+			if (hp == 0) {
+				show_debug_message("asdf")
+				change_state(BOSS_STATE.DEATH);
+				break;
+			}
+			if (is_stumbled) {
+				change_state(BOSS_STATE.BREAK);
+				break;
+			}
 			if (enabled) {
-				image_xscale = -image_xscale;
 				attack_cooldown = 30;
 				change_state(BOSS_STATE.TARGETING);
 			}
@@ -139,22 +194,24 @@ switch state {
 		break;
 	case BOSS_STATE.BREAK:
 		if (inner_state == 0) {
-			sprite_index = spr_tutboss_break;
+			sprite_index = spr_bigslime_break;
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {
-			break_frames--;
-			if (break_frames == 0) {
-				change_state(BOSS_STATE.TARGETING);
-				is_stumbled = false
-			} 
-		} else {
+			if (hp == 0) {
+				show_debug_message("asdf")
+				change_state(BOSS_STATE.DEATH);
+				break;
+			}
+		} else if (inner_state == 2) {
+			is_stumbled = false;
 			state = next_state;
 			inner_state = 0;
-		}
+		} 
+		break;
 	case BOSS_STATE.DEATH:
 		if (inner_state == 0) {
-			sprite_index = spr_slime_death;
+			sprite_index = spr_bigslime_death;
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {
