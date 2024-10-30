@@ -29,8 +29,8 @@ function save_room() {
 			has_hit : _inst.has_hit,
 			object_type : _inst.object_index,
 		}
-		if (variable_instance_exists(_inst, "door_index")) {
-	        _data.door_index = _inst.door_index;
+		if (variable_instance_exists(_inst, "item_index")) {
+	        _data.item_index = _inst.item_index;
 	    }
 		_room_struct.hittable_data[_i] = _data;
 	}
@@ -73,8 +73,8 @@ function load_room() {
 		var _obj_index = _hittable.object_type;
 		var _inst = instance_create_layer(_hittable.x, _hittable.y, "Interactables", _obj_index);
 		with (_inst) {
-			if (variable_instance_exists(_inst, "door_index")) {
-		        door_index = _hittable.door_index;
+			if (variable_instance_exists(_inst, "item_index")) {
+		        item_index = _hittable.item_index;
 		    }
 			has_hit = _hittable.has_hit;
 		}
