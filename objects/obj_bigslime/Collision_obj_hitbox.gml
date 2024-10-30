@@ -11,6 +11,7 @@ if (no_hurt_frames > 0) {
 		hp -= 1;
 		damage_dealt += 1;
 	}
+	
 	if (damage_dealt % 4 == 0 and not is_stumbled) {
 		is_stumbled = true;
 		no_hurt_frames = 20;

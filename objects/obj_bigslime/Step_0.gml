@@ -175,6 +175,7 @@ switch state {
 		} else if (inner_state == 1) {
 			check_animation(is_stumbled or hp == 0);
 			if (hp == 0) {
+				show_debug_message("asdf")
 				change_state(BOSS_STATE.DEATH);
 				break;
 			}
@@ -196,6 +197,12 @@ switch state {
 			sprite_index = spr_bigslime_break;
 			inner_state = 1;
 			move_speed = 0;
+		} else if (inner_state == 1) {
+			if (hp == 0) {
+				show_debug_message("asdf")
+				change_state(BOSS_STATE.DEATH);
+				break;
+			}
 		} else if (inner_state == 2) {
 			is_stumbled = false;
 			state = next_state;

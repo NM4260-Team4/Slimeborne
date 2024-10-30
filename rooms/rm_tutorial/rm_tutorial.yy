@@ -41,7 +41,6 @@
     {"name":"inst_26F69106","path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"inst_2B576075","path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"inst_2D93F2F2","path":"rooms/rm_tutorial/rm_tutorial.yy",},
-    {"name":"inst_3A3F06E9","path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"inst_6F641520","path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"inst_111E2ED5","path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"inst_3FE8FD8E","path":"rooms/rm_tutorial/rm_tutorial.yy",},
@@ -49,6 +48,7 @@
     {"name":"inst_1E0CF8DD","path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"inst_786F2368","path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"inst_57D426FF","path":"rooms/rm_tutorial/rm_tutorial.yy",},
+    {"name":"inst_5F8586E2","path":"rooms/rm_tutorial/rm_tutorial.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -87,10 +87,10 @@
         {"$GMRInstance":"v1","%Name":"inst_2B576075","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2B576075","objectId":{"name":"obj_slime","path":"objects/obj_slime/obj_slime.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":6272.0,"y":3872.0,},
         {"$GMRInstance":"v1","%Name":"inst_459B0A79","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_459B0A79","objectId":{"name":"obj_spearslime","path":"objects/obj_spearslime/obj_spearslime.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":7712.0,"y":4864.0,},
         {"$GMRInstance":"v1","%Name":"inst_2D93F2F2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2D93F2F2","objectId":{"name":"obj_slime","path":"objects/obj_slime/obj_slime.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2176.0,"y":3488.0,},
-        {"$GMRInstance":"v1","%Name":"inst_3A3F06E9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3A3F06E9","objectId":{"name":"obj_tutboss","path":"objects/obj_tutboss/obj_tutboss.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5760.0,"y":2432.0,},
         {"$GMRInstance":"v1","%Name":"inst_6F641520","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6F641520","objectId":{"name":"obj_spearslime","path":"objects/obj_spearslime/obj_spearslime.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":11520.0,"y":2656.0,},
         {"$GMRInstance":"v1","%Name":"inst_111E2ED5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_111E2ED5","objectId":{"name":"obj_spearslime","path":"objects/obj_spearslime/obj_spearslime.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":13184.0,"y":3744.0,},
         {"$GMRInstance":"v1","%Name":"inst_3FE8FD8E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3FE8FD8E","objectId":{"name":"obj_spearslime","path":"objects/obj_spearslime/obj_spearslime.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":10816.0,"y":4704.0,},
+        {"$GMRInstance":"v1","%Name":"inst_5F8586E2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5F8586E2","objectId":{"name":"obj_bigslime","path":"objects/obj_bigslime/obj_bigslime.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5760.0,"y":2400.0,},
       ],"layers":[],"name":"Enemies","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Collision_tiles","depth":300,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Collision_tiles","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":88,"SerialiseWidth":225,"TileCompressedData":[
           2,-2147483648,0,-11,-2147483648,-17,0,-80,-2147483648,-115,6,2,-2147483648,0,-11,-2147483648,-17,0,-80,
