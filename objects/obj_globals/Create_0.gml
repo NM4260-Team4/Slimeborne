@@ -1,3 +1,4 @@
+global.overlay_sequence = -1;
 global.default_hp = 3;
 global.has_final_access = false;
 global.max_attachments = 5;
