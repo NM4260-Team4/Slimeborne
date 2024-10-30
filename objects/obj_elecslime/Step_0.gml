@@ -24,7 +24,7 @@ switch state {
 		break;
 	case ENEMY_STATE.ROAM:
 		if (inner_state == 0) {
-			sprite_index = spr_slime_move;
+			sprite_index = spr_elecslime_idle;
 			inner_state = 1
 			move_speed = 2;
 		} else if (inner_state == 1) {
@@ -54,7 +54,7 @@ switch state {
 		break;
 	case ENEMY_STATE.TARGETING:
 		if (inner_state == 0) {
-			sprite_index = spr_slime_move;
+			sprite_index = spr_elecslime_idle;
 			inner_state = 1;
 			move_speed = 4;
 		} else if (inner_state == 1) {
@@ -94,7 +94,7 @@ switch state {
 		
 	case ENEMY_STATE.HIT:
 		if (inner_state == 0) {
-			sprite_index = spr_slime_hit;
+			sprite_index = spr_elecslime_hit;
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {
@@ -106,7 +106,7 @@ switch state {
 		break;
 	case ENEMY_STATE.DEATH:
 		if (inner_state == 0) {
-			sprite_index = spr_slime_death;
+			sprite_index = spr_elecslime_death;
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {
