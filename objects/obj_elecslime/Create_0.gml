@@ -21,7 +21,7 @@ all_collidables = [collision_tiles, obj_collidable, obj_breakable_wall];
 
 // boss state
 is_hit = false;
-enum ENEMY_STATE {
+enum poiu {
 	IDLE,
 	ROAM,
 	TARGETING,
