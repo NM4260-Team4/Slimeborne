@@ -70,7 +70,6 @@
     {"name":"inst_35872A18","path":"rooms/rm_furnace/rm_furnace.yy",},
     {"name":"inst_7303A986","path":"rooms/rm_furnace/rm_furnace.yy",},
     {"name":"inst_2326BC8D","path":"rooms/rm_furnace/rm_furnace.yy",},
-    {"name":"inst_3BCB0607","path":"rooms/rm_furnace/rm_furnace.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -100,7 +99,6 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_room_transition","path":"objects/obj_room_transition/obj_room_transition.yy",},"propertyId":{"name":"target_y","path":"objects/obj_room_transition/obj_room_transition.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3648",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_room_transition","path":"objects/obj_room_transition/obj_room_transition.yy",},"propertyId":{"name":"target_room","path":"objects/obj_room_transition/obj_room_transition.yy",},"resource":{"name":"rm_generator_room","path":"rooms/rm_generator_room/rm_generator_room.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_generator_room",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":-90.0,"scaleX":8.0,"scaleY":8.0,"x":768.0,"y":7488.0,},
-        {"$GMRInstance":"v1","%Name":"inst_3BCB0607","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3BCB0607","objectId":{"name":"obj_battery","path":"objects/obj_battery/obj_battery.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":13312.0,"y":3264.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Collision_tiles","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Collision_tiles","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":150,"SerialiseWidth":305,"TileCompressedData":[
           -166,0,-139,6,-166,0,-139,6,-166,0,-139,6,-166,0,-139,6,-166,0,-139,6,-166,0,-139,6,-166,0,-139,6,-166,
