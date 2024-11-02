@@ -158,7 +158,7 @@ switch state {
 		// update
 		else if (inner_state == 1) {
 			// edit here for interrupt
-			check_animation(is_hit);
+			check_animation(is_hit or obj_game_manager.paused);
 			if (global.equipped.has_attachment and instance_exists(obj_tracker)) {
 				global.equipped_attachment.x = obj_tracker.x;
 				global.equipped_attachment.y = obj_tracker.y;
@@ -242,3 +242,4 @@ if (no_hurt_frames > 0) {
 	//	image_alpha = 1;
 	//}
 }
+
