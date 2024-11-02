@@ -19,7 +19,7 @@ grav = 1;
 collision_tiles = layer_tilemap_get_id("Collision_tiles");
 all_collidables = [collision_tiles, obj_collidable, obj_breakable_wall];
 
-// boss state
+// state
 is_hit = false;
 enum ENEMY_STATE {
 	IDLE,
