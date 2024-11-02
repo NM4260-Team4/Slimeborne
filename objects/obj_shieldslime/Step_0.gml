@@ -28,7 +28,7 @@ switch state {
 		break;
 	case SLIMEENEMY_STATE.ROAM:
 		if (inner_state == 0) {
-			sprite_index = spr_spearslime_idle;
+			sprite_index = spr_shieldslime_idle;
 			inner_state = 1
 			move_speed = 2;
 		} else if (inner_state == 1) {
@@ -41,7 +41,7 @@ switch state {
 				break;
 			}
 			
-			if (abs(x - obj_player.x) < 600 and abs(y - obj_player.y) < 50) {
+			if (abs(x - obj_player.x) < 800 and abs(y - obj_player.y) < 50) {
 				change_state(SLIMEENEMY_STATE.TARGETING);
 				break;
 			}
@@ -58,7 +58,7 @@ switch state {
 		break;
 	case SLIMEENEMY_STATE.TARGETING:
 		if (inner_state == 0) {
-			sprite_index = spr_spearslime_idle;
+			sprite_index = spr_shieldslime_idle;
 			inner_state = 1;
 			move_speed = 6;
 		} else if (inner_state == 1) {
@@ -70,7 +70,7 @@ switch state {
 				change_state(SLIMEENEMY_STATE.HIT);
 				break;
 			}
-			if (abs(x - obj_player.x) >= 600 or abs(y - obj_player.y) > 50) {
+			if (abs(x - obj_player.x) >= 800 or abs(y - obj_player.y) > 50) {
 				change_state(SLIMEENEMY_STATE.ROAM);
 				break;
 			}
@@ -83,7 +83,7 @@ switch state {
 				image_xscale = abs(image_xscale);
 			}
 			
-			if (abs(x - obj_player.x) < 300 and abs(x - obj_player.x) > 200) {
+			if (abs(x - obj_player.x) < 350 and abs(x - obj_player.x) > 100) {
 				if (attack_cooldown == 0) {
 					attack_cooldown = irandom_range(5, 30);
 					change_state(SLIMEENEMY_STATE.ATTACK);
@@ -114,7 +114,7 @@ switch state {
 	case SLIMEENEMY_STATE.ATTACK:
 		if (inner_state == 0) {
 			if (attack_cooldown == 0) {
-				start_animation(seq_spearslime_attack);
+				start_animation(seq_shieldslime_attack);
 				inner_state = 1;
 			} else {
 				show_debug_message("somethings up")
@@ -133,7 +133,7 @@ switch state {
 		break;
 	case SLIMEENEMY_STATE.HIT:
 		if (inner_state == 0) {
-			sprite_index = spr_spearslime_hit;
+			sprite_index = spr_shieldslime_hit;
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {
@@ -148,7 +148,7 @@ switch state {
 		
 	case SLIMEENEMY_STATE.DEATH:
 		if (inner_state == 0) {
-			sprite_index = spr_spearslime_death;
+			sprite_index = spr_shieldslime_death;
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {
