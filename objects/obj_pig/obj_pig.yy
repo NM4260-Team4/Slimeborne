@@ -13,7 +13,10 @@
     "name":"Attachments",
     "path":"folders/Objects/Attachments.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_collectible",
+    "path":"objects/obj_collectible/obj_collectible.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

@@ -1,5 +1,5 @@
 /// @description Insert description here
-show_prompt = false;
+event_inherited();
 obj_attachment = obj_pig_attach;
 // Sprites
 spr_reg = spr_pig;
