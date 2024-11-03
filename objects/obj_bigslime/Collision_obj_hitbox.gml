@@ -6,7 +6,8 @@ if (no_hurt_frames > 0) {
 	exit; 
 } else {
 	if (is_stumbled) {
-		hp -= 3;
+		//hp -= 3;
+		hp -= 1;
 	} else {
 		hp -= 1;
 		damage_dealt += 1;

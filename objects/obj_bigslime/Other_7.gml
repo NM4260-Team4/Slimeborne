@@ -7,6 +7,5 @@ if (sprite_index == spr_bigslime_death) {
 
 if (sprite_index == spr_bigslime_break) {
 	change_state(BOSS_STATE.TARGETING);
-	no_hurt_frames = 0;
 }
 

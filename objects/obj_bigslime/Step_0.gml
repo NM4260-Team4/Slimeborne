@@ -32,6 +32,10 @@ switch state {
 			inner_state = 1
 			move_speed = 0;
 		} else if (inner_state == 1) {
+			if (hp == 0) {
+				change_state(BOSS_STATE.DEATH);
+				break;
+			}
 			if (point_distance(x, y, obj_player.x, obj_player.y) < 1200) {
 				change_state(BOSS_STATE.TARGETING);
 				break;
