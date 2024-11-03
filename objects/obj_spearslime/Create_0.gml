@@ -22,7 +22,6 @@ all_collidables = [collision_tiles, obj_collidable, obj_breakable_wall];
 // boss state
 is_hit = false;
 enum SLIMEENEMY_STATE {
-	IDLE,
 	ROAM,
 	TARGETING,
 	ATTACK,
@@ -36,6 +35,10 @@ inner_state = 0;
 change_state = function(_next_state) {
 	inner_state = 2;
 	next_state = _next_state;
+}
+
+function sees_player() {
+	return collision_line(x, (bbox_top + bbox_bottom) / 2, obj_player.x,  (obj_player.bbox_top + obj_player.bbox_bottom) / 2, all_collidables, 1, 0) == noone;
 }
 
 function swap_direction_on_bump() {

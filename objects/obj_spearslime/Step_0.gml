@@ -24,8 +24,6 @@ if (attack_cooldown > 0) {
 
 // State handling
 switch state {
-	case SLIMEENEMY_STATE.IDLE: 
-		break;
 	case SLIMEENEMY_STATE.ROAM:
 		if (inner_state == 0) {
 			sprite_index = spr_spearslime_idle;
@@ -41,7 +39,7 @@ switch state {
 				break;
 			}
 			
-			if (abs(x - obj_player.x) < 600 and abs(y - obj_player.y) < 50) {
+			if (abs(x - obj_player.x) < 600 and abs(y - obj_player.y) < 50 and sees_player()) {
 				change_state(SLIMEENEMY_STATE.TARGETING);
 				break;
 			}
@@ -69,7 +67,7 @@ switch state {
 				change_state(SLIMEENEMY_STATE.HIT);
 				break;
 			}
-			if (abs(x - obj_player.x) >= 600 or abs(y - obj_player.y) > 50) {
+			if (abs(x - obj_player.x) >= 600 or abs(y - obj_player.y) > 50 or not sees_player()) {
 				change_state(SLIMEENEMY_STATE.ROAM);
 				break;
 			}
