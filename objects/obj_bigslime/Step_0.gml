@@ -135,7 +135,7 @@ switch state {
 			
 			var _right_has_block = not position_meeting(bbox_right, bbox_bottom + 1, all_collidables[0]) or position_meeting(bbox_right + 2, bbox_bottom - 1, all_collidables);
 			var _left_has_block =  not position_meeting(bbox_left, bbox_bottom + 1, all_collidables[0]) or position_meeting(bbox_left - 2, bbox_bottom -1 , all_collidables);
-			if _right_has_block or _left_has_block {
+			if (_right_has_block and move_dir > 0) or (_left_has_block and move_dir < 0) {
 				move_dir = 0;
 			}
 			
