@@ -2,8 +2,11 @@ layer_sequence_create("Instances", 0, 0, seq_hud);
 
 paused = false;
 
+
 active_seq = NaN;
-control_seq = NaN;
+prev_seq = NaN;
+
+curr_checkpoint = NaN;
 
 function draw_paused(_seq) {
 	obj_player.check_animation(true);
@@ -18,5 +21,5 @@ function draw_paused(_seq) {
 function remove_draw() {
 	instance_activate_all();
 	paused = false;
-	layer_sequence_destroy(pause_seq);
+	layer_sequence_destroy(active_seq);
 }

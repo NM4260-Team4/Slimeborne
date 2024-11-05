@@ -23,6 +23,8 @@ global.player_state = {
 global.inventory = {
 	num_attachments: 0,
 	num_accessories: 0,
+	num_hp_potions: 0,
+	num_speed_potions: 0,
 	attachments:[], // array_create(global.max_attachments),
 	accessories: array_create(global.max_accessories)
 }
