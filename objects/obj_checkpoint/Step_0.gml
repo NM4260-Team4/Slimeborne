@@ -7,9 +7,8 @@ if (distance_to_object(obj_player) < 20) {
 	show_prompt = true;
 	
 	if keyboard_check(ord("E")) {
-		obj_player.hp = obj_player.max_hp;
 		interacted = true;
-		save_game(true);
+		obj_game_manager.draw_paused(seq_checkpoint);
 	}
 
 } else {

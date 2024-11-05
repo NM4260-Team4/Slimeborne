@@ -6,4 +6,4 @@ event_inherited();
 
 obj_game_manager.paused = false;
 instance_activate_all();
-layer_sequence_destroy(obj_game_manager.pause_seq);
+layer_sequence_destroy(obj_game_manager.active_seq);
