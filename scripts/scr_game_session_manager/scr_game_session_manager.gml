@@ -59,7 +59,6 @@ function load_game() {
 		global.equipped.equipped_attachment = global.equipped_attachment.object_index;
 	}
 	
-	
 }
 
 function init_game() {

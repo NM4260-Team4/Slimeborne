@@ -1,0 +1,1 @@
+count = global.inventory.num_speed_potions;

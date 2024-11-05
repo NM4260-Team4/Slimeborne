@@ -16,3 +16,4 @@ function use() {
 	}
 }
 
+max_amount = 5; 

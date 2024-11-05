@@ -23,6 +23,22 @@ if (swap_pressed != 0 and global.equipped.has_attachment) {
 	}
 } 
 
+if swap_potion_pressed {
+	obj_potion.get_next_potion();
+}
+
+if use_potion_pressed {
+	obj_potion.available_potions[obj_potion.current_potion].use();
+	
+}
+
+if effect_timer > 0 {
+	effect_timer--;
+	if effect_timer == 0 {
+		move_speed = 10;
+	}
+} 
+
 // state machine
 switch state {
 	case PLAYER_STATE.IDLE:

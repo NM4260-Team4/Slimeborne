@@ -12,6 +12,9 @@ if (global.player_state.respawn_y == -1) {
 	y = global.player_state.respawn_y;
 }
 
+// Potion 
+effect_timer = 0;
+
 // moving
 move_dir = 0;
 move_speed = 10;

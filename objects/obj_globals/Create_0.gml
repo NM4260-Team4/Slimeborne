@@ -40,6 +40,8 @@ global.equipped = {
 // Temporary variables for room use
 global.equipped_attachment = -1;
 global.attachments = [];
+global.available_potions = [];
+global.current_potion_pos = 0;
 
 // Function to add a new attachment
 global.add_attachment = function(_attachment) {
@@ -65,4 +67,5 @@ global.get_next_attachment = function() {
 	global.equipped_attachment = global.attachments[global.equipped.equipped_attachment_pos];
 	global.equipped.equipped_attachment = global.equipped_attachment.object_index;
 }
+
 

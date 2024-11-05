@@ -8,3 +8,5 @@ function use() {
 
 image_speed = 0;
 is_buy_mode = true;
+count = 0;
+max_amount = 0;
