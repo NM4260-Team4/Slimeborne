@@ -23,12 +23,16 @@ if (attack_cooldown > 0) {
 	attack_cooldown--;
 }
 
+if not electric_floor_active {
+	instance_deactivate_object(obj_electric);
+}
+
 
 // State handling
 switch state {
 	case BOSS_STATE.IDLE: 
 		if (inner_state == 0) {
-			sprite_index = spr_bigslime_idle;
+			sprite_index = spr_elecboss_idle;
 			inner_state = 1
 			move_speed = 0;
 		} else if (inner_state == 1) {
@@ -47,7 +51,7 @@ switch state {
 		break;
 	case BOSS_STATE.ROAM:
 		if (inner_state == 0) {
-			sprite_index = spr_bigslime_move;
+			sprite_index = spr_elecboss_move;
 			inner_state = 1
 			move_speed = 2;
 		} else if (inner_state == 1) {
@@ -60,7 +64,7 @@ switch state {
 				break;
 			}
 			
-			if (point_distance(x, y, obj_player.x, obj_player.y) < 1500) {
+			if (point_distance(x, y, obj_player.x, obj_player.y) < 3000) {
 				change_state(BOSS_STATE.TARGETING);
 				break;
 			}
@@ -77,20 +81,10 @@ switch state {
 	case BOSS_STATE.TARGETING:
 		if (inner_state == 0) {
 			// Set up for the next state
-			sprite_index = spr_bigslime_move;
+			sprite_index = spr_elecboss_move;
 			inner_state = 1;
 			move_speed = 3;
 			move_dir = sign(image_xscale);
-			// Pick an attack based on the player's location
-			if (abs(x - obj_player.x) >= 250) {
-				chosen_attack = BOSS_STATE.BASE_ATTACK;
-				show_debug_message("base attack logged")
-			}
-			// State 2: Within range of sweep attack
-			else{		
-				chosen_attack = BOSS_STATE.SWEEP_ATTACK;
-				show_debug_message("sweep attack logged")
-			}
 		} else if (inner_state == 1) {
 			// When the boss is dead, swap states
 			if (hp == 0) {
@@ -102,28 +96,37 @@ switch state {
 				change_state(BOSS_STATE.BREAK);
 				break;
 			}
-			if (point_distance(x, y, obj_player.x, obj_player.y) >= 2000) {
+			if (point_distance(x, y, obj_player.x, obj_player.y) >= 4000) {
 				change_state(BOSS_STATE.ROAM);
 				break;
 			}
-			// If within attack range, stop and trigger attack
 			
-			if (abs(x - obj_player.x) <= 280 and abs(x - obj_player.x) >= 150) {
-				change_state(chosen_attack);
-				if (x < obj_player.x) {
-					image_xscale = abs(image_xscale);
-				} else {
-					image_xscale = -1 * abs(image_xscale);
+			// If player too far/ too close, move towards player and attack if no cooldown
+			if (abs(x - obj_player.x) > 920 or abs(x - obj_player.x) < 350) {
+				if attack_cooldown == 0 {
+					change_state(BOSS_STATE.ATTACK1);
+					break;
 				}
-				break;
 			}
 			
-			if (x - obj_player.x >= 280 or (obj_player.x - x >= 0 and obj_player.x - x < 150)) {
+			if (abs(x - obj_player.x) <= 920 and abs(x - obj_player.x) >= 350) {
+				if attack_cooldown == 0 {
+					change_state(BOSS_STATE.ATTACK2);
+					break;
+				}
+			}
+			
+			
+			// Regular movement
+			
+			if (x - obj_player.x) > 900 or (obj_player.x - x >= 0 and obj_player.x - x < 400) or (x-obj_player.x >= 420 and x- obj_player.x < 910){
+				// If to the right of the player or to the left of the player but very close, move to the left
 				move_dir = -1;
 				image_xscale = -1 * abs(image_xscale);
-			} else if (obj_player.x - x >= 280 or (x - obj_player.x >= 0 and x - obj_player.x < 150)){
+			} else if (obj_player.x - x) > 900 or (x - obj_player.x >= 0 and x - obj_player.x < 400) or (obj_player.x - x >= 420 and obj_player.x - x < 910){
+				// If to the right of the player or to the left of the player but very close, move to the left
 				move_dir = 1;
-				image_xscale = abs(image_xscale);
+				image_xscale =abs(image_xscale);
 			} else {
 				move_dir = 0;
 				if (x < obj_player.x) {
@@ -133,6 +136,8 @@ switch state {
 				}
 			}
 			
+			
+			// Collision prevention
 			var _right_has_block = not position_meeting(bbox_right, bbox_bottom + 1, all_collidables[0]) or position_meeting(bbox_right + 2, bbox_bottom - 1, all_collidables);
 			var _left_has_block =  not position_meeting(bbox_left, bbox_bottom + 1, all_collidables[0]) or position_meeting(bbox_left - 2, bbox_bottom -1 , all_collidables);
 			if _right_has_block or _left_has_block {
@@ -147,23 +152,27 @@ switch state {
 		}
 		break;
 	
-	case BOSS_STATE.BASE_ATTACK:
+	case BOSS_STATE.ATTACK1:
 		if (inner_state == 0) {
-			start_animation(seq_bigslime_slam_attack);
+			start_animation(seq_elecboss_ground_attack);
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {
+			
 			check_animation(is_stumbled or hp == 0);
 			if (hp == 0) {
+				deactivate_electric_floor();
 				change_state(BOSS_STATE.DEATH);
 				break;
 			}
 			if (is_stumbled) {
+				deactivate_electric_floor();
 				change_state(BOSS_STATE.BREAK);
 				break;
 			}
 			if (enabled) {
-				attack_cooldown = 30;
+				deactivate_electric_floor();
+				attack_cooldown = 60;
 				change_state(BOSS_STATE.TARGETING);
 			}
 		} else {
@@ -171,15 +180,14 @@ switch state {
 			inner_state = 0;
 		}
 		break;
-	case BOSS_STATE.SWEEP_ATTACK:
+	case BOSS_STATE.ATTACK2:
 		if (inner_state == 0) {
-			start_animation(seq_bigslime_sweep_attack);
+			start_animation(seq_elecboss_laser_attack);
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {
 			check_animation(is_stumbled or hp == 0);
 			if (hp == 0) {
-				show_debug_message("asdf")
 				change_state(BOSS_STATE.DEATH);
 				break;
 			}
@@ -188,7 +196,7 @@ switch state {
 				break;
 			}
 			if (enabled) {
-				attack_cooldown = 30;
+				attack_cooldown = 60;
 				change_state(BOSS_STATE.TARGETING);
 			}
 		} else {
@@ -198,7 +206,8 @@ switch state {
 		break;
 	case BOSS_STATE.BREAK:
 		if (inner_state == 0) {
-			sprite_index = spr_bigslime_break;
+			sprite_index = spr_elecboss_break;
+			image_index = 0;
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {
@@ -215,7 +224,8 @@ switch state {
 		break;
 	case BOSS_STATE.DEATH:
 		if (inner_state == 0) {
-			sprite_index = spr_bigslime_death;
+			image_index = 0;
+			sprite_index = spr_elecboss_death;
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {

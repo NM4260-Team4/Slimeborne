@@ -49,8 +49,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Boss",
-    "path":"folders/Sprites/Boss.yy",
+    "name":"Big Slime",
+    "path":"folders/Sprites/Boss/Big Slime.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

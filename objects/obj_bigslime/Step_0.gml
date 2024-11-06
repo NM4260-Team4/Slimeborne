@@ -83,12 +83,12 @@ switch state {
 			move_dir = sign(image_xscale);
 			// Pick an attack based on the player's location
 			if (abs(x - obj_player.x) >= 250) {
-				chosen_attack = BOSS_STATE.BASE_ATTACK;
+				chosen_attack = BOSS_STATE.ATTACK1;
 				show_debug_message("base attack logged")
 			}
 			// State 2: Within range of sweep attack
 			else{		
-				chosen_attack = BOSS_STATE.SWEEP_ATTACK;
+				chosen_attack = BOSS_STATE.ATTACK2;
 				show_debug_message("sweep attack logged")
 			}
 		} else if (inner_state == 1) {
@@ -147,7 +147,7 @@ switch state {
 		}
 		break;
 	
-	case BOSS_STATE.BASE_ATTACK:
+	case BOSS_STATE.ATTACK1:
 		if (inner_state == 0) {
 			start_animation(seq_bigslime_slam_attack);
 			inner_state = 1;
@@ -171,7 +171,7 @@ switch state {
 			inner_state = 0;
 		}
 		break;
-	case BOSS_STATE.SWEEP_ATTACK:
+	case BOSS_STATE.ATTACK2:
 		if (inner_state == 0) {
 			start_animation(seq_bigslime_sweep_attack);
 			inner_state = 1;
@@ -199,6 +199,7 @@ switch state {
 	case BOSS_STATE.BREAK:
 		if (inner_state == 0) {
 			sprite_index = spr_bigslime_break;
+			image_index = 0;
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {
@@ -216,6 +217,7 @@ switch state {
 	case BOSS_STATE.DEATH:
 		if (inner_state == 0) {
 			sprite_index = spr_bigslime_death;
+			image_index = 0;
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {
