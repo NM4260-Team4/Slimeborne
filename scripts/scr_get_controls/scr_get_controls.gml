@@ -19,6 +19,8 @@ function get_controls() {
 	jump_pressed = keyboard_check_pressed(vk_space);
 	attack_pressed = clamp(mouse_check_button_pressed(mb_left) + keyboard_check(ord("J")), 0, 1);
 	swap_pressed = keyboard_check_pressed(ord("Q"));
+	swap_potion_pressed = keyboard_check_pressed(ord("R"));
+	use_potion_pressed = keyboard_check_pressed(ord("F"));
 	if (mouse_check_button_pressed(mb_right)) {
 		global.has_final_access = !global.has_final_access;
 		//show_debug_message("Number of collectibles: " + string(instance_number(obj_collectible)));

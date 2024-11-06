@@ -1,5 +1,6 @@
 if (sprite_index == spr_slime_death) {
 	instance_destroy();
+	obj_microplastics.add_microplastics(5);
 }
 
 if (sprite_index == spr_slime_hit) {

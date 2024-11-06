@@ -8,7 +8,7 @@ function save_game(_should_save_location) {
 	}
 	global.player_state.max_hp = obj_player.max_hp;
 	global.player_state.hp = obj_player.hp;
-	global.player_state.microplastics = obj_player.microplastics;
+	//global.player_state.microplastics = obj_player.microplastics;
 	global.player_state.current_room = room_get_name(room);
 	
 	// save inventory, attachment owned, and accessories
@@ -59,7 +59,6 @@ function load_game() {
 		global.equipped.equipped_attachment = global.equipped_attachment.object_index;
 	}
 	
-	
 }
 
 function init_game() {
@@ -70,7 +69,7 @@ function init_game() {
 	
 	global.player_state.max_hp = global.default_hp;
 	global.player_state.hp = global.player_state.max_hp;
-	global.player_state.microplastics = 0;
+	global.player_state.microplastics = 50;
 	global.player_state.current_room = "rm_tutorial";
 	global.player_state.respawn_x = -1;
 	global.player_state.respawn_y = -1;

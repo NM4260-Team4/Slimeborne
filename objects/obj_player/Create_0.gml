@@ -12,6 +12,9 @@ if (global.player_state.respawn_y == -1) {
 	y = global.player_state.respawn_y;
 }
 
+// Potion 
+effect_timer = 0;
+
 // moving
 move_dir = 0;
 move_speed = 10;
@@ -32,6 +35,7 @@ grounded_y = y;
 // player state
 should_freeze = false;
 is_hit = false;
+just_paused = false;
 enum PLAYER_STATE {
 	IDLE,
 	MOVE,

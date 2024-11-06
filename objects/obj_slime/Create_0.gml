@@ -19,7 +19,7 @@ grav = 1;
 collision_tiles = layer_tilemap_get_id("Collision_tiles");
 all_collidables = [collision_tiles, obj_collidable, obj_breakable_wall];
 
-// boss state
+// state
 is_hit = false;
 enum ENEMY_STATE {
 	IDLE,
@@ -38,7 +38,10 @@ change_state = function(_next_state) {
 	next_state = _next_state;
 }
 
-_test = 0;
+
+function sees_player() {
+	return collision_line(x, (bbox_top + bbox_bottom) / 2, obj_player.x,  (obj_player.bbox_top + obj_player.bbox_bottom) / 2, all_collidables, 1, 0) == noone;
+}
 function swap_direction_on_bump() {
 	
 	var _right_has_block = not position_meeting(bbox_right, bbox_bottom + 1, all_collidables[0]) or position_meeting(bbox_right + 2, bbox_top, all_collidables);

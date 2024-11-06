@@ -1,5 +1,5 @@
-hp = 20;
-max_hp = 20;
+hp = 10;
+max_hp = 10;
 damage_dealt = 0;
 
 // Frame counts
@@ -27,8 +27,8 @@ enum BOSS_STATE {
 	IDLE,
 	ROAM,
 	TARGETING,
-	BASE_ATTACK,
-	SWEEP_ATTACK,
+	ATTACK1,
+	ATTACK2,
 	BREAK,
 	DEATH
 }

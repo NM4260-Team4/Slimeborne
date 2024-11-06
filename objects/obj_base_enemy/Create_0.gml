@@ -8,6 +8,7 @@ grav = 1;
 // Other Properties
 max_health = 2;
 no_hurt_frames = 0;
+is_dead = false;
 
 // for collision
 collision_tiles = layer_tilemap_get_id("Collision_tiles");

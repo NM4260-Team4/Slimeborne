@@ -23,6 +23,22 @@ if (swap_pressed != 0 and global.equipped.has_attachment) {
 	}
 } 
 
+if swap_potion_pressed {
+	obj_potion.get_next_potion();
+}
+
+if use_potion_pressed {
+	obj_potion.available_potions[obj_potion.current_potion].use();
+	
+}
+
+if effect_timer > 0 {
+	effect_timer--;
+	if effect_timer == 0 {
+		move_speed = 10;
+	}
+} 
+
 // state machine
 switch state {
 	case PLAYER_STATE.IDLE:
@@ -32,6 +48,7 @@ switch state {
 			sprite_index = spr_player_idle;
 			image_index = 0;
 			image_speed = 1;
+			just_paused = false;
 		} 
 		// update
 		else if (inner_state == 1) {
@@ -68,7 +85,9 @@ switch state {
 			} else if (jump_buffered && coyote_buffer_timer > 0) {
 				change_state(PLAYER_STATE.JUMP);
 			} else if (attack_buffered) {
+				
 				change_state(PLAYER_STATE.ATTACK);
+				
 			} else if (!grounded) {
 				change_state(PLAYER_STATE.FALL);
 			} else if (move_dir == 0) {
@@ -153,11 +172,17 @@ switch state {
 			// reset the buffer
 			attack_buffered = false;
 			attack_buffer_timer = 0;
-			start_animation(seq_player_attack);
+			if not just_paused {
+				start_animation(seq_player_attack);
+			}
 		}
 		// update
 		else if (inner_state == 1) {
 			// edit here for interrupt
+			if just_paused {
+				change_state(PLAYER_STATE.IDLE);
+				break;
+			}
 			check_animation(is_hit);
 			if (global.equipped.has_attachment and instance_exists(obj_tracker)) {
 				global.equipped_attachment.x = obj_tracker.x;
@@ -236,9 +261,5 @@ y += move_y;
 // invincible frame
 if (no_hurt_frames > 0) {
 	no_hurt_frames --;
-	//if (image_alpha == 1) {
-	//	image_alpha = 0.5;
-	//} else {
-	//	image_alpha = 1;
-	//}
 }
+
