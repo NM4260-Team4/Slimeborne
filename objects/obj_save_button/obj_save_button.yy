@@ -8,7 +8,7 @@
   "managed":true,
   "name":"obj_save_button",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_gamemenu_button","path":"objects/obj_gamemenu_button/obj_gamemenu_button.yy",},"propertyId":{"name":"button_text","path":"objects/obj_gamemenu_button/obj_gamemenu_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Rest",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_gamemenu_button","path":"objects/obj_gamemenu_button/obj_gamemenu_button.yy",},"propertyId":{"name":"button_text","path":"objects/obj_gamemenu_button/obj_gamemenu_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Save & Rest",},
   ],
   "parent":{
     "name":"UI",

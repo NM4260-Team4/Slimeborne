@@ -68,4 +68,3 @@ global.get_next_attachment = function() {
 	global.equipped.equipped_attachment = global.equipped_attachment.object_index;
 }
 
-

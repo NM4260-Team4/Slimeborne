@@ -1,8 +1,9 @@
 event_inherited();
 
 function buy() {
-	if (global.inventory.num_hp_potions < 5) {
-		global.inventory.num_hp_potions++; 
+	if (global.inventory.num_hp_potions < 5 and global.player_state.microplastics >= cost) {
+		global.inventory.num_hp_potions++;
+		obj_microplastics.add_microplastics(-cost);
 		return true;
 	} else {
 		return false;
@@ -17,3 +18,4 @@ function use() {
 }
 
 max_amount = 5; 
+cost = 15;
