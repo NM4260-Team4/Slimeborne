@@ -1,3 +1,5 @@
 event_inherited();
 
-room_goto(rm_tutorial);
+load_game();
+
+room_goto(asset_get_index(global.player_state.current_room));

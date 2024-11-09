@@ -1,6 +1,5 @@
 global.overlay_sequence = -1;
 global.default_hp = 3;
-global.has_final_access = false;
 global.max_attachments = 5;
 global.max_accessories = 10;
 global.max_acc_equipped = 3;
@@ -17,7 +16,8 @@ global.player_state = {
 	microplastics : 0,
 	current_room : "rm_tutorial",
 	respawn_x : -1,
-	respawn_y : -1
+	respawn_y : -1,
+	has_final_access : false
 }
 
 global.inventory = {

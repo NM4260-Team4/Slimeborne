@@ -1,3 +1,5 @@
+load_game();
+
 if (!instance_exists(obj_player)) {
 	var _respawn_x = global.player_state.respawn_x;
 	var _respawn_y = global.player_state.respawn_y;
