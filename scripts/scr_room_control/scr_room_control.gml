@@ -2,11 +2,14 @@ function save_room() {
 	
 	var _interactable_num = instance_number(obj_interactable);
 	var _hittable_num = instance_number(obj_hittable);
+	var _boss_num = instance_number(obj_bigslime);
 	var _room_struct = {
 		interactable_num : _interactable_num,
 		interactable_data : array_create(_interactable_num),
 		hittable_num : _hittable_num,
-		hittable_data : array_create(_hittable_num)
+		hittable_data : array_create(_hittable_num),
+		boss_num : _boss_num,
+		boss_data : array_create(_boss_num),
 	}
 	
 	// save interactable
@@ -33,6 +36,17 @@ function save_room() {
 	        _data.item_index = _inst.item_index;
 	    }
 		_room_struct.hittable_data[_i] = _data;
+	}
+	
+	// save bosses
+	for (var _i = 0; _i < _boss_num; _i++) {
+		var _inst = instance_find(obj_bigslime, _i);
+		var _data = {
+			spawn_x : _inst.spawn_x,
+			spawn_y : _inst.spawn_y,
+			object_type : _inst.object_index,
+		}
+		_room_struct.boss_data[_i] = _data;
 	}
 	
 	// save to specific room
@@ -78,6 +92,16 @@ function load_room() {
 		    }
 			has_hit = _hittable.has_hit;
 		}
+	}
+	
+	// for bosses, destroy default and create with saved data
+	if instance_exists(obj_bigslime) {
+		instance_destroy(obj_bigslime);
+	}
+	for (var _i = 0; _i < _room_struct.boss_num; _i++) {
+		var _boss = _room_struct.boss_data[_i];
+		var _obj_index = _boss.object_type;
+		var _inst = instance_create_layer(_boss.spawn_x, _boss.spawn_y, "Enemies", _obj_index);
 	}
 	
 }
