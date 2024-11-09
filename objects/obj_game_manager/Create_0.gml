@@ -6,7 +6,7 @@ paused = false;
 active_seq = NaN;
 prev_seq = NaN;
 
-curr_checkpoint = NaN;
+// curr_checkpoint = NaN;
 
 function draw_paused(_seq) {
 	if (instance_exists(obj_bigslime)) {

@@ -4,8 +4,8 @@ if (distance_to_object(obj_player) < 40) {
 	
 	if keyboard_check(ord("E")) {
 		obj_player.max_hp ++;
-		save_game(false);
 		instance_destroy();
+		save_game(false);
 	}
 
 } else {

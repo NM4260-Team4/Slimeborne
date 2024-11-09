@@ -114,8 +114,6 @@ switch state {
 			if (attack_cooldown == 0) {
 				start_animation(seq_shieldslime_attack);
 				inner_state = 1;
-			} else {
-				show_debug_message("somethings up")
 			}
 		} else if (inner_state == 1) {
 			move_x = 0;

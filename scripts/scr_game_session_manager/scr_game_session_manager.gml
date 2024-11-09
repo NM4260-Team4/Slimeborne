@@ -54,6 +54,12 @@ function load_game() {
 	global.player_state = array_get(_load_array, 0);
 	global.inventory = array_get(_load_array, 1);
 	global.equipped = array_get(_load_array, 2);
+	global.room_data = array_get(_load_array, 3);
+	
+	if (room == rm_menu) {
+		exit;
+	}
+	
 	global.attachments = [];
 	for (var _i = 0; _i < global.inventory.num_attachments; _i++) {
 		array_push(global.attachments, instance_create_layer(0, 0, "Attachments", global.inventory.attachments[_i]));
@@ -64,8 +70,7 @@ function load_game() {
 		global.equipped.equipped_attachment = global.equipped_attachment.object_index;
 	}
 	
-	// level data
-	global.room_data = array_get(_load_array, 3);
+	// load level data
 	load_room();
 	
 }

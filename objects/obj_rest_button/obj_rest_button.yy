@@ -1,14 +1,14 @@
 {
   "$GMObject":"",
-  "%Name":"obj_save_button",
+  "%Name":"obj_rest_button",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_save_button",
+  "name":"obj_rest_button",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_gamemenu_button","path":"objects/obj_gamemenu_button/obj_gamemenu_button.yy",},"propertyId":{"name":"button_text","path":"objects/obj_gamemenu_button/obj_gamemenu_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Save & Rest",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_gamemenu_button","path":"objects/obj_gamemenu_button/obj_gamemenu_button.yy",},"propertyId":{"name":"button_text","path":"objects/obj_gamemenu_button/obj_gamemenu_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Rest",},
   ],
   "parent":{
     "name":"UI",

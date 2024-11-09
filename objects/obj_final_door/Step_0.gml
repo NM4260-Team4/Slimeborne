@@ -8,7 +8,7 @@ if (distance_to_object(obj_player) < 64) {
 	}
 	
 	if keyboard_check(ord("E")) {
-		if (global.has_final_access) {
+		if (global.player_state.has_final_acess) {
 			activated = true;
 			interacted = true;
 		} else {
