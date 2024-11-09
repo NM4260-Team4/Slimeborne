@@ -9,8 +9,12 @@ prev_seq = NaN;
 curr_checkpoint = NaN;
 
 function draw_paused(_seq) {
-	obj_bigslime.check_animation(true);
-	obj_elecboss.check_animation(true);
+	if (instance_exists(obj_bigslime)) {
+		obj_bigslime.check_animation(true);
+	}
+	if (instance_exists(obj_elecboss)) {
+		obj_elecboss.check_animation(true);
+	}
 	obj_player.check_animation(true);
 	obj_player.just_paused = true;
 	var _camera_x = camera_get_view_x(view_camera[0]);
