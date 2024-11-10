@@ -30,13 +30,15 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"is_left_locked","filters":[],"listItems":[],"multiselect":false,"name":"is_left_locked","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"true","varType":3,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_spikes",
-    "path":"sprites/spr_spikes/spr_spikes.yy",
+    "name":"spr_spikes_empty",
+    "path":"sprites/spr_spikes_empty/spr_spikes_empty.yy",
   },
   "spriteMaskId":null,
   "visible":true,

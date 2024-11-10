@@ -13,7 +13,7 @@ global.room_data = {
 global.player_state = {
 	max_hp : global.default_hp,
 	hp : global.default_hp,
-	microplastics : 0,
+	microplastics : 100,
 	current_room : "rm_tutorial",
 	respawn_x : -1,
 	respawn_y : -1,

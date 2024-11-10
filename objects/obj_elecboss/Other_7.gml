@@ -3,6 +3,7 @@ if (sprite_index == spr_elecboss_death) {
 	if (active_sequence != undefined) {
 		layer_sequence_destroy(active_sequence);
 	}
+	save_game(false);
 }
 
 if (sprite_index == spr_elecboss_break) {

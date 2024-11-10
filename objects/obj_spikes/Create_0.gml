@@ -1,1 +1,1 @@
-visible = false;
+trigger_distance = 128;

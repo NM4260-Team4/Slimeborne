@@ -244,6 +244,7 @@
     {"id":{"name":"spr_spearslime_idle","path":"sprites/spr_spearslime_idle/spr_spearslime_idle.yy",},},
     {"id":{"name":"spr_speed_potion","path":"sprites/spr_speed_potion/spr_speed_potion.yy",},},
     {"id":{"name":"spr_speed","path":"sprites/spr_speed/spr_speed.yy",},},
+    {"id":{"name":"spr_spikes_empty","path":"sprites/spr_spikes_empty/spr_spikes_empty.yy",},},
     {"id":{"name":"spr_spikes","path":"sprites/spr_spikes/spr_spikes.yy",},},
     {"id":{"name":"spr_switch","path":"sprites/spr_switch/spr_switch.yy",},},
     {"id":{"name":"spr_tile","path":"sprites/spr_tile/spr_tile.yy",},},

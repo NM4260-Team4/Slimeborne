@@ -83,7 +83,7 @@ function init_game() {
 	
 	global.player_state.max_hp = global.default_hp;
 	global.player_state.hp = global.player_state.max_hp;
-	global.player_state.microplastics = 0;
+	// global.player_state.microplastics = 0;
 	global.player_state.current_room = "rm_tutorial";
 	global.player_state.respawn_x = -1;
 	global.player_state.respawn_y = -1;
