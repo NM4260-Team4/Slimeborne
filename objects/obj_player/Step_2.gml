@@ -1,11 +1,11 @@
 // respawn
 if (hp <= 0) {
 	// TODO: play death animation and add black out
-	load_game();
 	instance_destroy();
 	if (active_sequence != undefined) {
 		layer_sequence_destroy(active_sequence);
 	}
+	// load_game();
 	if (global.equipped.has_attachment) {
 		global.equipped_attachment.visible = false;
 	}
