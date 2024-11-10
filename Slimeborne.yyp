@@ -83,6 +83,7 @@
     {"id":{"name":"obj_electric_door","path":"objects/obj_electric_door/obj_electric_door.yy",},},
     {"id":{"name":"obj_electric","path":"objects/obj_electric/obj_electric.yy",},},
     {"id":{"name":"obj_enemy_hitbox","path":"objects/obj_enemy_hitbox/obj_enemy_hitbox.yy",},},
+    {"id":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},},
     {"id":{"name":"obj_exit_button","path":"objects/obj_exit_button/obj_exit_button.yy",},},
     {"id":{"name":"obj_final_door","path":"objects/obj_final_door/obj_final_door.yy",},},
     {"id":{"name":"obj_fire_shooter","path":"objects/obj_fire_shooter/obj_fire_shooter.yy",},},
