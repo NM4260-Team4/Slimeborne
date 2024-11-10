@@ -4,6 +4,12 @@ global.max_attachments = 5;
 global.max_accessories = 10;
 global.max_acc_equipped = 3;
 
+global.enemy_init_data = {
+	tutorial : 0,
+	generator_room : 0,
+	furnance: 0
+}
+
 global.room_data = {
 	tutorial : 0,
 	generator_room : 0,
@@ -13,7 +19,7 @@ global.room_data = {
 global.player_state = {
 	max_hp : global.default_hp,
 	hp : global.default_hp,
-	microplastics : 100,
+	microplastics : 0,
 	current_room : "rm_tutorial",
 	respawn_x : -1,
 	respawn_y : -1,
