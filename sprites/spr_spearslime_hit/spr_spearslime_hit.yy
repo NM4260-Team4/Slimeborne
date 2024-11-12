@@ -29,8 +29,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Enemy",
-    "path":"folders/Sprites/Enemy.yy",
+    "name":"spearslime",
+    "path":"folders/Sprites/Enemy/spearslime.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
