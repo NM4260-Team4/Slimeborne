@@ -22,6 +22,10 @@ if (attack_cooldown > 0) {
 	attack_cooldown--;
 }
 
+if (!instance_exists(obj_player)) {
+	exit;
+}
+
 // State handling
 switch state {
 	case SLIMEENEMY_STATE.ROAM:
