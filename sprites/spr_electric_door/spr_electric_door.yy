@@ -12,16 +12,16 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"80120f5d-cd82-4a7e-9a72-e5935b5a6b7b","name":"80120f5d-cd82-4a7e-9a72-e5935b5a6b7b","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"fb3de02c-1f03-4321-8d43-224fe699db67","name":"fb3de02c-1f03-4321-8d43-224fe699db67","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
-    {"$GMSpriteFrame":"","%Name":"e99be146-4b74-423f-9b50-5fa5353b05a3","name":"e99be146-4b74-423f-9b50-5fa5353b05a3","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"8167fb79-deaa-412f-95d1-846e930359f5","name":"8167fb79-deaa-412f-95d1-846e930359f5","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"8377c762-7269-4089-8855-c2c32ce73b9c","name":"8377c762-7269-4089-8855-c2c32ce73b9c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"de8b9af3-2db3-4160-8037-867757415208","name":"de8b9af3-2db3-4160-8037-867757415208","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":384,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"c5622eaa-31e6-4ca5-83a2-3972d21bb2b3","blendMode":0,"displayName":"default","isLocked":false,"name":"c5622eaa-31e6-4ca5-83a2-3972d21bb2b3","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"8eca130c-fb50-4676-9d26-f08f080f7f13","blendMode":0,"displayName":"default","isLocked":false,"name":"8eca130c-fb50-4676-9d26-f08f080f7f13","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_electric_door",
   "nineSlice":{
@@ -90,14 +90,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"80120f5d-cd82-4a7e-9a72-e5935b5a6b7b","path":"sprites/spr_electric_door/spr_electric_door.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"dd203a25-475a-4a11-9244-c6b1b69e9c63","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8167fb79-deaa-412f-95d1-846e930359f5","path":"sprites/spr_electric_door/spr_electric_door.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"0109ddd1-50c3-4d20-9a43-49a62d2d9adf","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"fb3de02c-1f03-4321-8d43-224fe699db67","path":"sprites/spr_electric_door/spr_electric_door.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"55d7040d-6a54-45e1-9b89-a189a9359a03","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8377c762-7269-4089-8855-c2c32ce73b9c","path":"sprites/spr_electric_door/spr_electric_door.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"5c02c24d-0e20-4307-b8cb-176b25167119","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"e99be146-4b74-423f-9b50-5fa5353b05a3","path":"sprites/spr_electric_door/spr_electric_door.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"f84ac2a8-33bc-4486-b302-b1406fcc61ab","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"de8b9af3-2db3-4160-8037-867757415208","path":"sprites/spr_electric_door/spr_electric_door.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"ad63cd94-db50-4cf7-858b-616b18998fed","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
