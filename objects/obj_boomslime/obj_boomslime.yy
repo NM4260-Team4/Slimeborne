@@ -1,21 +1,22 @@
 {
   "$GMObject":"",
-  "%Name":"obj_lazer",
+  "%Name":"obj_boomslime",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_lazer",
+  "name":"obj_boomslime",
   "overriddenProperties":[],
   "parent":{
     "name":"Regular",
     "path":"folders/Objects/Enemy/Regular.yy",
   },
   "parentObjectId":{
-    "name":"obj_enemy_hitbox",
-    "path":"objects/obj_enemy_hitbox/obj_enemy_hitbox.yy",
+    "name":"obj_spearslime",
+    "path":"objects/obj_spearslime/obj_spearslime.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -35,8 +36,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_lazer",
-    "path":"sprites/spr_lazer/spr_lazer.yy",
+    "name":"spr_boomslime_idle",
+    "path":"sprites/spr_boomslime_idle/spr_boomslime_idle.yy",
   },
   "spriteMaskId":null,
   "visible":true,

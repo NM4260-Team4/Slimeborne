@@ -9,8 +9,8 @@
   "name":"obj_finalboss",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemy",
-    "path":"folders/Objects/Enemy.yy",
+    "name":"Bosses",
+    "path":"folders/Objects/Enemy/Bosses.yy",
   },
   "parentObjectId":{
     "name":"obj_bigslime",
