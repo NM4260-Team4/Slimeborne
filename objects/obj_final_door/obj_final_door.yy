@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"SPR_Final_door",
-    "path":"sprites/SPR_Final_door/SPR_Final_door.yy",
+    "name":"spr_Final_door",
+    "path":"sprites/spr_Final_door/spr_Final_door.yy",
   },
   "spriteMaskId":null,
   "visible":true,

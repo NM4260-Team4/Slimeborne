@@ -26,7 +26,9 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"pad_index","filters":[],"listItems":[],"multiselect":false,"name":"pad_index","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-1","varType":1,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
@@ -35,5 +37,5 @@
     "path":"sprites/spr_jump_pad_zone/spr_jump_pad_zone.yy",
   },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }
