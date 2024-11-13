@@ -2,12 +2,6 @@ if (!instance_exists(obj_player)) {
 	exit;
 }
 
-draw_set_color(c_black);
-draw_set_alpha(0.75);
-draw_rectangle(0, 0, (sprite_get_width(spr_heart) + 20) * obj_player.max_hp, 95 + sprite_get_height(spr_heart), false);
-draw_set_alpha(1);
-draw_set_color(c_white);
-
 if obj_player.effect_timer > 0 {
 	draw_sprite(spr_speed, 0, x + 50, y + 54 + sprite_get_height(spr_heart))
 	draw_set_font(fnt_gamemenu);
