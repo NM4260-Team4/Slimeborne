@@ -18,6 +18,10 @@ if (no_hurt_frames > 0) {
 	no_hurt_frames --;
 }
 
+if (!instance_exists(obj_player)) {
+	exit;
+}
+
 // State handling
 switch state {
 	case ENEMY_STATE.IDLE: 

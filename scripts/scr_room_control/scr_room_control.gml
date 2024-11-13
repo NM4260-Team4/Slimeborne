@@ -163,7 +163,18 @@ function save_enemy_init_data() {
 	else if room == rm_furnace {global.enemy_init_data.furnance = _room_enemy_struct;}
 }
 
-function respawn_normal_enemies() {
+function respawn_enemies() {
+	
+	var _boss_count = instance_number(obj_bigslime);
+	for (var _i = 0; _i < _boss_count; _i++) {
+		var _inst = instance_find(obj_bigslime, _i);
+		var _respawn_x = _inst.xstart;
+		var _respawn_y = _inst.ystart;
+		var _obj_index = _inst.object_index;
+		instance_destroy(_inst);
+		instance_create_layer(_respawn_x, _respawn_y, "Enemies", _obj_index);
+	}
+	
 	var _room_struct = 0;
 	
 	// get the correct struct
