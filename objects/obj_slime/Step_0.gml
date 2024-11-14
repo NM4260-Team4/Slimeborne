@@ -29,7 +29,7 @@ switch state {
 			move_speed = 2;
 		} else if (inner_state == 1) {
 			if (is_hit) {
-				if (hp == 0) {
+				if (hp <= 0) {
 					change_state(ENEMY_STATE.DEATH);
 					break;
 				}
@@ -59,7 +59,7 @@ switch state {
 			move_speed = 4;
 		} else if (inner_state == 1) {
 			if (is_hit) {
-				if (hp == 0) {
+				if (hp <= 0) {
 					change_state(ENEMY_STATE.DEATH);
 					break;
 				}

@@ -32,7 +32,7 @@ switch state {
 			inner_state = 1
 			move_speed = 0;
 		} else if (inner_state == 1) {
-			if (hp == 0) {
+			if (hp <= 0) {
 				change_state(BOSS_STATE.DEATH);
 				break;
 			}
@@ -54,7 +54,7 @@ switch state {
 			move_dir = 1
 		} else if (inner_state == 1) {
 			// When the boss is dead, swap states
-			if (hp == 0) {
+			if (hp <= 0) {
 				change_state(BOSS_STATE.DEATH);
 				break;
 			}
@@ -113,8 +113,8 @@ switch state {
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {
-			check_animation(is_stumbled or hp == 0);
-			if (hp == 0) {
+			check_animation(is_stumbled or hp <= 0);
+			if (hp <= 0) {
 				change_state(BOSS_STATE.DEATH);
 				break;
 			}
@@ -133,8 +133,8 @@ switch state {
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {
-			check_animation(is_stumbled or hp == 0);
-			if (hp == 0) {
+			check_animation(is_stumbled or hp <= 0);
+			if (hp <= 0) {
 				change_state(BOSS_STATE.DEATH);
 				break;
 			}
@@ -153,8 +153,8 @@ switch state {
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {
-			check_animation(is_stumbled or hp == 0);
-			if (hp == 0) {
+			check_animation(is_stumbled or hp <= 0);
+			if (hp <= 0) {
 				change_state(BOSS_STATE.DEATH);
 				break;
 			}
