@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_finalboss_death",
   "bboxMode":2,
-  "bbox_bottom":757,
+  "bbox_bottom":754,
   "bbox_left":553,
   "bbox_right":1442,
   "bbox_top":123,

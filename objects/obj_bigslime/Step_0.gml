@@ -45,35 +45,35 @@ switch state {
 			inner_state = 0;
 		}
 		break;
-	case BOSS_STATE.ROAM:
-		if (inner_state == 0) {
-			sprite_index = spr_bigslime_move;
-			inner_state = 1
-			move_speed = 2;
-		} else if (inner_state == 1) {
-			if (hp == 0) {
-				change_state(BOSS_STATE.DEATH);
-				break;
-			}
-			if (is_stumbled) {
-				change_state(BOSS_STATE.BREAK);
-				break;
-			}
+	//case BOSS_STATE.ROAM:
+	//	if (inner_state == 0) {
+	//		sprite_index = spr_bigslime_move;
+	//		inner_state = 1
+	//		move_speed = 2;
+	//	} else if (inner_state == 1) {
+	//		if (hp == 0) {
+	//			change_state(BOSS_STATE.DEATH);
+	//			break;
+	//		}
+	//		if (is_stumbled) {
+	//			change_state(BOSS_STATE.BREAK);
+	//			break;
+	//		}
 			
-			if (point_distance(x, y, obj_player.x, obj_player.y) < 1500) {
-				change_state(BOSS_STATE.TARGETING);
-				break;
-			}
-			if _on_land {
-				swap_direction_on_bump();
-				move_x = move_speed * move_dir;
-			} 
-			x += move_x;
-		} else {
-			state = next_state;
-			inner_state = 0;
-		}
-		break;
+	//		if (point_distance(x, y, obj_player.x, obj_player.y) < 1500) {
+	//			change_state(BOSS_STATE.TARGETING);
+	//			break;
+	//		}
+	//		if _on_land {
+	//			swap_direction_on_bump();
+	//			move_x = move_speed * move_dir;
+	//		} 
+	//		x += move_x;
+	//	} else {
+	//		state = next_state;
+	//		inner_state = 0;
+	//	}
+	//	break;
 	case BOSS_STATE.TARGETING:
 		if (inner_state == 0) {
 			// Set up for the next state
@@ -102,10 +102,10 @@ switch state {
 				change_state(BOSS_STATE.BREAK);
 				break;
 			}
-			if (point_distance(x, y, obj_player.x, obj_player.y) >= 2000) {
-				change_state(BOSS_STATE.ROAM);
-				break;
-			}
+			//if (point_distance(x, y, obj_player.x, obj_player.y) >= 2000) {
+			//	change_state(BOSS_STATE.ROAM);
+			//	break;
+			//}
 			// If within attack range, stop and trigger attack
 			
 			if (abs(x - obj_player.x) <= 280 and abs(x - obj_player.x) >= 150) {

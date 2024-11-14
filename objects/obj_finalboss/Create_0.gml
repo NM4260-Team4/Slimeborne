@@ -4,4 +4,5 @@
 // Inherit the parent event
 event_inherited();
 
-grav = 0;
+attacks = [BOSS_STATE.ATTACK1, BOSS_STATE.ATTACK2, BOSS_STATE.ATTACK3];
+grav = 1;

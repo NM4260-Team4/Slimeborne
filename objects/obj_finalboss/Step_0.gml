@@ -45,75 +45,58 @@ switch state {
 			inner_state = 0;
 		}
 		break;
-	case BOSS_STATE.ROAM:
-		if (inner_state == 0) {
-			sprite_index = spr_finalboss_idle;
-			inner_state = 1
-			move_speed = 2;
-		} else if (inner_state == 1) {
-			if (hp == 0) {
-				change_state(BOSS_STATE.DEATH);
-				break;
-			}
-			if (is_stumbled) {
-				change_state(BOSS_STATE.BREAK);
-				break;
-			}
-			
-			if (point_distance(x, y, obj_player.x, obj_player.y) < 1500) {
-				change_state(BOSS_STATE.TARGETING);
-				break;
-			}
-			if _on_land {
-				swap_direction_on_bump();
-				move_x = move_speed * move_dir;
-			} 
-			x += move_x;
-		} else {
-			state = next_state;
-			inner_state = 0;
-		}
-		break;
 	case BOSS_STATE.TARGETING:
 		if (inner_state == 0) {
 			// Set up for the next state
-			sprite_index = spr_bigslime_move;
+			sprite_index = spr_finalboss_idle;
 			inner_state = 1;
-			move_speed = 3;
-			move_dir = sign(image_xscale);
-			// Pick an attack at random
-			var _attacks = [BOSS_STATE.ATTACK1, BOSS_STATE.ATTACK2, BOSS_STATE.ATTACK3];
-			chosen_attack = _attacks[irandom(2)];
+			move_speed = 2;
+			move_dir = 1
 		} else if (inner_state == 1) {
 			// When the boss is dead, swap states
 			if (hp == 0) {
 				change_state(BOSS_STATE.DEATH);
 				break;
 			}
-
+			
+			// If too far away, switch back to roaming
 			if (point_distance(x, y, obj_player.x, obj_player.y) >= 2000) {
-				change_state(BOSS_STATE.ROAM);
-				break;
-			}
-			// If within attack range, stop and trigger attack
-			
-			if (abs(x - obj_player.x) <= 280) {
-				change_state(chosen_attack);
+				change_state(BOSS_STATE.IDLE);
 				break;
 			}
 			
-			if (x - obj_player.x >= 500) {
+
+			// Check if player has entered attack range
+			if (abs(x - obj_player.x) < 500 and attack_cooldown == 0) {
+				var _range = 1;
+				// Check which attack ranges the player is in
+				if (x - obj_player.x < 450) {
+					_range = 2;
+				} 
+				if (abs(x - obj_player.x) < 70) {
+					_range = 3;
+				}
+				var _choice = irandom(_range);
+				show_debug_message("Chosen attack:" + string(_choice))
+				show_debug_message("Range:" + string(_range))
+				show_debug_message("Distance:" + string(abs(x - obj_player.x)))
+				change_state(attacks[_choice]);
+			}
+			// Attack distance			
+			if (x - obj_player.x >= 70) {
 				move_dir = -1;
-			} else if (obj_player.x - x >= 500){
+				move_speed = 2;
+			} else if (obj_player.x - x >= 70){
 				move_dir = 1;
+				move_speed = 2;
 			} else {
-				move_dir = 0;
+				move_speed = 0;
 			}
 			
 			var _right_has_block = not position_meeting(bbox_right, bbox_bottom + 1, all_collidables[0]) or position_meeting(bbox_right + 2, bbox_bottom - 1, all_collidables);
 			var _left_has_block =  not position_meeting(bbox_left, bbox_bottom + 1, all_collidables[0]) or position_meeting(bbox_left - 2, bbox_bottom -1 , all_collidables);
 			if (_right_has_block and move_dir > 0) or (_left_has_block and move_dir < 0) {
-				move_dir = 0;
+				move_speed = 0;
 			}
 			
 			move_x = move_speed * move_dir;

@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_finalboss_fireattack",
   "bboxMode":2,
-  "bbox_bottom":755,
+  "bbox_bottom":754,
   "bbox_left":256,
   "bbox_right":1109,
   "bbox_top":144,
