@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":7,
   "parent":{
-    "name":"Environment",
-    "path":"folders/Sprites/Environment.yy",
+    "name":"Traps",
+    "path":"folders/Sprites/Traps.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

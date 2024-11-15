@@ -1,6 +1,6 @@
 {
   "$GMSprite":"",
-  "%Name":"spr_fire_shooter_warn_1",
+  "%Name":"spr_fire_shooter_fire",
   "bboxMode":2,
   "bbox_bottom":447,
   "bbox_left":0,
@@ -24,19 +24,19 @@
   "layers":[
     {"$GMImageLayer":"","%Name":"6167f5bc-d169-4416-a5a5-27e01dce15bb","blendMode":0,"displayName":"default","isLocked":false,"name":"6167f5bc-d169-4416-a5a5-27e01dce15bb","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
-  "name":"spr_fire_shooter_warn_1",
+  "name":"spr_fire_shooter_fire",
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"Environment",
-    "path":"folders/Sprites/Environment.yy",
+    "name":"Traps",
+    "path":"folders/Sprites/Traps.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
   "resourceVersion":"2.0",
   "sequence":{
     "$GMSequence":"",
-    "%Name":"spr_fire_shooter_warn_1",
+    "%Name":"spr_fire_shooter_fire",
     "autoRecord":true,
     "backdropHeight":768,
     "backdropImageOpacity":0.5,
@@ -60,7 +60,7 @@
       "resourceType":"KeyframeStore<MomentsEventKeyframe>",
       "resourceVersion":"2.0",
     },
-    "name":"spr_fire_shooter_warn_1",
+    "name":"spr_fire_shooter_fire",
     "playback":1,
     "playbackSpeed":8.0,
     "playbackSpeedType":0,
@@ -72,16 +72,16 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"13d53a22-59b3-4674-82af-e441dfe51e5a","path":"sprites/spr_fire_shooter_warn_1/spr_fire_shooter_warn_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"13d53a22-59b3-4674-82af-e441dfe51e5a","path":"sprites/spr_fire_shooter_fire/spr_fire_shooter_fire.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"56a06473-3db0-4272-b460-915ce3ccd20a","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"64527a16-5fe7-4a9c-9537-dfb00c79fd02","path":"sprites/spr_fire_shooter_warn_1/spr_fire_shooter_warn_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"64527a16-5fe7-4a9c-9537-dfb00c79fd02","path":"sprites/spr_fire_shooter_fire/spr_fire_shooter_fire.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"d154247f-305e-4f42-a7de-3d618fadbe01","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6111a8b0-8089-4559-be68-3867038fea67","path":"sprites/spr_fire_shooter_warn_1/spr_fire_shooter_warn_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"6111a8b0-8089-4559-be68-3867038fea67","path":"sprites/spr_fire_shooter_fire/spr_fire_shooter_fire.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"5361eb4b-222c-4db3-ba5d-da843c54c225","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ae0757ea-d48e-4dc3-a302-446e4f95173a","path":"sprites/spr_fire_shooter_warn_1/spr_fire_shooter_warn_1.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"ae0757ea-d48e-4dc3-a302-446e4f95173a","path":"sprites/spr_fire_shooter_fire/spr_fire_shooter_fire.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
               },"Disabled":false,"id":"affaf083-09b2-4432-8ecb-0d9cba4a547d","IsCreationKey":false,"Key":3.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
