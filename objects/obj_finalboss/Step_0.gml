@@ -67,20 +67,21 @@ switch state {
 			
 
 			// Check if player has entered attack range
-			if (abs(x - obj_player.x) < 500 and attack_cooldown == 0) {
-				var _range = 1;
+			if (abs(obj_player.x - x) < 500 and attack_cooldown == 0) {
+				var _range = 0;
 				// Check which attack ranges the player is in
-				if (x - obj_player.x < 450) {
-					_range = 2;
+				if (obj_player.x - x < 450) {
+					_range = 1;
 				} 
 				if (abs(x - obj_player.x) < 70) {
-					_range = 3;
+					_range = 2;
 				}
 				var _choice = irandom(_range);
 				show_debug_message("Chosen attack:" + string(_choice))
 				show_debug_message("Range:" + string(_range))
 				show_debug_message("Distance:" + string(abs(x - obj_player.x)))
-				change_state(attacks[_choice]);
+				change_state(attacks[1]);
+				break;
 			}
 			// Attack distance			
 			if (x - obj_player.x >= 70) {
@@ -100,7 +101,7 @@ switch state {
 			}
 			
 			move_x = move_speed * move_dir;
-			x += move_x;
+			//x += move_x;
 		} else {
 			state = next_state;
 			inner_state = 0;

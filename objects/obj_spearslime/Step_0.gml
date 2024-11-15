@@ -80,21 +80,21 @@ switch state {
 				image_xscale = abs(image_xscale);
 			}
 			
-			if (abs(x - obj_player.x) < 300 and abs(x - obj_player.x) > 200) {
-				if (attack_cooldown == 0) {
-					attack_cooldown = irandom_range(5, 30);
-					change_state(SLIMEENEMY_STATE.ATTACK);
-				}
-				break;
-			} else if (abs(x - obj_player.x) <= 200) {
-				if (x > obj_player.x) {
-					move_dir = 1;
-					image_xscale = 1;
-				} else {
-					move_dir = -1;
-					image_xscale = -1;
-				}
-			}
+			//if (abs(x - obj_player.x) < 300 and abs(x - obj_player.x) > 200) {
+			//	if (attack_cooldown == 0) {
+			//		attack_cooldown = irandom_range(5, 30);
+			//		change_state(SLIMEENEMY_STATE.ATTACK);
+			//	}
+			//	break;
+			//} else if (abs(x - obj_player.x) <= 200) {
+			//	if (x > obj_player.x) {
+			//		move_dir = 1;
+			//		image_xscale = 1;
+			//	} else {
+			//		move_dir = -1;
+			//		image_xscale = -1;
+			//	}
+			//}
 			//swap_direction_on_bump();
 			var _no_floor = (not position_meeting(bbox_right, bbox_bottom + 1, all_collidables[0]) and move_dir > 0) or (not position_meeting(bbox_left, bbox_bottom + 1, all_collidables[0]) and move_dir < 0);
 			var _has_wall = (position_meeting(bbox_right + 2, bbox_top, all_collidables) and move_dir > 0) or (position_meeting(bbox_left - 2, bbox_top, all_collidables) and move_dir < 0);
@@ -102,7 +102,7 @@ switch state {
 				move_dir = 0;
 			}
 			move_x = move_speed * move_dir;
-			x += move_x;
+			//x += move_x;
 		} else {
 			state = next_state;
 			inner_state = 0;
