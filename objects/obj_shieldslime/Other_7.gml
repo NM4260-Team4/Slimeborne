@@ -1,6 +1,6 @@
 if (sprite_index == spr_shieldslime_death) {
 	instance_destroy();
-	obj_microplastics.add_microplastics(20);
+	obj_currency.add_microplastics(20);
 }
 
 if (sprite_index == spr_shieldslime_hit) {

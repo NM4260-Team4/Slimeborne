@@ -3,7 +3,7 @@ event_inherited();
 function buy() {
 	if (global.inventory.num_hp_potions < 5 and global.player_state.microplastics >= cost) {
 		global.inventory.num_hp_potions++;
-		obj_microplastics.add_microplastics(-cost);
+		obj_currency.add_microplastics(-cost);
 		return true;
 	} else {
 		return false;

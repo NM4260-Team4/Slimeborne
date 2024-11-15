@@ -9,7 +9,7 @@
   "canGenerateBitmap":true,
   "charset":0,
   "first":0,
-  "fontName":"Power Red and Green",
+  "fontName":"Meiryo",
   "glyphOperations":0,
   "glyphs":{
     "32":{"character":32,"h":74,"offset":0,"shift":13,"w":13,"x":2,"y":2,},
@@ -133,7 +133,7 @@
   "sampleText":"abcdef ABCDEF\n0123456789 .,<>\"'&!?\nthe quick brown fox jumps over the lazy dog\nTHE QUICK BROWN FOX JUMPS OVER THE LAZY DOG\nDefault character: ▯ (9647)",
   "sdfSpread":8,
   "size":40.0,
-  "styleName":"Regular",
+  "styleName":"Bold",
   "textureGroupId":{
     "name":"Default",
     "path":"texturegroups/Default",

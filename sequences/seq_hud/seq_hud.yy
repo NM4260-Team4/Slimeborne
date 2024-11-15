@@ -128,7 +128,7 @@
       ],"traits":0,},
     {"$GMInstanceTrack":"","%Name":"obj_microplastics","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<AssetInstanceKeyframe>":"","Keyframes":[
           {"$Keyframe<AssetInstanceKeyframe>":"","Channels":{
-              "0":{"$AssetInstanceKeyframe":"","Id":{"name":"obj_microplastics","path":"objects/obj_microplastics/obj_microplastics.yy",},"resourceType":"AssetInstanceKeyframe","resourceVersion":"2.0",},
+              "0":{"$AssetInstanceKeyframe":"","Id":{"name":"obj_currency","path":"objects/obj_currency/obj_currency.yy",},"resourceType":"AssetInstanceKeyframe","resourceVersion":"2.0",},
             },"Disabled":false,"id":"f8b29ca0-90cf-4136-94d7-a6430c0a4da3","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<AssetInstanceKeyframe>","resourceVersion":"2.0","Stretch":false,},
         ],"resourceType":"KeyframeStore<AssetInstanceKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"obj_microplastics","resourceType":"GMInstanceTrack","resourceVersion":"2.0","trackColour":4294105160,"tracks":[
         {"$GMRealTrack":"","%Name":"origin","builtinName":16,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":true,"keyframes":{"$KeyframeStore<RealKeyframe>":"","Keyframes":[
