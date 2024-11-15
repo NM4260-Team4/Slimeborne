@@ -2,7 +2,7 @@
   "$GMSprite":"",
   "%Name":"spr_generator_room_tiles",
   "bboxMode":0,
-  "bbox_bottom":2455,
+  "bbox_bottom":2975,
   "bbox_left":0,
   "bbox_right":791,
   "bbox_top":0,
@@ -12,14 +12,14 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"d46f07fb-c76a-47ba-9359-b322e5a0dea1","name":"d46f07fb-c76a-47ba-9359-b322e5a0dea1","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"649e2ef8-e419-4f78-a04d-21a890c0ea14","name":"649e2ef8-e419-4f78-a04d-21a890c0ea14","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
-  "height":2456,
+  "height":2976,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"16e5b8c9-40b2-4921-b222-9fcd44420e40","blendMode":0,"displayName":"default","isLocked":false,"name":"16e5b8c9-40b2-4921-b222-9fcd44420e40","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"946890b5-4aa5-445d-a35c-f14567ee17d3","blendMode":0,"displayName":"default","isLocked":false,"name":"946890b5-4aa5-445d-a35c-f14567ee17d3","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_generator_room_tiles",
   "nineSlice":null,
@@ -69,8 +69,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"d46f07fb-c76a-47ba-9359-b322e5a0dea1","path":"sprites/spr_generator_room_tiles/spr_generator_room_tiles.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"ddf0a86e-6479-4666-80ed-e2907dc2ab8c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"649e2ef8-e419-4f78-a04d-21a890c0ea14","path":"sprites/spr_generator_room_tiles/spr_generator_room_tiles.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"a62bc753-41e4-423a-a5bb-e764e552ae7e","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,

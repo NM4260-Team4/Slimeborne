@@ -24,7 +24,7 @@ switch state {
 		sprite_index = spr_fire_shooter_warn;
 		break;
 	case ITEM_STATE.DANGER:
-		sprite_index = spr_fire_shooter_warn_1;
+		sprite_index = spr_fire_shooter_fire;
 		break;
 }
 
