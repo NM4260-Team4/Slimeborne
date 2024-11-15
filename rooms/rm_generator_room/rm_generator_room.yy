@@ -127,6 +127,7 @@
     {"name":"inst_54A9EB0B","path":"rooms/rm_generator_room/rm_generator_room.yy",},
     {"name":"inst_72128B2F","path":"rooms/rm_generator_room/rm_generator_room.yy",},
     {"name":"inst_3ECC7DEC","path":"rooms/rm_generator_room/rm_generator_room.yy",},
+    {"name":"inst_53CBB8FA","path":"rooms/rm_generator_room/rm_generator_room.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -189,6 +190,7 @@
         {"$GMRInstance":"v1","%Name":"inst_4E546B93","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4E546B93","objectId":{"name":"obj_danger_zone","path":"objects/obj_danger_zone/obj_danger_zone.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_danger_zone","path":"objects/obj_danger_zone/obj_danger_zone.yy",},"propertyId":{"name":"is_on_ground","path":"objects/obj_danger_zone/obj_danger_zone.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.25,"scaleY":5.0,"x":64.0,"y":3616.0,},
+        {"$GMRInstance":"v1","%Name":"inst_53CBB8FA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_53CBB8FA","objectId":{"name":"obj_spikes","path":"objects/obj_spikes/obj_spikes.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":6400.0,"y":6528.0,},
       ],"layers":[],"name":"Instances","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Enemies","depth":200,"effectEnabled":true,"effectType":null,"gridX":64,"gridY":64,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_6D8221E5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6D8221E5","objectId":{"name":"obj_elecboss","path":"objects/obj_elecboss/obj_elecboss.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":8608.0,"y":6528.0,},

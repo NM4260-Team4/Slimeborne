@@ -200,6 +200,7 @@
     {"id":{"name":"spr_electric","path":"sprites/spr_electric/spr_electric.yy",},},
     {"id":{"name":"spr_enemy_hitbox","path":"sprites/spr_enemy_hitbox/spr_enemy_hitbox.yy",},},
     {"id":{"name":"spr_Final_door","path":"sprites/spr_Final_door/spr_Final_door.yy",},},
+    {"id":{"name":"spr_final_key","path":"sprites/spr_final_key/spr_final_key.yy",},},
     {"id":{"name":"spr_fire_shooter_fire","path":"sprites/spr_fire_shooter_fire/spr_fire_shooter_fire.yy",},},
     {"id":{"name":"spr_fire_shooter_warn","path":"sprites/spr_fire_shooter_warn/spr_fire_shooter_warn.yy",},},
     {"id":{"name":"spr_fire_shooter","path":"sprites/spr_fire_shooter/spr_fire_shooter.yy",},},

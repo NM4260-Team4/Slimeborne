@@ -11,6 +11,7 @@ if (distance_to_object(obj_player) < 64) {
 		if (global.player_state.has_final_access) {
 			activated = true;
 			interacted = true;
+			image_index = 1;
 		} else {
 			obj_instruction.instruction_text = "You need a power core to unlock the door";
 		}
