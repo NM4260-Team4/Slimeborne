@@ -40,7 +40,6 @@
     {"name":"inst_4E546B93","path":"rooms/rm_generator_room/rm_generator_room.yy",},
     {"name":"inst_23AEECB3","path":"rooms/rm_generator_room/rm_generator_room.yy",},
     {"name":"inst_6D8221E5","path":"rooms/rm_generator_room/rm_generator_room.yy",},
-    {"name":"inst_3ECC7DEC","path":"rooms/rm_generator_room/rm_generator_room.yy",},
     {"name":"inst_68E14B70","path":"rooms/rm_generator_room/rm_generator_room.yy",},
     {"name":"inst_5432FAFF","path":"rooms/rm_generator_room/rm_generator_room.yy",},
     {"name":"inst_70B0BF25","path":"rooms/rm_generator_room/rm_generator_room.yy",},
@@ -127,6 +126,7 @@
     {"name":"inst_7CD28A7","path":"rooms/rm_generator_room/rm_generator_room.yy",},
     {"name":"inst_54A9EB0B","path":"rooms/rm_generator_room/rm_generator_room.yy",},
     {"name":"inst_72128B2F","path":"rooms/rm_generator_room/rm_generator_room.yy",},
+    {"name":"inst_3ECC7DEC","path":"rooms/rm_generator_room/rm_generator_room.yy",},
   ],
   "isDnd":false,
   "layers":[

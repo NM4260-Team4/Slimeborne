@@ -1,25 +1,27 @@
 {
   "$GMSprite":"",
   "%Name":"spr_wind_pipe_overcharged",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":159,
   "bbox_left":0,
   "bbox_right":159,
-  "bbox_top":3,
+  "bbox_top":32,
   "collisionKind":1,
   "collisionTolerance":0,
   "DynamicTexturePage":false,
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"","%Name":"622acdf5-8b50-40f5-b89f-4f441a3f63af","name":"622acdf5-8b50-40f5-b89f-4f441a3f63af","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"dae5cd05-37dc-46ed-ac2b-61ef40a56344","name":"dae5cd05-37dc-46ed-ac2b-61ef40a56344","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"af2bcb4a-11d7-4f4c-b9e4-39d6abd21a04","name":"af2bcb4a-11d7-4f4c-b9e4-39d6abd21a04","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"","%Name":"7919b9f5-9df5-43b0-9a09-b92c87211c1c","name":"7919b9f5-9df5-43b0-9a09-b92c87211c1c","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":160,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"1026b83d-cf8a-4532-89c8-7e6f271fbee4","blendMode":0,"displayName":"default","isLocked":false,"name":"1026b83d-cf8a-4532-89c8-7e6f271fbee4","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"9f09f017-ac95-42d5-b105-9593876d8fd9","blendMode":0,"displayName":"default","isLocked":false,"name":"9f09f017-ac95-42d5-b105-9593876d8fd9","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_wind_pipe_overcharged",
   "nineSlice":null,
@@ -49,7 +51,7 @@
     },
     "eventStubScript":null,
     "eventToFunction":{},
-    "length":1.0,
+    "length":3.0,
     "lockOrigin":false,
     "moments":{
       "$KeyframeStore<MomentsEventKeyframe>":"",
@@ -59,7 +61,7 @@
     },
     "name":"spr_wind_pipe_overcharged",
     "playback":1,
-    "playbackSpeed":30.0,
+    "playbackSpeed":8.0,
     "playbackSpeedType":0,
     "resourceType":"GMSequence",
     "resourceVersion":"2.0",
@@ -69,8 +71,14 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"622acdf5-8b50-40f5-b89f-4f441a3f63af","path":"sprites/spr_wind_pipe_overcharged/spr_wind_pipe_overcharged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"6af3148f-a000-4bf1-8b9b-e2ca8b4c687c","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"dae5cd05-37dc-46ed-ac2b-61ef40a56344","path":"sprites/spr_wind_pipe_overcharged/spr_wind_pipe_overcharged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"617e07ac-237f-43ab-8e0c-57a09d4dadc8","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"af2bcb4a-11d7-4f4c-b9e4-39d6abd21a04","path":"sprites/spr_wind_pipe_overcharged/spr_wind_pipe_overcharged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"d6372dc9-cf32-499a-8324-3dc7da188c71","IsCreationKey":false,"Key":1.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+            {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"7919b9f5-9df5-43b0-9a09-b92c87211c1c","path":"sprites/spr_wind_pipe_overcharged/spr_wind_pipe_overcharged.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"1602e987-be69-4a4b-b023-5b9697c44f5a","IsCreationKey":false,"Key":2.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
