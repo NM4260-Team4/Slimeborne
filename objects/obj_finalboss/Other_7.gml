@@ -3,7 +3,9 @@ if (sprite_index == spr_finalboss_death) {
 	if (active_sequence != undefined) {
 		layer_sequence_destroy(active_sequence);
 	}
-	instance_create_layer(x, y - 80, "Instances", obj_hammer);
+	if layer_sequence_exists(weakness_layer, weak_sequence) {
+		layer_sequence_destroy(weak_sequence);
+	}
 	save_game(false);
 }
 

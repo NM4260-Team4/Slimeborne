@@ -23,6 +23,9 @@ if (attack_cooldown > 0) {
 	attack_cooldown--;
 }
 
+if layer_sequence_is_finished(weak_sequence) {
+	layer_sequence_destroy(weak_sequence);
+}
 
 // State handling
 switch state {
@@ -80,7 +83,7 @@ switch state {
 				show_debug_message("Chosen attack:" + string(_choice))
 				show_debug_message("Range:" + string(_range))
 				show_debug_message("Distance:" + string(abs(x - obj_player.x)))
-				change_state(attacks[1]);
+				change_state(attacks[_choice]);
 				break;
 			}
 			// Attack distance			
@@ -109,10 +112,13 @@ switch state {
 		break;
 	
 	case BOSS_STATE.ATTACK1:
+		// Laser attack
 		if (inner_state == 0) {
 			start_animation(seq_finalboss_elec_attack);
 			inner_state = 1;
 			move_speed = 0;
+			weakness = obj_battery_attach;
+			offset = 400;
 		} else if (inner_state == 1) {
 			check_animation(is_stumbled or hp <= 0);
 			if (hp <= 0) {
@@ -133,6 +139,8 @@ switch state {
 			start_animation(seq_finalboss_fire_attack);
 			inner_state = 1;
 			move_speed = 0;
+			weakness = obj_coal_attach;
+			offset = -400;
 		} else if (inner_state == 1) {
 			check_animation(is_stumbled or hp <= 0);
 			if (hp <= 0) {
@@ -153,6 +161,8 @@ switch state {
 			start_animation(seq_finalboss_head_attack);
 			inner_state = 1;
 			move_speed = 0;
+			weakness = obj_hammer_attach;
+			offset = 0;
 		} else if (inner_state == 1) {
 			check_animation(is_stumbled or hp <= 0);
 			if (hp <= 0) {
