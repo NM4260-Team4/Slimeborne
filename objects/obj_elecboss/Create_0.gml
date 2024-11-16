@@ -1,6 +1,6 @@
 event_inherited();
-hp = 20;
-max_hp = 20;
+hp = 30;
+max_hp = 30;
 
 electric_floor_active = false;
 

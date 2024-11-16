@@ -6,7 +6,7 @@ if (sprite_index == spr_elecboss_death) {
 	deactivate_electric_floor();
 	save_game(true);
 	global.player_state.has_final_access = true;
-	obj_game_manager.draw_paused(seq_elecboss_death_ui);
+	obj_game_manager.draw_paused(seq_bigslime_death_ui);
 }
 
 if (sprite_index == spr_elecboss_break) {

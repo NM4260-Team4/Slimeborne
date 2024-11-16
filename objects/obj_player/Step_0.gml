@@ -173,7 +173,11 @@ switch state {
 			attack_buffered = false;
 			attack_buffer_timer = 0;
 			if not just_paused {
-				start_animation(seq_player_attack);
+				if no_hurt_frames > 0 {
+					start_animation(seq_player_attack_whilehit);
+				} else {
+					start_animation(seq_player_attack);
+				}
 			}
 		}
 		// update
@@ -261,5 +265,18 @@ y += move_y;
 // invincible frame
 if (no_hurt_frames > 0) {
 	no_hurt_frames --;
+	if enabled {
+		if no_hurt_frames % 10 == 0 {
+			image_alpha = 0.5;
+		} 
+		if no_hurt_frames % 20 == 0 {
+			image_alpha = 1;
+		} 
+	}
+	
+} else {
+	if enabled { 
+		image_alpha = 1;
+	}
 }
 
