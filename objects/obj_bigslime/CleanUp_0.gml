@@ -1,0 +1,1 @@
+check_animation(true);

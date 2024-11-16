@@ -1,10 +1,10 @@
 if (sprite_index == spr_shootslime_death) {
 	instance_destroy();
-	obj_microplastics.add_microplastics(15);
+	obj_currency.add_microplastics(15);
 }
 
 if (sprite_index == spr_shootslime_attack) {
-	instance_create_layer(x + 30 * move_dir, y - 80, layer, obj_lazer);
+	instance_create_layer(x + 30 * move_dir, y - 80, layer, obj_laser);
 	attack_cooldown = 90;
 	change_state(SLIMEENEMY_STATE.TARGETING);
 }

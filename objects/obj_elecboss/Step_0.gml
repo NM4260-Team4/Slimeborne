@@ -27,6 +27,9 @@ if not electric_floor_active {
 	instance_deactivate_object(obj_electric);
 }
 
+if (!instance_exists(obj_player)) {
+	exit;
+}
 
 // State handling
 switch state {

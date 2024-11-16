@@ -1,7 +1,7 @@
 event_inherited();
 
 if (has_hit) {
-	sprite_index = sprite_on;
+	sprite_index = spr_generator_on;
 } else {
-	sprite_index = sprite_off;
+	sprite_index = spr_generator_off;
 }

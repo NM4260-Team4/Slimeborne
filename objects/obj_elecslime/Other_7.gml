@@ -2,7 +2,7 @@
 // You can write your code in this editor
 if (sprite_index == spr_elecslime_death) {
 	instance_destroy();
-	obj_microplastics.add_microplastics(7);
+	obj_currency.add_microplastics(7);
 }
 
 if (sprite_index == spr_elecslime_hit) {

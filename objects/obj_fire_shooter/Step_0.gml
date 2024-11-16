@@ -18,13 +18,13 @@ if (timer < safe_duration) {
 
 switch state {
 	case ITEM_STATE.SAFE:
-		image_index = 0;
+		sprite_index = spr_fire_shooter;
 		break;
 	case ITEM_STATE.WARN:
-		image_index = 1;
+		sprite_index = spr_fire_shooter_warn;
 		break;
 	case ITEM_STATE.DANGER:
-		image_index = 2;
+		sprite_index = spr_fire_shooter_fire;
 		break;
 }
 

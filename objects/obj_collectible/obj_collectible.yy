@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_chemical",
-    "path":"sprites/spr_chemical/spr_chemical.yy",
+    "name":"spr_power_up",
+    "path":"sprites/spr_power_up/spr_power_up.yy",
   },
   "spriteMaskId":null,
   "visible":true,

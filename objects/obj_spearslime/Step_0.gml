@@ -26,6 +26,10 @@ if layer_sequence_is_finished(weak_sequence) {
 	layer_sequence_destroy(weak_sequence);
 }
 
+if (!instance_exists(obj_player)) {
+	exit;
+}
+
 // State handling
 switch state {
 	case SLIMEENEMY_STATE.ROAM:

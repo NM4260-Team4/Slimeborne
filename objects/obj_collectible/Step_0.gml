@@ -1,4 +1,4 @@
-if (distance_to_object(obj_player) < 40) {
+if (distance_to_object(obj_player) < 96) {
 	
 	show_prompt = true;
 	

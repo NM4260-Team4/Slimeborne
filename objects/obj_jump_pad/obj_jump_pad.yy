@@ -1,7 +1,10 @@
 {
   "$GMObject":"",
   "%Name":"obj_jump_pad",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_jump_pad",
   "overriddenProperties":[],
@@ -26,7 +29,9 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[],
+  "properties":[
+    {"$GMObjectProperty":"v1","%Name":"pad_index","filters":[],"listItems":[],"multiselect":false,"name":"pad_index","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"-1","varType":1,},
+  ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
@@ -34,6 +39,9 @@
     "name":"spr_jump_pad",
     "path":"sprites/spr_jump_pad/spr_jump_pad.yy",
   },
-  "spriteMaskId":null,
+  "spriteMaskId":{
+    "name":"spr_jump_pad_idle",
+    "path":"sprites/spr_jump_pad_idle/spr_jump_pad_idle.yy",
+  },
   "visible":true,
 }
