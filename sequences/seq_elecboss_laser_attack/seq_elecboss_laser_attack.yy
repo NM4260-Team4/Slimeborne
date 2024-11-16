@@ -26,8 +26,8 @@
   },
   "name":"seq_elecboss_laser_attack",
   "parent":{
-    "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "name":"Electric Boss",
+    "path":"folders/Sequences/Electric Boss.yy",
   },
   "playback":0,
   "playbackSpeed":8.0,

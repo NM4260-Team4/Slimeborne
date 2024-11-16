@@ -8,8 +8,8 @@
   "name":"obj_electric",
   "overriddenProperties":[],
   "parent":{
-    "name":"Regular",
-    "path":"folders/Objects/Enemy/Regular.yy",
+    "name":"Bosses",
+    "path":"folders/Objects/Enemy/Bosses.yy",
   },
   "parentObjectId":{
     "name":"obj_enemy_hitbox",

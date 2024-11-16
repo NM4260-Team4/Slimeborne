@@ -99,10 +99,6 @@ switch state {
 				change_state(BOSS_STATE.BREAK);
 				break;
 			}
-			if (point_distance(x, y, obj_player.x, obj_player.y) >= 4000) {
-				change_state(BOSS_STATE.ROAM);
-				break;
-			}
 			
 			// If player too far/ too close, move towards player and attack if no cooldown
 			if (abs(x - obj_player.x) > 920 or abs(x - obj_player.x) < 350) {

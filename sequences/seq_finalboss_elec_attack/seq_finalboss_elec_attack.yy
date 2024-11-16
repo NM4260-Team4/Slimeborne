@@ -26,8 +26,8 @@
   },
   "name":"seq_finalboss_elec_attack",
   "parent":{
-    "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "name":"Final Boss",
+    "path":"folders/Sequences/Final Boss.yy",
   },
   "playback":0,
   "playbackSpeed":10.0,

@@ -26,8 +26,8 @@
   },
   "name":"seq_bigslime_sweep_attack",
   "parent":{
-    "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "name":"Big Slime",
+    "path":"folders/Sequences/Big Slime.yy",
   },
   "playback":0,
   "playbackSpeed":10.0,

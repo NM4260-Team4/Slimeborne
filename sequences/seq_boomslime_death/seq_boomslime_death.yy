@@ -26,8 +26,8 @@
   },
   "name":"seq_boomslime_death",
   "parent":{
-    "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "name":"Boom Slime",
+    "path":"folders/Sequences/Boom Slime.yy",
   },
   "playback":0,
   "playbackSpeed":10.0,

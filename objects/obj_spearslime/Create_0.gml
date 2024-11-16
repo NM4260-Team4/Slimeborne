@@ -1,5 +1,5 @@
-hp = 4;
-max_hp = 4;
+hp = 3;
+max_hp = 3;
 
 // Frame counts
 attack_cooldown = 0;

@@ -26,8 +26,8 @@
   },
   "name":"seq_checkpoint",
   "parent":{
-    "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "name":"UI",
+    "path":"folders/Sequences/UI.yy",
   },
   "playback":0,
   "playbackSpeed":60.0,
