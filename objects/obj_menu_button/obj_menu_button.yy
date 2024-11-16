@@ -13,8 +13,8 @@
   "name":"obj_menu_button",
   "overriddenProperties":[],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"Main Menu Buttons",
+    "path":"folders/Objects/UI/Main Menu Buttons.yy",
   },
   "parentObjectId":null,
   "persistent":false,

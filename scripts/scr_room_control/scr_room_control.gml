@@ -45,8 +45,8 @@ function save_room() {
 	for (var _i = 0; _i < _boss_num; _i++) {
 		var _inst = instance_find(obj_bigslime, _i);
 		var _data = {
-			spawn_x : _inst.spawn_x,
-			spawn_y : _inst.spawn_y,
+			spawn_x : _inst.xstart,
+			spawn_y : _inst.ystart,
 			object_type : _inst.object_index,
 		}
 		_room_struct.boss_data[_i] = _data;
