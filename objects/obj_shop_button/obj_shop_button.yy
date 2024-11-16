@@ -7,15 +7,15 @@
   "managed":true,
   "name":"obj_shop_button",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_gamemenu_button","path":"objects/obj_gamemenu_button/obj_gamemenu_button.yy",},"propertyId":{"name":"button_text","path":"objects/obj_gamemenu_button/obj_gamemenu_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Shop",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_in_game_button","path":"objects/obj_in_game_button/obj_in_game_button.yy",},"propertyId":{"name":"button_text","path":"objects/obj_in_game_button/obj_in_game_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Shop",},
   ],
   "parent":{
-    "name":"UI",
-    "path":"folders/Objects/UI.yy",
+    "name":"In-game Buttons",
+    "path":"folders/Objects/UI/In-game Buttons.yy",
   },
   "parentObjectId":{
-    "name":"obj_gamemenu_button",
-    "path":"objects/obj_gamemenu_button/obj_gamemenu_button.yy",
+    "name":"obj_in_game_button",
+    "path":"objects/obj_in_game_button/obj_in_game_button.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_menu_button",
-    "path":"sprites/spr_menu_button/spr_menu_button.yy",
+    "name":"spr_menu_button_one_side_alt",
+    "path":"sprites/spr_menu_button_one_side_alt/spr_menu_button_one_side_alt.yy",
   },
   "spriteMaskId":null,
   "visible":true,
