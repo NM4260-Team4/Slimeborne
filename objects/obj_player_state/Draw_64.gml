@@ -24,8 +24,9 @@ for (var _i = 0; _i < obj_player.max_hp; _i++) {
 
 var _width = display_get_gui_width();
 var _height = display_get_gui_height()
-draw_rectangle_color(_width - 210, _height -210, _width - 60, _height - 60, c_white,c_white,c_white, c_white, 0);
-draw_rectangle_color(_width - 200, _height -200, _width -70, _height - 70, c_gray,c_gray,c_gray, c_gray, 0);
+//draw_rectangle_color(230, _height -230, 40, _height - 40, #4A5368, #4A5368, #4A5368, #4A5368, 0);
+draw_roundrect_color_ext(_width - 228, _height -230, _width - 46, _height - 46, 50, 50, #4A5368, #4A5368, 0);
+draw_sprite_ext(spr_frame, -1,_width - 135, _height - 135, 0.3, 0.3, 0, c_white, 1);
 if (global.equipped.has_attachment) {
 	draw_sprite(global.equipped_attachment.sprite_index, 0, _width - 135, _height - 135);
 }

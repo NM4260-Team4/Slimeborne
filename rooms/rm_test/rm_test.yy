@@ -24,6 +24,8 @@
     {"name":"inst_53531C1C","path":"rooms/rm_test/rm_test.yy",},
     {"name":"inst_63988279","path":"rooms/rm_test/rm_test.yy",},
     {"name":"inst_76C2B63D","path":"rooms/rm_test/rm_test.yy",},
+    {"name":"inst_4E6ABF7E","path":"rooms/rm_test/rm_test.yy",},
+    {"name":"inst_6FB028E1","path":"rooms/rm_test/rm_test.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -83,6 +85,8 @@
         {"$GMRInstance":"v1","%Name":"inst_B78B8B1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":true,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_B78B8B1","objectId":{"name":"obj_electric","path":"objects/obj_electric/obj_electric.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.9345794,"scaleY":4.85,"x":3669.5327,"y":1439.0,},
         {"$GMRInstance":"v1","%Name":"inst_53531C1C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":true,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_53531C1C","objectId":{"name":"obj_boomslime","path":"objects/obj_boomslime/obj_boomslime.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":1405.0,"y":1088.0,},
         {"$GMRInstance":"v1","%Name":"inst_63988279","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_63988279","objectId":{"name":"obj_finalboss","path":"objects/obj_finalboss/obj_finalboss.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2503.0,"y":1354.0,},
+        {"$GMRInstance":"v1","%Name":"inst_4E6ABF7E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4E6ABF7E","objectId":{"name":"obj_hammer","path":"objects/obj_hammer/obj_hammer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":160.0,"y":1344.0,},
+        {"$GMRInstance":"v1","%Name":"inst_6FB028E1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6FB028E1","objectId":{"name":"obj_coal","path":"objects/obj_coal/obj_coal.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":384.0,"y":1344.0,},
       ],"layers":[],"name":"Enemy","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4278190080,"depth":700,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

@@ -54,7 +54,7 @@ switch state {
 			sprite_index = spr_finalboss_idle;
 			inner_state = 1;
 			move_speed = 2;
-			move_dir = 1
+			move_dir = 1;
 		} else if (inner_state == 1) {
 			// When the boss is dead, swap states
 			if (hp <= 0) {
