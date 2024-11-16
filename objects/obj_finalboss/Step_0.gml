@@ -83,7 +83,7 @@ switch state {
 				show_debug_message("Chosen attack:" + string(_choice))
 				show_debug_message("Range:" + string(_range))
 				show_debug_message("Distance:" + string(abs(x - obj_player.x)))
-				change_state(attacks[_choice]);
+				change_state(attacks[1]);
 				break;
 			}
 			// Attack distance			
