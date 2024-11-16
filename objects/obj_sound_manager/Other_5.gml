@@ -1,1 +1,1 @@
-audio_stop_sound(background_music);
+stop_background_music(background_music);

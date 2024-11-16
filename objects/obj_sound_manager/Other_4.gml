@@ -1,1 +1,1 @@
-audio_play_sound(background_music, 0, true);
+play_background_music(background_music);
