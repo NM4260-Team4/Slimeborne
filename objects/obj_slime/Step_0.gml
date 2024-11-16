@@ -18,6 +18,10 @@ if (no_hurt_frames > 0) {
 	no_hurt_frames --;
 }
 
+if layer_sequence_is_finished(weak_sequence) {
+	layer_sequence_destroy(weak_sequence);
+}
+
 // State handling
 switch state {
 	case ENEMY_STATE.IDLE: 

@@ -50,6 +50,7 @@
     {"name":"inst_5C1874B2","path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"inst_15A0D09D","path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"inst_29275F7B","path":"rooms/rm_tutorial/rm_tutorial.yy",},
+    {"name":"inst_328A7F95","path":"rooms/rm_tutorial/rm_tutorial.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -174,6 +175,7 @@
         {"$GMRInstance":"v1","%Name":"inst_6FCAF9C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6FCAF9C","objectId":{"name":"obj_breakable_wall","path":"objects/obj_breakable_wall/obj_breakable_wall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":8320.0,"y":2432.0,},
         {"$GMRInstance":"v1","%Name":"inst_6B8E8E85","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6B8E8E85","objectId":{"name":"obj_breakable_wall","path":"objects/obj_breakable_wall/obj_breakable_wall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":8256.0,"y":2303.0,},
         {"$GMRInstance":"v1","%Name":"inst_4B46FA83","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4B46FA83","objectId":{"name":"obj_breakable_wall","path":"objects/obj_breakable_wall/obj_breakable_wall.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":8256.0,"y":2238.0,},
+        {"$GMRInstance":"v1","%Name":"inst_328A7F95","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_328A7F95","objectId":{"name":"obj_hammer","path":"objects/obj_hammer/obj_hammer.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":11456.0,"y":3584.0,},
       ],"layers":[],"name":"Interactables","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"Traps","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Traps","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":88,"SerialiseWidth":225,"TileCompressedData":[
           -12833,-2147483648,-7,1,-218,-2147483648,-7,1,-3630,-2147483648,1,0,-1335,-2147483648,-3,1,-6,-2147483648,

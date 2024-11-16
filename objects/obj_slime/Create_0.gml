@@ -73,7 +73,7 @@ active_animation = -1;
 active_sequence = -1;
 function start_animation(_sequence) {
 	active_animation = _sequence;
-	active_sequence = layer_sequence_create(layer, x, y, _sequence);
+	active_sequence = layer_sequence_create(layer, x, y - sprite_height, _sequence);
 	layer_sequence_xscale(active_sequence, image_xscale);
 	disable();
 }
@@ -90,3 +90,7 @@ function check_animation(_should_interrupt) {
 		enable();
 	}
 }
+
+// Weakness
+weakness = obj_hammer_attach;
+weak_sequence = -1;

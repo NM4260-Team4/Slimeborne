@@ -22,6 +22,10 @@ if (attack_cooldown > 0) {
 	attack_cooldown--;
 }
 
+if layer_sequence_is_finished(weak_sequence) {
+	layer_sequence_destroy(weak_sequence);
+}
+
 // State handling
 switch state {
 	case SLIMEENEMY_STATE.ROAM:

@@ -88,3 +88,6 @@ function check_animation(_should_interrupt) {
 		enable();
 	}
 }
+
+weak_sequence = -1;
+weakness = obj_hammer_attach;	
