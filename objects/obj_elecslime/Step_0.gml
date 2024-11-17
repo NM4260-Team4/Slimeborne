@@ -101,6 +101,7 @@ switch state {
 			sprite_index = spr_elecslime_hit;
 			inner_state = 1;
 			move_speed = 0;
+			audio_play_sound(snd_slime_hit, 10, false);
 		} else if (inner_state == 1) {
 			move_x = 0;
 		} else {
@@ -113,6 +114,7 @@ switch state {
 			sprite_index = spr_elecslime_death;
 			inner_state = 1;
 			move_speed = 0;
+			audio_play_sound(snd_slime_death, 10, false);
 		} else if (inner_state == 1) {
 			move_x = 0;
 		}

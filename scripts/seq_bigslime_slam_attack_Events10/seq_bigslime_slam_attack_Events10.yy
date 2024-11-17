@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"seq_bigslime_slam_attack_Events10",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"seq_bigslime_slam_attack_Events10",
+  "parent":{
+    "name":"Slimeborne",
+    "path":"Slimeborne.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

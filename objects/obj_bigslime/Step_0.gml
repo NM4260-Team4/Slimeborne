@@ -17,6 +17,8 @@ y += move_y;
 // invincible frame
 if (no_hurt_frames > 0) {
 	no_hurt_frames --;
+} else if enabled {
+	image_alpha = 1;
 }
 // Counting timers
 if (attack_cooldown > 0) {
@@ -39,7 +41,7 @@ switch state {
 				change_state(BOSS_STATE.DEATH);
 				break;
 			}
-			if (point_distance(x, y, obj_player.x, obj_player.y) < 1200) {
+			if (point_distance(x, y, obj_player.x, obj_player.y) < 1200 and abs(y - obj_player.y) < 50 and y <= obj_player.y) {
 				change_state(BOSS_STATE.TARGETING);
 				break;
 			}
@@ -201,15 +203,21 @@ switch state {
 		break;
 	case BOSS_STATE.BREAK:
 		if (inner_state == 0) {
+			audio_stop_sound(snd_bigslime_slamdown);
+			audio_stop_sound(snd_bigslime_slamup);
+			audio_stop_sound(snd_bigslime_sweep);
+			audio_play_sound(snd_stumble, 10, false);
 			sprite_index = spr_bigslime_break;
 			image_index = 0;
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {
 			if (hp <= 0) {
-				show_debug_message("asdf")
 				change_state(BOSS_STATE.DEATH);
 				break;
+			}
+			if image_index == 13.05 {
+				audio_play_sound(snd_bigslime_return, 10, false);
 			}
 		} else if (inner_state == 2) {
 			is_stumbled = false;
@@ -223,8 +231,15 @@ switch state {
 			image_index = 0;
 			inner_state = 1;
 			move_speed = 0;
+			audio_stop_sound(snd_bigslime_slamdown);
+			audio_stop_sound(snd_bigslime_slamup);
+			audio_stop_sound(snd_bigslime_sweep);
 		} else if (inner_state == 1) {
 			move_x = 0;
+			if image_index == 3 {
+				audio_play_sound(snd_bigslime_death1, 10, false);
+				audio_play_sound(snd_bigslime_death2, 10, false);
+			}
 		}
 		break;
 }

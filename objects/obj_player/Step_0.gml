@@ -1,5 +1,5 @@
 if (should_freeze) {exit;}
-
+audio_listener_position(x, y, 0);
 // y movement
 move_y += grav;
 
@@ -222,6 +222,7 @@ switch state {
 			sprite_index = spr_player_on_hit;
 			image_index = 0;
 			image_speed = 1;
+			audio_play_sound(snd_player_hit, 10, false);
 		}
 		// update
 		else if (inner_state == 1) {

@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"seq_elecboss_laser_attack_Events12",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"seq_elecboss_laser_attack_Events12",
+  "parent":{
+    "name":"Slimeborne",
+    "path":"Slimeborne.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

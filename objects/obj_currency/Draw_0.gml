@@ -1,7 +1,7 @@
 if (not sequence_exists(seq_shop)) {
 	exit;
 }
-
+show_debug_message("dfasldfasfasdfasdfda")
 draw_self();
 
 draw_set_valign(fa_middle);

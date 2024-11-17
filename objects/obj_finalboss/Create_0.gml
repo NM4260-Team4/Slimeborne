@@ -21,11 +21,11 @@ function hit() {
 			if layer_sequence_exists(weakness_layer, weak_sequence) {
 				layer_sequence_destroy(weak_sequence);
 			}
-			
 			weak_sequence = layer_sequence_create(weakness_layer, x + offset, y - 10, seq_weak);
 		} else {
 			hp -= 1;
 		}
+		audio_play_sound(snd_finalboss_hit, 10, false);
 		no_hurt_frames = 20;
 	}
 }

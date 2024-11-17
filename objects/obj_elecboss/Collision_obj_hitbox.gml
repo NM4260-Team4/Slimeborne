@@ -6,6 +6,7 @@ if (no_hurt_frames > 0) {
 	if (not is_stumbled) {
 		damage_dealt += 1;
 	} 
+	audio_play_sound(snd_elecboss_hit, 10, false);
 	if (damage_dealt % 5 == 0 and not is_stumbled) {
 		is_stumbled = true;
 		no_hurt_frames = 20;

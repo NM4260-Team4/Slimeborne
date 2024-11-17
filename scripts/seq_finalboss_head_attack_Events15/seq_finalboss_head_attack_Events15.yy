@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"seq_finalboss_head_attack_Events15",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"seq_finalboss_head_attack_Events15",
+  "parent":{
+    "name":"Slimeborne",
+    "path":"Slimeborne.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

@@ -113,6 +113,7 @@ switch state {
 	case SLIMEENEMY_STATE.ATTACK:
 		if (inner_state == 0) {
 			if (attack_cooldown == 0) {
+				audio_play_sound(snd_boomslime_attack, 10, false);
 				start_animation(seq_boomslime_attack);
 				inner_state = 1;
 			}
@@ -134,6 +135,7 @@ switch state {
 			inner_state = 1;
 			move_speed = 0;
 			image_index = 0;
+			audio_play_sound(snd_metalslime_hit, 10, false);
 		} else if (inner_state == 1) {
 			move_x = 0;
 		} else {
@@ -146,15 +148,16 @@ switch state {
 		
 	case SLIMEENEMY_STATE.DEATH:
 		if (inner_state == 0) {
-			start_animation(seq_boomslime_attack);
+			start_animation(seq_boomslime_death);
 			inner_state = 1;
 			image_index = 0;
 			move_speed = 0;
+			audio_play_sound(snd_boomslime_death, 10, false);
 		} else if (inner_state == 1) {
 			check_animation(false);
 			if (enabled) {
 				instance_destroy();
-				//obj_microplastics.add_microplastics(10);
+				obj_currency.add_microplastics(10);
 			}
 		}
 		break;

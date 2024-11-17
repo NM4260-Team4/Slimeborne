@@ -136,6 +136,8 @@ switch state {
 			sprite_index = spr_shieldslime_hit;
 			inner_state = 1;
 			move_speed = 0;
+			audio_stop_sound(snd_shieldslime_attack);
+			audio_play_sound(snd_shieldslime_hit, 10, false);
 		} else if (inner_state == 1) {
 			move_x = 0;
 		} else {
@@ -150,6 +152,9 @@ switch state {
 			sprite_index = spr_shieldslime_death;
 			inner_state = 1;
 			move_speed = 0;
+			audio_stop_sound(snd_shieldslime_attack);
+			audio_stop_sound(snd_shieldslime_hit);
+			audio_play_sound(snd_slime_death, 10, false);
 		} else if (inner_state == 1) {
 			move_x = 0;
 		}

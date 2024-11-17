@@ -1,5 +1,6 @@
 // y movement
 move_y += grav;
+
 // move with y collision
 var _sub_pixel = 1;
 var _on_land = false;
@@ -43,7 +44,7 @@ switch state {
 				change_state(BOSS_STATE.DEATH);
 				break;
 			}
-			if (point_distance(x, y, obj_player.x, obj_player.y) < 1000) {
+			if (point_distance(x, y, obj_player.x, obj_player.y) < 900 and abs(y - obj_player.y) < 50 and y <= obj_player.y) {
 				change_state(BOSS_STATE.TARGETING);
 				break;
 			}
@@ -108,7 +109,7 @@ switch state {
 			}
 			
 			move_x = move_speed * move_dir;
-			//x += move_x;
+			x += move_x;
 		} else {
 			state = next_state;
 			inner_state = 0;
@@ -188,9 +189,15 @@ switch state {
 			image_index = 0;
 			inner_state = 1;
 			move_speed = 0;
+			audio_stop_sound(snd_finalboss_elechand);
+			audio_stop_sound(snd_finalboss_firehand);
+			audio_stop_sound(snd_finalboss_firewave);
+			audio_stop_sound(snd_finalboss_headback);
+			audio_play_sound(snd_finalboss_death, 10, false);
 		} else if (inner_state == 1) {
 			move_x = 0;
 		}
 		break;
 }
+
 
