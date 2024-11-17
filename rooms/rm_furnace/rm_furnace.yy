@@ -107,13 +107,10 @@
     {"name":"inst_374F3830","path":"rooms/rm_furnace/rm_furnace.yy",},
     {"name":"inst_4268F9F3","path":"rooms/rm_furnace/rm_furnace.yy",},
     {"name":"inst_4243F16F","path":"rooms/rm_furnace/rm_furnace.yy",},
-    {"name":"inst_1BD5F95F","path":"rooms/rm_furnace/rm_furnace.yy",},
   ],
   "isDnd":false,
   "layers":[
-    {"$GMRInstanceLayer":"","%Name":"Attachments","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v1","%Name":"inst_1BD5F95F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1BD5F95F","objectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":17728.0,"y":5120.0,},
-      ],"layers":[],"name":"Attachments","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
+    {"$GMRInstanceLayer":"","%Name":"Attachments","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Attachments","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Instances","depth":100,"effectEnabled":true,"effectType":null,"gridX":64,"gridY":64,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v1","%Name":"inst_7128E15B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_7128E15B","objectId":{"name":"obj_game_manager","path":"objects/obj_game_manager/obj_game_manager.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":0.0,},
         {"$GMRInstance":"v1","%Name":"inst_304F148D","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_304F148D","objectId":{"name":"obj_sound_manager","path":"objects/obj_sound_manager/obj_sound_manager.yy",},"properties":[

@@ -21,16 +21,6 @@ function get_controls() {
 	swap_pressed = keyboard_check_pressed(ord("Q"));
 	swap_potion_pressed = keyboard_check_pressed(ord("R"));
 	use_potion_pressed = keyboard_check_pressed(ord("F"));
-	if (mouse_check_button_pressed(mb_right)) {
-		global.player_state.has_final_access = !global.player_state.has_final_access;
-		//show_debug_message("Number of collectibles: " + string(instance_number(obj_collectible)));
-		//is_hit = true;
-		//if (!is_hit and no_hurt_frames <= 0) {
-			
-		//}
-		//show_debug_message("right meeting: " + string(place_meeting(x + 1, y, all_collidables)));
-		//show_debug_message("down meeting: " + string(place_meeting(x, y + 1, all_collidables)));
-	}
 	
 	// jump key buffering
 	if (jump_pressed) {

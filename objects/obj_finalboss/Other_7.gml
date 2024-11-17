@@ -7,5 +7,6 @@ if (sprite_index == spr_finalboss_death) {
 		layer_sequence_destroy(weak_sequence);
 	}
 	save_game(false);
+	obj_game_manager.draw_paused(seq_finalboss_death_ui)
 }
 

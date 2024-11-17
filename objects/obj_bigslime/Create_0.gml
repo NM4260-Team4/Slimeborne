@@ -1,5 +1,5 @@
-hp = 10;
-max_hp = 10;
+hp = 25;
+max_hp = 25;
 damage_dealt = 0;
 
 // Frame counts

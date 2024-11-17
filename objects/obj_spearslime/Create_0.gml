@@ -90,4 +90,4 @@ function check_animation(_should_interrupt) {
 }
 
 weak_sequence = -1;
-weakness = obj_hammer_attach;	
+weakness = obj_battery_attach;	
