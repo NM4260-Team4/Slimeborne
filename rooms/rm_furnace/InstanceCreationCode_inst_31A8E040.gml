@@ -1,1 +1,0 @@
-state = PIPE_STATE.HEATING;
