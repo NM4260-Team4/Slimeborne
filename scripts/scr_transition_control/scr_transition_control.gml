@@ -33,3 +33,7 @@ function finish_transition() {
 	global.in_transition = false;
 	show_debug_message("transition end");
 }
+
+function enable_change() {
+	global.in_transition = false;
+}

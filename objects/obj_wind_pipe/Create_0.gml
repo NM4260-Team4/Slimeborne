@@ -8,6 +8,7 @@ enum PIPE_STATE {
 
 state = PIPE_STATE.NORMAL;
 duration_to_normal = 101;
+alarm[1] = 1;
 
 function hit() {
 	if (state == PIPE_STATE.NORMAL) {
