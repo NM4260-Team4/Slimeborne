@@ -1,6 +1,6 @@
 if (sprite_index == spr_spearslime_death) {
 	instance_destroy();
-	obj_microplastics.add_microplastics(10);
+	obj_currency.add_microplastics(10);
 	if layer_sequence_exists(layer, weak_sequence) {
 		layer_sequence_destroy(weak_sequence);
 	}

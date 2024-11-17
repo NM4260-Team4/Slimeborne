@@ -41,7 +41,7 @@ switch state {
 				change_state(BOSS_STATE.DEATH);
 				break;
 			}
-			if (point_distance(x, y, obj_player.x, obj_player.y) < 1200) {
+			if (point_distance(x, y, obj_player.x, obj_player.y) < 1200 and abs(y - obj_player.y) < 50 and y <= obj_player.y) {
 				change_state(BOSS_STATE.TARGETING);
 				break;
 			}
