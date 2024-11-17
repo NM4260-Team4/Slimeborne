@@ -297,6 +297,7 @@
     {"id":{"name":"spr_tutboss_hurt","path":"sprites/spr_tutboss_hurt/spr_tutboss_hurt.yy",},},
     {"id":{"name":"spr_tutboss_idle","path":"sprites/spr_tutboss_idle/spr_tutboss_idle.yy",},},
     {"id":{"name":"spr_tutboss_sweep_attack","path":"sprites/spr_tutboss_sweep_attack/spr_tutboss_sweep_attack.yy",},},
+    {"id":{"name":"spr_tutorial_background","path":"sprites/spr_tutorial_background/spr_tutorial_background.yy",},},
     {"id":{"name":"spr_tutorial_tiles","path":"sprites/spr_tutorial_tiles/spr_tutorial_tiles.yy",},},
     {"id":{"name":"spr_unit_pixel","path":"sprites/spr_unit_pixel/spr_unit_pixel.yy",},},
     {"id":{"name":"spr_wind_alt","path":"sprites/spr_wind_alt/spr_wind_alt.yy",},},
