@@ -2,7 +2,7 @@
 
 function play_electric()
 {
-	audio_play_sound(snd_finalboss_elechand, 10, true);
+	audio_play_sound(snd_finalboss_elechand, 10, false);
 }
 
 
