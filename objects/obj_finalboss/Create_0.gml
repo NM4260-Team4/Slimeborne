@@ -3,7 +3,7 @@
 
 // Inherit the parent event
 event_inherited();
-hp = 1;
+hp = 50;
 max_hp = 50;
 attacks = [BOSS_STATE.ATTACK1, BOSS_STATE.ATTACK2, BOSS_STATE.ATTACK3];
 grav = 1;
