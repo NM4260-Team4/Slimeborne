@@ -9,7 +9,7 @@
   "managed":true,
   "name":"obj_resume_button",
   "overriddenProperties":[
-    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_menu_button","path":"objects/obj_menu_button/obj_menu_button.yy",},"propertyId":{"name":"button_text","path":"objects/obj_menu_button/obj_menu_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Credits",},
+    {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_menu_button","path":"objects/obj_menu_button/obj_menu_button.yy",},"propertyId":{"name":"button_text","path":"objects/obj_menu_button/obj_menu_button.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Resume",},
   ],
   "parent":{
     "name":"Pause Menu Buttons",
