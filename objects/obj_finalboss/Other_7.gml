@@ -7,6 +7,10 @@ if (sprite_index == spr_finalboss_death) {
 		layer_sequence_destroy(weak_sequence);
 	}
 	save_game(false);
+	audio_stop_sound(snd_finalboss_elechand);
+	audio_stop_sound(snd_finalboss_firehand);
+	audio_stop_sound(snd_finalboss_firewave);
+	audio_stop_sound(snd_finalboss_headback);
 	obj_game_manager.draw_paused(seq_finalboss_death_ui)
 }
 
