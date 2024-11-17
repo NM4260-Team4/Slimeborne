@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_player_attack",
+  "%Name":"snd_coal",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.417938,
-  "name":"snd_player_attack",
+  "duration":0.528,
+  "name":"snd_coal",
   "parent":{
     "name":"Player",
     "path":"folders/Sounds/Player.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_player_attack.mp3",
-  "type":1,
-  "volume":1.0,
+  "soundFile":"snd_coal.mp3",
+  "type":0,
+  "volume":0.37,
 }

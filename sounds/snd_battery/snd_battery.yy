@@ -1,6 +1,6 @@
 {
   "$GMSound":"",
-  "%Name":"snd_player_attack",
+  "%Name":"snd_battery",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -9,8 +9,8 @@
   "bitRate":128,
   "compression":0,
   "conversionMode":0,
-  "duration":0.417938,
-  "name":"snd_player_attack",
+  "duration":0.783656,
+  "name":"snd_battery",
   "parent":{
     "name":"Player",
     "path":"folders/Sounds/Player.yy",
@@ -19,7 +19,7 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"snd_player_attack.mp3",
-  "type":1,
+  "soundFile":"snd_battery.mp3",
+  "type":0,
   "volume":1.0,
 }

@@ -1,6 +1,7 @@
 // respawn
 if (hp <= 0) {
 	instance_destroy();
+	audio_play_sound(snd_player_death, 10, false);
 	if (active_sequence != undefined) {
 		layer_sequence_destroy(active_sequence);
 	}
