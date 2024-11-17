@@ -191,6 +191,7 @@
     {"id":{"name":"seq_boomslime_death","path":"sequences/seq_boomslime_death/seq_boomslime_death.yy",},},
     {"id":{"name":"seq_checkpoint","path":"sequences/seq_checkpoint/seq_checkpoint.yy",},},
     {"id":{"name":"seq_control","path":"sequences/seq_control/seq_control.yy",},},
+    {"id":{"name":"seq_credits","path":"sequences/seq_credits/seq_credits.yy",},},
     {"id":{"name":"seq_elecboss_death_ui","path":"sequences/seq_elecboss_death_ui/seq_elecboss_death_ui.yy",},},
     {"id":{"name":"seq_elecboss_ground_attack","path":"sequences/seq_elecboss_ground_attack/seq_elecboss_ground_attack.yy",},},
     {"id":{"name":"seq_elecboss_laser_attack","path":"sequences/seq_elecboss_laser_attack/seq_elecboss_laser_attack.yy",},},

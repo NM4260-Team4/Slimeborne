@@ -5,7 +5,7 @@
   "backdropHeight":1080,
   "backdropImageOpacity":0.5,
   "backdropImagePath":"",
-  "backdropWidth":1980,
+  "backdropWidth":1920,
   "backdropXOffset":0.0,
   "backdropYOffset":0.0,
   "events":{
@@ -219,6 +219,6 @@
     "y":1.0,
   },
   "volume":1.0,
-  "xorigin":-990,
+  "xorigin":-960,
   "yorigin":-540,
 }
