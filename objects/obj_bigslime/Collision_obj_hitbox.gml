@@ -9,11 +9,10 @@ if (no_hurt_frames > 0) {
 	if (not is_stumbled) {
 		damage_dealt += 1;
 	} 
+	audio_play_sound(snd_bigslime_hit, 10, false);
 	if (damage_dealt % 4 == 0 and not is_stumbled) {
 		is_stumbled = true;
-		no_hurt_frames = 20;
 		damage_dealt = 0;
-	} else {
-		no_hurt_frames = 20;
-	}
+	} 
+	no_hurt_frames = 20;
 }
