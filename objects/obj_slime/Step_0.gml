@@ -105,6 +105,7 @@ switch state {
 			sprite_index = spr_slime_hit;
 			inner_state = 1;
 			move_speed = 0;
+			audio_play_sound(snd_slime_hit, 10, false);
 		} else if (inner_state == 1) {
 			move_x = 0;
 		} else {
@@ -114,6 +115,7 @@ switch state {
 		break;
 	case ENEMY_STATE.DEATH:
 		if (inner_state == 0) {
+			audio_play_sound(snd_slime_death, 10, false);
 			sprite_index = spr_slime_death;
 			inner_state = 1;
 			move_speed = 0;
