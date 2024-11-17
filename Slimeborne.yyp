@@ -201,6 +201,7 @@
     {"id":{"name":"seq_finalboss_fire_attack","path":"sequences/seq_finalboss_fire_attack/seq_finalboss_fire_attack.yy",},},
     {"id":{"name":"seq_finalboss_head_attack","path":"sequences/seq_finalboss_head_attack/seq_finalboss_head_attack.yy",},},
     {"id":{"name":"seq_hud","path":"sequences/seq_hud/seq_hud.yy",},},
+    {"id":{"name":"seq_opening","path":"sequences/seq_opening/seq_opening.yy",},},
     {"id":{"name":"seq_pausecontrol","path":"sequences/seq_pausecontrol/seq_pausecontrol.yy",},},
     {"id":{"name":"seq_paused","path":"sequences/seq_paused/seq_paused.yy",},},
     {"id":{"name":"seq_player_attack_whilehit","path":"sequences/seq_player_attack_whilehit/seq_player_attack_whilehit.yy",},},
