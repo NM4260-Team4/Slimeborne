@@ -108,6 +108,7 @@
     {"id":{"name":"obj_collidable","path":"objects/obj_collidable/obj_collidable.yy",},},
     {"id":{"name":"obj_consumable","path":"objects/obj_consumable/obj_consumable.yy",},},
     {"id":{"name":"obj_continue_button","path":"objects/obj_continue_button/obj_continue_button.yy",},},
+    {"id":{"name":"obj_credits_button","path":"objects/obj_credits_button/obj_credits_button.yy",},},
     {"id":{"name":"obj_currency","path":"objects/obj_currency/obj_currency.yy",},},
     {"id":{"name":"obj_danger_zone","path":"objects/obj_danger_zone/obj_danger_zone.yy",},},
     {"id":{"name":"obj_elecboss","path":"objects/obj_elecboss/obj_elecboss.yy",},},
