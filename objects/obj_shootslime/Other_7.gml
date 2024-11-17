@@ -8,6 +8,7 @@ if (sprite_index == spr_shootslime_death) {
 
 if (sprite_index == spr_shootslime_attack) {
 	instance_create_layer(x + 30 * move_dir, y - 80, layer, obj_laser);
+	audio_play_sound(snd_shootslime_laser, 10, false, 1,  0.09);
 	attack_cooldown = 90;
 	change_state(SLIMEENEMY_STATE.TARGETING);
 }

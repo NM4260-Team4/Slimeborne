@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"seq_spearslime_attack_Events8",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"seq_spearslime_attack_Events8",
+  "parent":{
+    "name":"Slimeborne",
+    "path":"Slimeborne.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
