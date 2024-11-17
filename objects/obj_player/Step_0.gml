@@ -1,5 +1,5 @@
 if (should_freeze) {exit;}
-
+audio_listener_position(x, y, 0);
 // y movement
 move_y += grav;
 

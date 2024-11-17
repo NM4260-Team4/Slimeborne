@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"seq_finalboss_fire_attack_Events14",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"seq_finalboss_fire_attack_Events14",
+  "parent":{
+    "name":"Slimeborne",
+    "path":"Slimeborne.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

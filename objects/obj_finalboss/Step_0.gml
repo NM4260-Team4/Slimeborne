@@ -1,5 +1,6 @@
 // y movement
 move_y += grav;
+
 // move with y collision
 var _sub_pixel = 1;
 var _on_land = false;
@@ -83,7 +84,7 @@ switch state {
 				show_debug_message("Chosen attack:" + string(_choice))
 				show_debug_message("Range:" + string(_range))
 				show_debug_message("Distance:" + string(abs(x - obj_player.x)))
-				change_state(attacks[0]);
+				change_state(attacks[_choice]);
 				break;
 			}
 			// Attack distance			
@@ -104,7 +105,7 @@ switch state {
 			}
 			
 			move_x = move_speed * move_dir;
-			//x += move_x;
+			x += move_x;
 		} else {
 			state = next_state;
 			inner_state = 0;
@@ -184,9 +185,15 @@ switch state {
 			image_index = 0;
 			inner_state = 1;
 			move_speed = 0;
+			audio_stop_sound(snd_finalboss_elechand);
+			audio_stop_sound(snd_finalboss_firehand);
+			audio_stop_sound(snd_finalboss_firewave);
+			audio_stop_sound(snd_finalboss_headback);
+			audio_play_sound(snd_finalboss_death, 10, false);
 		} else if (inner_state == 1) {
 			move_x = 0;
 		}
 		break;
 }
+
 

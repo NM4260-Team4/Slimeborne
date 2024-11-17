@@ -234,6 +234,10 @@ switch state {
 			sprite_index = spr_elecboss_death;
 			inner_state = 1;
 			move_speed = 0;
+			audio_stop_sound(snd_elecboss_groundpre);
+			audio_stop_sound(snd_elecboss_laser_pr);
+			audio_stop_sound(snd_elecboss_laser);
+			audio_stop_sound(snd_electric_floor);
 		} else if (inner_state == 1) {
 			move_x = 0;
 			if image_index == 1 {

@@ -1,0 +1,25 @@
+{
+  "$GMSound":"",
+  "%Name":"snd_finalboss_death",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "bitRate":128,
+  "compression":0,
+  "conversionMode":0,
+  "duration":6.144,
+  "name":"snd_finalboss_death",
+  "parent":{
+    "name":"FinalBoss",
+    "path":"folders/Sounds/FinalBoss.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_finalboss_death.mp3",
+  "type":0,
+  "volume":1.0,
+}
