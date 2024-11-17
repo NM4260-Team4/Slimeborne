@@ -1,5 +1,5 @@
-hp = 4;
-max_hp = 4;
+hp = 3;
+max_hp = 3;
 
 // Frame counts
 attack_cooldown = 0;
@@ -88,3 +88,6 @@ function check_animation(_should_interrupt) {
 		enable();
 	}
 }
+
+weak_sequence = -1;
+weakness = obj_hammer_attach;	

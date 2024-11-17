@@ -35,7 +35,7 @@ switch state {
 			move_speed = 2;
 		} else if (inner_state == 1) {
 			if (is_hit) {
-				if (hp == 0) {
+				if (hp <= 0) {
 					change_state(SLIMEENEMY_STATE.DEATH);
 					break;
 				}
@@ -65,7 +65,7 @@ switch state {
 			move_speed = 6;
 		} else if (inner_state == 1) {
 			if (is_hit) {
-				if (hp == 0) {
+				if (hp <= 0) {
 					change_state(SLIMEENEMY_STATE.DEATH);
 					break;
 				}
@@ -132,7 +132,6 @@ switch state {
 		} else if (inner_state == 1) {
 			move_x = 0;
 		} else {
-			no_hurt_frames = 5;
 			is_hit = false;
 			state = next_state;
 			inner_state = 0;

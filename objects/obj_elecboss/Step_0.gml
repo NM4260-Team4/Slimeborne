@@ -39,7 +39,7 @@ switch state {
 			inner_state = 1
 			move_speed = 0;
 		} else if (inner_state == 1) {
-			if (hp == 0) {
+			if (hp <= 0) {
 				change_state(BOSS_STATE.DEATH);
 				break;
 			}
@@ -58,7 +58,7 @@ switch state {
 			inner_state = 1
 			move_speed = 2;
 		} else if (inner_state == 1) {
-			if (hp == 0) {
+			if (hp <= 0) {
 				change_state(BOSS_STATE.DEATH);
 				break;
 			}
@@ -90,17 +90,13 @@ switch state {
 			move_dir = sign(image_xscale);
 		} else if (inner_state == 1) {
 			// When the boss is dead, swap states
-			if (hp == 0) {
+			if (hp <= 0) {
 				change_state(BOSS_STATE.DEATH);
 				break;
 			}
 			// When the boss is broken, swap states
 			if (is_stumbled) {
 				change_state(BOSS_STATE.BREAK);
-				break;
-			}
-			if (point_distance(x, y, obj_player.x, obj_player.y) >= 4000) {
-				change_state(BOSS_STATE.ROAM);
 				break;
 			}
 			
@@ -162,8 +158,8 @@ switch state {
 			move_speed = 0;
 		} else if (inner_state == 1) {
 			
-			check_animation(is_stumbled or hp == 0);
-			if (hp == 0) {
+			check_animation(is_stumbled or hp <= 0);
+			if (hp <= 0) {
 				deactivate_electric_floor();
 				change_state(BOSS_STATE.DEATH);
 				break;
@@ -189,8 +185,8 @@ switch state {
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {
-			check_animation(is_stumbled or hp == 0);
-			if (hp == 0) {
+			check_animation(is_stumbled or hp <= 0);
+			if (hp <= 0) {
 				change_state(BOSS_STATE.DEATH);
 				break;
 			}
@@ -214,7 +210,7 @@ switch state {
 			inner_state = 1;
 			move_speed = 0;
 		} else if (inner_state == 1) {
-			if (hp == 0) {
+			if (hp <= 0) {
 				show_debug_message("asdf")
 				change_state(BOSS_STATE.DEATH);
 				break;

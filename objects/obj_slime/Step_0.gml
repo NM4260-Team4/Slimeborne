@@ -18,6 +18,10 @@ if (no_hurt_frames > 0) {
 	no_hurt_frames --;
 }
 
+if layer_sequence_is_finished(weak_sequence) {
+	layer_sequence_destroy(weak_sequence);
+}
+
 if (!instance_exists(obj_player)) {
 	exit;
 }
@@ -33,7 +37,7 @@ switch state {
 			move_speed = 2;
 		} else if (inner_state == 1) {
 			if (is_hit) {
-				if (hp == 0) {
+				if (hp <= 0) {
 					change_state(ENEMY_STATE.DEATH);
 					break;
 				}
@@ -63,7 +67,7 @@ switch state {
 			move_speed = 4;
 		} else if (inner_state == 1) {
 			if (is_hit) {
-				if (hp == 0) {
+				if (hp <= 0) {
 					change_state(ENEMY_STATE.DEATH);
 					break;
 				}

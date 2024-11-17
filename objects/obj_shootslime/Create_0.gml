@@ -4,5 +4,6 @@
 // Inherit the parent event
 event_inherited();
 
-hp = 5;
-max_hp = 5;
+hp = 4;
+max_hp = 4;
+weakness = obj_battery_attach;

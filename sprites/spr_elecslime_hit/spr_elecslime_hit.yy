@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":9,
   "parent":{
-    "name":"Enemy",
-    "path":"folders/Sprites/Enemy.yy",
+    "name":"elecslime",
+    "path":"folders/Sprites/Enemy/elecslime.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
@@ -93,8 +93,8 @@
   "swatchColours":null,
   "swfPrecision":0.5,
   "textureGroupId":{
-    "name":"Default",
-    "path":"texturegroups/Default",
+    "name":"texturegroup1",
+    "path":"texturegroups/texturegroup1",
   },
   "type":0,
   "VTile":false,

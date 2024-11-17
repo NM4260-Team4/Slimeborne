@@ -37,8 +37,8 @@
   },
   "name":"seq_elecboss_ground_attack",
   "parent":{
-    "name":"Sequences",
-    "path":"folders/Sequences.yy",
+    "name":"Electric Boss",
+    "path":"folders/Sequences/Electric Boss.yy",
   },
   "playback":0,
   "playbackSpeed":10.0,

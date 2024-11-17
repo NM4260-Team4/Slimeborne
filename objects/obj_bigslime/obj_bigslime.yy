@@ -13,8 +13,8 @@
   "name":"obj_bigslime",
   "overriddenProperties":[],
   "parent":{
-    "name":"Enemy",
-    "path":"folders/Objects/Enemy.yy",
+    "name":"Bosses",
+    "path":"folders/Objects/Enemy/Bosses.yy",
   },
   "parentObjectId":null,
   "persistent":false,

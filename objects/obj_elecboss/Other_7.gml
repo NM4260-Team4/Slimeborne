@@ -3,7 +3,10 @@ if (sprite_index == spr_elecboss_death) {
 	if (active_sequence != undefined) {
 		layer_sequence_destroy(active_sequence);
 	}
-	save_game(false);
+	deactivate_electric_floor();
+	save_game(true);
+	global.player_state.has_final_access = true;
+	obj_game_manager.draw_paused(seq_bigslime_death_ui);
 }
 
 if (sprite_index == spr_elecboss_break) {

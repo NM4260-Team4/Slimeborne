@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"seq_player_attack_Events7",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"seq_player_attack_Events7",
+  "parent":{
+    "name":"Slimeborne",
+    "path":"Slimeborne.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

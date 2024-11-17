@@ -27,8 +27,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Enemy",
-    "path":"folders/Sprites/Enemy.yy",
+    "name":"shootslime",
+    "path":"folders/Sprites/Enemy/shootslime.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
