@@ -12,8 +12,8 @@
     "path":"folders/Objects/Enemy/Bosses.yy",
   },
   "parentObjectId":{
-    "name":"obj_hitbox",
-    "path":"objects/obj_hitbox/obj_hitbox.yy",
+    "name":"obj_enemy_hitbox",
+    "path":"objects/obj_enemy_hitbox/obj_enemy_hitbox.yy",
   },
   "persistent":false,
   "physicsAngularDamping":0.1,
